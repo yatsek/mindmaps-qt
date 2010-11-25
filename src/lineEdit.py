@@ -8,7 +8,7 @@ class lineEdit(QLineEdit):
 		self.history=[] #stack of input history
 		self.position=0 #current history position
 		self.maxhistory=10 #number of maximum history entries
-	def event(self, event):
+	def event(self, event): #additional key events
 		if event.type()==QEvent.KeyPress:
 			if event.key()==Qt.Key_Up:
 				self.historyUp()
