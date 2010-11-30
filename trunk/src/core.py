@@ -3,6 +3,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from random import randrange
 from graphicsItems import *
+from textEdit import *
 class GraphicsView(QGraphicsView):
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
@@ -23,29 +24,41 @@ class Form(QDialog):
 		self.view.setScene(self.scene)
 		self.button=QPushButton("Add")
 		self.button2=QPushButton("DBG")
-		layout=QVBoxLayout()
-		layout.addWidget(self.view,0)
-		layout.addWidget(self.button,1)
-		layout.addWidget(self.button2,2)
-		self.setLayout(layout)
+		self.textedit = textEdit(self)
+		self.layout=QVBoxLayout()
+		self.layout.addWidget(self.view,0)
+		self.layout.addWidget(self.button,1)
+		self.layout.addWidget(self.button2,2)
+		self.layout.addWidget(self.textedit,0)
+		self.setLayout(self.layout)
 		self.setWindowTitle("Test")
 		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
 		self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
 		self.count=0
-	def addItem(self):
+	def addItem(self,text=None,position=None):
 		#print "Width %s, height %s"%(self.view.width(),self.view.height()) 
-		width = randrange((-1)*self.view.width()/2,self.view.width()/2)
-		height = randrange((-1)*self.view.height()/2,self.view.height()/2)
-		print "Added %s %s"%(width,height)
-		stack[self.count]=Node(QPointF(width,height),QSizeF(width,height))
+		x = randrange((-1)*self.view.width()/2,self.view.width()/2)
+		y = randrange((-1)*self.view.height()/2,self.view.height()/2)
+		print "Added %s %s"%(x,y)
+		if text is not None:
+			stack[self.count]=Node(QPointF(x,y),text)
+		else:
+			stack[self.count]=Node(QPointF(width,height),QSizeF(width,height))
 		stack[self.count].drawOnScene(self.scene)
 		self.count+=1
 		print len(stack)
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
-			self.scene.items()[randrange(0,len(stack))].setSelected(True)
+			item=self.scene.items()[randrange(0,len(stack))]
+			self.scene.removeItem(item)
 
+	def switchToTextEdit(self):
+		self.layout.removeItem(self.view)
+		self.layout.addWidget(self.textedit,0)
+	def switchToView(self):
+		self.layout.removeItem(self.textedit)
+		self.layout.addWidget(self.view,0)
 app=QApplication(sys.argv)
 form=Form()
 rect=QApplication.desktop().availableGeometry()

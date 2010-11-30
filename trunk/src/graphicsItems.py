@@ -2,7 +2,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 globalFontSize=10
-globalSize=QRectF(60,40,60,40)
+globalSize=QSizeF(60,40)
 class TextItem(QGraphicsTextItem):
     def __init__(self,text,position,font=QFont("Times",globalFontSize),matrix=QMatrix()):
         super(TextItem,self).__init__(text)
@@ -11,11 +11,11 @@ class TextItem(QGraphicsTextItem):
         self.setPos(position)
         self.setMatrix(matrix)
 class EllipsisItem(QGraphicsEllipseItem):
-    def __init__(self,position,rect=globalSize,color=Qt.blue,penStyle=Qt.PenStyle(2),penWidth=2):
+    def __init__(self,position,size=globalSize,color=Qt.blue,penStyle=Qt.PenStyle(2),penWidth=2):
         super(EllipsisItem,self).__init__()
         self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
         self.prepareGeometryChange()
-        self.setRect(rect)
+        self.setRect(QRectF(position,size))
         self.setMatrix(QMatrix())
         def setPenStyle(self):
             self.pen=QPen()
@@ -26,9 +26,8 @@ class EllipsisItem(QGraphicsEllipseItem):
         setPenStyle(self)
         
 class Node(QGraphicsItemGroup):
-    def __init__(self,rect,parent=None):
+    def __init__(self,position,text="Override",parent=None):
         super(Node,self).__init__()
-        position=QPointF(rect.x(),rect.y())
         self.setPos(position)
         
         self.children =[] #children of Node
@@ -37,7 +36,7 @@ class Node(QGraphicsItemGroup):
         self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
         self.ellipsis=EllipsisItem(position)
         self.ellipsis.setParentItem(self)
-        self.text=TextItem("abc",self.ellipsisCenter())
+        self.text=TextItem(text,self.ellipsisCenter())
         self.text.setParentItem(self)
         self.addToGroup(self.ellipsis)
         self.addToGroup(self.text)
