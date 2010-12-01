@@ -1,19 +1,21 @@
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from random import randrange
-from graphicsItems import *
-from textEdit import *
+from random import randrange,choice
+from graphicsItems import Node
 from createFromText import FormFromText
+import globalVars as globalV
 class GraphicsView(QGraphicsView):
+	"""QGraphicsView override"""
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.setRenderHint(QPainter.TextAntialiasing)
 	def wheelEvent(self,event):
-		factor =1.41 **(-event.delta()/240.0)
+		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
+		print self.transform()
 		
 	
 stack={}
@@ -21,6 +23,7 @@ class Form(QDialog):
 	def __init__(self,item=None,position=None,scene=None,parent=None):
 		super(Form,self).__init__(parent)
 		
+		#initalise and show FormFromText
 		self.textForm=FormFromText(self)
 		self.textForm.show()
 		
@@ -57,8 +60,11 @@ class Form(QDialog):
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
-			item=self.scene.items()[randrange(0,len(stack))]
-			self.scene.removeItem(item)
+			try:
+				item=choice(self.scene.items())
+				self.scene.removeItem(item)
+			except:
+				pass
 
 	def switchToTextEdit(self):
 		self.layout.removeItem(self.view)
@@ -71,6 +77,5 @@ form=Form()
 rect=QApplication.desktop().availableGeometry()
 form.resize(int(rect.width() *0.8), int(rect.height() * 0.8))
 form.show()
-
 
 app.exec_()

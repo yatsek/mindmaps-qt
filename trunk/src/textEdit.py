@@ -1,7 +1,7 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from graphicsItems import Node
-import globalVars
+import globalVars as globalV
 str="""Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
 Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
 Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
@@ -13,9 +13,10 @@ class textEdit(QTextEdit):
         super(textEdit,self).__init__(parent)
         self.setCursorWidth(0) #nie chcemy kursora myszki 
         self.setText(str)
+        self.setFont(globalV.fontFromText)
         
     def checkLength(self,text):
-        if len(text) >globalVars.maxSelectionText:
+        if len(text) >globalV.maxSelectionText:
             msgbox=QMessageBox()
             msgbox.setText("Text is too long")
             msgbox.setStandardButtons(QMessageBox.Ok)
