@@ -1,0 +1,1 @@
+maxSelectionText=30
