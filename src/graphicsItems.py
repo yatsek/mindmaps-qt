@@ -1,10 +1,10 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-
+import globalVars as globalV
 globalFontSize=10
 globalSize=QSizeF(60,40)
 class TextItem(QGraphicsTextItem):
-    def __init__(self,text,position,font=QFont("Times",globalFontSize),matrix=QMatrix()):
+    def __init__(self,text,position,font=globalV.fontNode,matrix=QMatrix()):
         super(TextItem,self).__init__(text)
         self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
         self.setFont(font)
@@ -40,6 +40,7 @@ class Node(QGraphicsItemGroup):
         self.text.setParentItem(self)
         self.addToGroup(self.ellipsis)
         self.addToGroup(self.text)
+        self.setScale(1.41)
     def drawOnScene(self,scene):
         scene.addItem(self)
     def ellipsisCenter(self):
