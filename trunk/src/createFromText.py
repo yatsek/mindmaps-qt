@@ -58,6 +58,10 @@ class FormFromText(QDialog):
 		self.btnContainer[index][1].hide()
 		self.disconnect(self.btnContainer[index][1], SIGNAL("clicked()"),self.buttonDelClicked)
 		del(self.btnContainer[index])
+		if len(self.btnContainer) == 0:
+			self.buttonOK.show()
+		else:
+			self.buttonOK.hide()
 			
 		
 	def buttonDelClicked(self):
