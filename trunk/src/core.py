@@ -15,7 +15,6 @@ class GraphicsView(QGraphicsView):
 	def wheelEvent(self,event):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
-		print self.transform()
 		
 	
 stack={}
