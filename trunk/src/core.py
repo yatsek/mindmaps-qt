@@ -12,11 +12,20 @@ class GraphicsView(QGraphicsView):
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.setRenderHint(QPainter.TextAntialiasing)
+		self.setMouseTracking(True)
+		self.tempItem=None
 	def wheelEvent(self,event):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
+	def mouseMoveEvent(self,event):
+		item=self.itemAt(event.pos())
+		if  item <> None:
+			print "Eureka!!"
+		return QGraphicsView.mouseMoveEvent(self,event)
 		
-	
+class GraphicsScene(QGraphicsScene):
+	def __init__(self,parent):
+		super(GraphicsScene,self).__init__(parent)
 stack={}
 class Form(QDialog):
 	def __init__(self,item=None,position=None,scene=None,parent=None):
@@ -26,8 +35,8 @@ class Form(QDialog):
 		self.textForm=FormFromText(self)
 		self.textForm.show()
 		
-		self.view=GraphicsView()
-		self.scene =  QGraphicsScene(self)
+		self.view=GraphicsView(self)
+		self.scene =  GraphicsScene(self)
 		self.scene.setSceneRect(0,0,100,100)
 		self.view.setScene(self.scene)
 		self.button=QPushButton("Add")
