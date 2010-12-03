@@ -26,13 +26,12 @@ class EllipsisItem(QGraphicsEllipseItem):
         setPenStyle(self)
         
 class Node(QGraphicsItemGroup):
+    """Documentation"""
     def __init__(self,position,text="Override",parent=None):
         super(Node,self).__init__()
         self.setPos(position)
-        
         self.children =[] #children of Node
         self.parent=parent #parent of the Node  
-                
         self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
         self.ellipsis=EllipsisItem(position)
         self.ellipsis.setParentItem(self)
@@ -41,6 +40,8 @@ class Node(QGraphicsItemGroup):
         self.addToGroup(self.ellipsis)
         self.addToGroup(self.text)
         self.setScale(1.41)
+    def runEditingText(self):
+        print "DoubleClickOnText"
     def drawOnScene(self,scene):
         scene.addItem(self)
     def ellipsisCenter(self):

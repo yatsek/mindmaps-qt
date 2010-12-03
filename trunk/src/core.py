@@ -2,9 +2,11 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from random import randrange,choice
-from graphicsItems import Node
+from graphicsItems import Node, TextItem
 from createFromText import FormFromText
+from editTextDialog import editTextDialog
 import globalVars as globalV
+import graphicsItems
 class GraphicsView(QGraphicsView):
 	"""QGraphicsView override"""
 	def __init__(self,parent=None):
@@ -17,11 +19,20 @@ class GraphicsView(QGraphicsView):
 	def wheelEvent(self,event):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
-	def mouseMoveEvent(self,event):
+	def mouseDoubleClickEvent(self,event):
 		item=self.itemAt(event.pos())
-		if  item <> None:
-			print "Eureka!!"
-		return QGraphicsView.mouseMoveEvent(self,event)
+		if item <> None:
+			if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
+				print "DoubleClick :)"
+				pass
+		return QGraphicsView.mouseDoubleClickEvent(self,event)
+	#def mouseMoveEvent(self,event):
+	#	item=self.itemAt(event.pos())
+	#	if  item <> None:
+	#		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
+	#			#hover on item
+	#			pass
+	#	return QGraphicsView.mouseMoveEvent(self,event)
 		
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
@@ -31,9 +42,12 @@ class Form(QDialog):
 	def __init__(self,item=None,position=None,scene=None,parent=None):
 		super(Form,self).__init__(parent)
 		
-		#initalise and show FormFromText
+		#initalize and show FormFromText
 		self.textForm=FormFromText(self)
 		self.textForm.show()
+		
+		#initalize editTextDialog
+		self.editTextDialog=editTextDialog(parent=self)
 		
 		self.view=GraphicsView(self)
 		self.scene =  GraphicsScene(self)
@@ -49,8 +63,11 @@ class Form(QDialog):
 		self.setWindowTitle("Test")
 		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
 		self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
-		self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
+		#self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
+		self.connect(self.button2, SIGNAL("clicked()"),self.showEditDialog)
 		self.count=0
+	def showEditDialog(self):
+		self.editTextDialog.show()
 	def getViewRange(self):
 		x = randrange((-1)*self.view.width()/2,self.view.width()/2)
 		y = randrange((-1)*self.view.height()/2,self.view.height()/2)
