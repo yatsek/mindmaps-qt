@@ -14,8 +14,14 @@ class GraphicsView(QGraphicsView):
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.setRenderHint(QPainter.TextAntialiasing)
+		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
 		self.setMouseTracking(True)
 		self.tempItem=None
+	def mouseClickEvent(self,event):
+		item=self.itemAt(event.pos())
+		if item <> None:
+			print "AAA"
+		return self.mouseClickEvent(self,event)
 	def wheelEvent(self,event):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
@@ -26,14 +32,9 @@ class GraphicsView(QGraphicsView):
 				print "DoubleClick :)"
 				pass
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
-	#def mouseMoveEvent(self,event):
-	#	item=self.itemAt(event.pos())
-	#	if  item <> None:
-	#		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
-	#			#hover on item
-	#			pass
-	#	return QGraphicsView.mouseMoveEvent(self,event)
-		
+	def mouseMoveEvent(self,event):
+		self.centerOn(QPointF(event.pos()))
+		return QGraphicsView.mouseMoveEvent(self,event)
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
 		super(GraphicsScene,self).__init__(parent)
@@ -76,9 +77,9 @@ class Form(QDialog):
 	def addItem(self,text=None,position=None):
 		#print "Width %s, height %s"%(self.view.width(),self.view.height()) 	
 		if text is not None:
-			stack[self.count]=Node(self.getViewRange(),text)
+			stack[self.count]=Node(self.getViewRange(),text,parent=self)
 		else:
-			stack[self.count]=Node(self.getViewRange())
+			stack[self.count]=Node(self.getViewRange(),parent=self)
 		stack[self.count].drawOnScene(self.scene)
 		self.count+=1
 		print len(stack)
