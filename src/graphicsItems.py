@@ -10,6 +10,7 @@ class TextItem(QGraphicsTextItem):
         self.setFont(font)
         self.setPos(position)
         self.setMatrix(matrix)
+        self.ItemSendsGeometryChanges=True
 class EllipsisItem(QGraphicsEllipseItem):
     def __init__(self,position,size=globalSize,color=Qt.blue,penStyle=Qt.PenStyle(2),penWidth=2):
         super(EllipsisItem,self).__init__()
@@ -17,6 +18,7 @@ class EllipsisItem(QGraphicsEllipseItem):
         self.prepareGeometryChange()
         self.setRect(QRectF(position,size))
         self.setMatrix(QMatrix())
+        self.ItemSendsGeometryChanges=True
         def setPenStyle(self):
             self.pen=QPen()
             self.pen.setColor(color)
@@ -48,3 +50,22 @@ class Node(QGraphicsItemGroup):
         x=self.ellipsis.pos().x()
         y=self.ellipsis.pos().y()        
         return self.ellipsis.rect().center()
+    
+    #very important function - handles item change and so on
+    def itemChange(self,change,variant):
+        if change == QGraphicsItemGroup.ItemFlagsChange:
+            print "Item position change"
+            self.checkCollide()
+        else:
+            print self.pos()
+            pass
+            #print change
+        return QGraphicsItemGroup.itemChange(self,change, variant)
+    def checkCollide(self):
+        try:
+            list = self.collidingItems()
+            for x in list:
+                print x
+            return True
+        except:
+            return False
