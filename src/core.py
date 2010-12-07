@@ -20,7 +20,7 @@ class GraphicsView(QGraphicsView):
 	def mouseClickEvent(self,event):
 		item=self.itemAt(event.pos())
 		if item <> None:
-			print "AAA"
+			print "mouseClickEvent"
 		return self.mouseClickEvent(self,event)
 	def wheelEvent(self,event):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
@@ -29,16 +29,30 @@ class GraphicsView(QGraphicsView):
 		item=self.itemAt(event.pos())
 		if item <> None:
 			if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
-				print "DoubleClick :)"
-				pass
+				if not isinstance(item,graphicsItems.Node):
+					item.parentItem().runEditingText()
+				else:
+					item.runEditingText()
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	def mouseMoveEvent(self,event):
 		self.centerOn(QPointF(event.pos()))
 		return QGraphicsView.mouseMoveEvent(self,event)
+	def keyPressEvent(self,event):
+		if event.key() ==Qt.Key_Enter:
+			item=self.parent().selectedItem()[0]
+			item.runEditingText()
+			
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
 		super(GraphicsScene,self).__init__(parent)
+	def keyPressEvent(self,event):
+		if event.key() == Qt.Key_Enter:
+			item=self.selectedItems()[0]
+			item.runEditingText()
+		return QGraphicsScene.keyPressEvent(self,event)
+
 stack={}
+
 class Form(QDialog):
 	def __init__(self,item=None,position=None,scene=None,parent=None):
 		super(Form,self).__init__(parent)
@@ -101,7 +115,7 @@ class Form(QDialog):
 app=QApplication(sys.argv)
 form=Form()
 rect=QApplication.desktop().availableGeometry()
-form.resize(int(rect.width() *0.8), int(rect.height() * 0.8))
+form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
 form.show()
 
 app.exec_()
