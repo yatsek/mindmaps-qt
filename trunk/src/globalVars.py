@@ -1,5 +1,6 @@
 """Global variables of the application"""
-from QtGui import QFont
+from PyQt4.QtGui import QFont
+from PyQt4.QtCore import QPointF
 #how many characters can user select when creating node from text
 maxSelectionText=30
 
@@ -7,6 +8,10 @@ maxSelectionText=30
 wheelFactor=1.41
 
 
+#
+#Geometry section
+#
+nodeSize=QPointF(20,30)
 
 #
 #FONT SECTION

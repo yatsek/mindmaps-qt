@@ -1,6 +1,5 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from graphicsItems import Node
 import globalVars as globalV
 str="""Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
 Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
