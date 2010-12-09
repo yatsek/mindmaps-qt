@@ -53,8 +53,6 @@ class Node(QGraphicsItemGroup):
     def drawOnScene(self,scene):
         scene.addItem(self)
     def ellipsisCenter(self):
-        x=self.ellipsis.pos().x()
-        y=self.ellipsis.pos().y()        
         return self.ellipsis.rect().center()
     #very important function - handles item change and so on
     def itemChange(self,change,variant):
