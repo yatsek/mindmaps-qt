@@ -66,7 +66,7 @@ class Form(QDialog):
 		
 		self.view=GraphicsView(self)
 		self.scene =  GraphicsScene(self)
-		self.scene.setSceneRect(0,0,100,100)
+		self.scene.setSceneRect(-100,-100,100,100)
 		self.view.setScene(self.scene)
 		self.button=QPushButton("Add")
 		self.button2=QPushButton("DBG")
