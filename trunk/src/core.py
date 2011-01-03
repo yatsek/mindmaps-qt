@@ -1,12 +1,15 @@
 import sys
 from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import  *
 from random import randrange,choice
 from graphicsItems import Node, TextItem
 from createFromText import FormFromText
 from editTextDialog import editTextDialog
 import globalVars as globalV
 import graphicsItems
+from types import NoneType
+
+
 class GraphicsView(QGraphicsView):
 	"""QGraphicsView override"""
 	def __init__(self,parent=None):
@@ -26,31 +29,50 @@ class GraphicsView(QGraphicsView):
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
 	def mouseDoubleClickEvent(self,event):
-		item=self.itemAt(event.pos())
-		if item <> None:
-			if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
-				if not isinstance(item,graphicsItems.Node):
-					item.parentItem().runEditingText()
-				else:
-					item.runEditingText()
+		pos_scene=self.mapToScene(event.pos())
+		item=self.scene().itemAt(pos_scene)
+		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
+			if not isinstance(item,graphicsItems.Node):
+				print "mouse - " + str(event.pos())
+				pos_item=self.scene().selectedItems()[0].pos()
+				print "scene - " + str(pos_item)
+				#self.
+				pos,text=item.parentItem().runEditingText()
+				self.scene().editor.textedit.setText(text)
+				self.scene().editor.show()
+				self.scene().editedItem=item.parentItem()
+				self.scene().editor.setFocus()
+			else:
+				item.runEditingText(pos_item)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	def mouseMoveEvent(self,event):
-		self.centerOn(QPointF(event.pos()))
+		#mozna sliedzic mysz
+		#print event.pos()
 		return QGraphicsView.mouseMoveEvent(self,event)
 	def keyPressEvent(self,event):
-		if event.key() ==Qt.Key_Enter:
-			item=self.parent().selectedItem()[0]
-			item.runEditingText()
+		#print "GraphicsView KeyEvent"
+		#if event.key() ==Qt.Key_Enter:
+		#	item=self.parent().selectedItem()[0]
+		#	item.runEditingText()
+		if self.scene().editor.isVisible():
+			self.scene().editor.keyPressEvent(event)
+			
 			
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
 		super(GraphicsScene,self).__init__(parent)
-	def keyPressEvent(self,event):
-		if event.key() == Qt.Key_Enter:
-			item=self.selectedItems()[0]
-			item.runEditingText()
-		return QGraphicsScene.keyPressEvent(self,event)
-
+		self.picture=QGraphicsPixmapItem(picture,scene=self)
+		self.picture.setZValue(-1) #always on background
+		self.addItem(self.picture)
+		self.editor =graphicsItems.inputOnView()
+		self.proxy=self.addWidget(self.editor,Qt.Widget)
+		self.editedItem=None
+		self.editor.hide()
+		self.editor.textedit.setText("S")
+		self.connect(self.editor, SIGNAL("editFinish"),self.applyText)
+	def applyText(self,text):
+		pass
+		
 stack={}
 
 class Form(QDialog):
@@ -58,8 +80,8 @@ class Form(QDialog):
 		super(Form,self).__init__(parent)
 		
 		#initalize and show FormFromText
-		self.textForm=FormFromText(self)
-		self.textForm.show()
+		#self.textForm=FormFromText(self)
+		#self.textForm.show()
 		
 		#initalize editTextDialog
 		self.editTextDialog=editTextDialog(parent=self)
@@ -68,6 +90,7 @@ class Form(QDialog):
 		self.scene =  GraphicsScene(self)
 		self.scene.setSceneRect(-100,-100,100,100)
 		self.view.setScene(self.scene)
+		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")
 		self.button2=QPushButton("DBG")
 		self.layout=QVBoxLayout()
@@ -77,7 +100,7 @@ class Form(QDialog):
 		self.setLayout(self.layout)
 		self.setWindowTitle("Test")
 		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
-		self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
+		#self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
 		#self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
 		self.connect(self.button2, SIGNAL("clicked()"),self.showEditDialog)
 		self.count=0
@@ -86,14 +109,19 @@ class Form(QDialog):
 	def getViewRange(self):
 		x = randrange((-1)*self.view.width()/2,self.view.width()/2)
 		y = randrange((-1)*self.view.height()/2,self.view.height()/2)
-		print "Added %s %s"%(x,y)
+		#print "Added %s %s"%(x,y)
 		return QPointF(x,y)
 	def addItem(self,text=None,position=None):
-		#print "Width %s, height %s"%(self.view.width(),self.view.height()) 	
+		#print "Width %s, height %s"%(self.view.width(),self.view.height())
+		#x=graphicsItems.inputOnView(text="asd",rect = QRectF(-257.0, -171.0,40,40))
+		#x.show() 	
+		#self.scene.addWidget(x)
+		#if x in self.scene.items():
+		#	print "Added proxy"
 		if text is not None:
-			stack[self.count]=Node(self.getViewRange(),text,parent=self)
+			stack[self.count]=Node(self.getViewRange(),text,parent=self.scene)
 		else:
-			stack[self.count]=Node(self.getViewRange(),parent=self)
+			stack[self.count]=Node(self.getViewRange(),parent=self.scene)
 		stack[self.count].drawOnScene(self.scene)
 		self.count+=1
 		print len(stack)
@@ -113,6 +141,9 @@ class Form(QDialog):
 		self.layout.removeItem(self.textedit)
 		self.layout.addWidget(self.view,0)
 app=QApplication(sys.argv)
+
+picture=QPixmap('data/bg.jpg')
+
 form=Form()
 rect=QApplication.desktop().availableGeometry()
 form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
