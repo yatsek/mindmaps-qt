@@ -8,7 +8,7 @@ class TextItem(QGraphicsTextItem):
         self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
         self.setFont(font)
         self.setPos(position)
-        self.setMatrix(matrix)
+        #self.setMatrix(matrix)
         self.ItemSendsGeometryChanges=True
 class EllipsisItem(QGraphicsEllipseItem):
     def __init__(self,position,size=globalV.nodeSize,color=Qt.blue,penStyle=Qt.PenStyle(2),penWidth=2):
@@ -38,18 +38,28 @@ class Node(QGraphicsItemGroup):
         self.ellipsis.setParentItem(self)
         self.text=TextItem(text,self.ellipsisCenter())
         self.text.setParentItem(self)
-        
-        self.textEdit=inputOnView("sdfsd",_parent=self)
-        self.textEdit.hide()
+        self.setZValue(-1) #being on top
         
         self.addToGroup(self.ellipsis)
         self.addToGroup(self.text)
         self.setScale(1.41)
+    def shape(self):
+        #define shape of item
+        path=QPainterPath()
+        path.addEllipse(self.ellipsis.rect())
+        return path
+        
     def runEditingText(self):
         print "DoubleClickOnText"
-        self.textEdit.setPos(self.text.pos())
-        self.textEdit.show()
+        print self.scene()
+        local_text_pos=self.text.pos()
+        #self.addToGroup(self.textEdit)
         
+        #translacja na scene, dodanie widgetu etc
+        #self.scene().addWidget
+        print "RunEditingText "
+        return local_text_pos,self.text.toPlainText()
+        #self.textEdit.show()
     def drawOnScene(self,scene):
         scene.addItem(self)
     def ellipsisCenter(self):
@@ -64,14 +74,23 @@ class Node(QGraphicsItemGroup):
             #print change
         return QGraphicsItemGroup.itemChange(self,change, variant)
     
-class inputOnView(QGraphicsProxyWidget):
+class inputOnView(QWidget):
     def __init__(self,text="Overload",rect=None,_parent=None):
         super(inputOnView,self).__init__(_parent)
         self.textedit=QTextEdit(text)
+        self.layout=QVBoxLayout()
+        self.layout.addWidget(self.textedit)
+        self.setLayout(self.layout)
+    def focusInEvent(self,event):
+        print "Focus in event"
+        return QWidget.focusInEvent(self,event)
+    def focusOutEvent(self,event):
+        print "Focus in event"
+        return QWidget.focusOutEvent(self,event)
     def keyPressEvent(self,event):
         if event.key() == Qt.Key_Enter:
             print "Enter pressed"
             self.textedit.selectAll()
             self.emit(SIGNAL("editFinish"),self.textedit.textCursor().selectedText())
-        else:              
-            return QGraphicsProxyWidget.keyPressEvent(self,event)
+        else:
+            return QWidget.keyPressEvent(self,event)
