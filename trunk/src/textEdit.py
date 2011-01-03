@@ -21,7 +21,7 @@ class textEdit(QTextEdit):
             msgbox.setStandardButtons(QMessageBox.Ok)
             msgbox.exec_()
             return False
-        if len(text) <3:
+        if len(text) <globalV.minSelectionText:
             return False
         return True
     def mouseReleaseEvent(self,event):
