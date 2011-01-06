@@ -9,31 +9,32 @@ import globalVars as globalV
 import graphicsItems
 
 class GraphicsView(QGraphicsView):
-	"""QGraphicsView override"""
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
+		#initial config
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.setRenderHint(QPainter.TextAntialiasing)
 		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
 		self.setSceneRect(0,0,1000,1000)
-		self.setMouseTracking(True)
-		self.tempItem=None
+		#for  tracking position of a mouse
+		self.setMouseTracking(True) #(maybe not required?)
+		# variables for panning  
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
-		self.setCenter(QPointF(500.,500.0))	
-	#def mouseClickEvent(self,event):
-	#	item=self.itemAt(event.pos())
-	#	if item <> None:
-	#		print "mouseClickEvent"
-	#	return self.mouseClickEvent(self,event)
+		#setting current center
+		self.setCenter(QPointF(500.0,500.0))	
 	def wheelEvent(self,event):
+		"""For resizing  the view"""
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
 	def mouseDoubleClickEvent(self,event):
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
-		if item is not None and isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node):
+		if type(item) == type(None):
+			#TODO - adding item
+			return
+		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node): #TODO - better recognition
 			if not isinstance(item,graphicsItems.Node):
 				print "mouse - " + str(event.pos())
 				pos_item=self.scene().selectedItems()[0].pos()
@@ -47,19 +48,12 @@ class GraphicsView(QGraphicsView):
 			else:
 				item.runEditingText(pos_item)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
-	#def mouseMoveEvent(self,event):
-	#	#mozna sliedzic mysz
-	#	#print event.pos()
-	#	return QGraphicsView.mouseMoveEvent(self,event)
-	def keyPressEvent(self,event):
-		#print "GraphicsView KeyEvent"
-		#if event.key() ==Qt.Key_Enter:
-		#	item=self.parent().selectedItem()[0]
-		#	item.runEditingText()
-		if self.scene().editor.isVisible():
-			self.scene().editor.keyPressEvent(event)
-		else:
-			return QGraphicsView.keyPressEvent(self,event)
+#	def keyPressEvent(self,event):
+#		#TODO - grabbing 
+#		if self.scene().editor.isVisible():
+#			self.scene().editor.textedit.keyPressEvent(event)
+#		else:
+#			return QGraphicsView.keyPressEvent(self,event)
 	
 	#sets the current centerpoint
 	def setCenter(self,centerPoint):
@@ -94,6 +88,8 @@ class GraphicsView(QGraphicsView):
 					self.CurrentCenterPoint.setY(bounds.y())
 		self.centerOn(self.CurrentCenterPoint)
 	def mousePressEvent(self,event):
+		if Qt.LeftButton == event.buttons():
+			return QGraphicsView.mousePressEvent(self,event)
 		#for paning the view
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
@@ -105,6 +101,8 @@ class GraphicsView(QGraphicsView):
 		self.LastPanPoint = event.pos()
 		self.setCursor(Qt.ClosedHandCursor)
 	def mouseReleaseEvent(self,event):
+		if Qt.LeftButton == event.buttons():
+			return QGraphicsView.mouseReleaseEvent(self,event)		
 		self.setCursor(Qt.OpenHandCursor)
 		self.LastPanPoint = None
 	def mouseMoveEvent(self,event):
@@ -156,7 +154,6 @@ class Form(QDialog):
 		
 		self.view=GraphicsView(self)
 		self.scene =  GraphicsScene(self)
-		self.scene.setSceneRect(0,0,1000,1000)
 		self.view.setScene(self.scene)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")
@@ -175,8 +172,8 @@ class Form(QDialog):
 	def showEditDialog(self):
 		self.editTextDialog.show()
 	def getViewRange(self):
-		x = randrange((-1)*self.view.width()/2,self.view.width()/2)
-		y = randrange((-1)*self.view.height()/2,self.view.height()/2)
+		x = randrange((-1)*self.scene.width()/2,self.scene.width()/2)
+		y = randrange((-1)*self.scene.height()/2,self.scene.height()/2)
 		#print "Added %s %s"%(x,y)
 		return QPointF(x,y)
 	def addItem(self,text=None,position=None):
