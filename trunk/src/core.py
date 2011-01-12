@@ -2,7 +2,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import  *
 from random import randrange,choice
-from graphicsItems import Node, TextItem
+from graphicsItems import Node
 from createFromText import FormFromText
 from editTextDialog import editTextDialog
 import globalVars as globalV
@@ -32,7 +32,10 @@ class GraphicsView(QGraphicsView):
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
 		if type(item) == type(None):
-			#TODO - adding item
+			#add new item in the same position
+			pos_scene=self.mapToScene(event.pos())
+			self.parent().addItem(text="New Item",position=pos_scene)
+
 			return
 		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node): #TODO - better recognition
 			if not isinstance(item,graphicsItems.Node):
@@ -83,8 +86,14 @@ class GraphicsView(QGraphicsView):
 		self.centerOn(self.CurrentCenterPoint)
 	def mousePressEvent(self,event):
 		if Qt.LeftButton == event.buttons():
+			#change cursor when moving item
+			if self.getSelectedItem():
+				self.setCursor(Qt.PointingHandCursor)
 			return QGraphicsView.mousePressEvent(self,event)
 		#for paning the view
+		if Qt.RightButton == event.buttons():
+			print "Context menu TODO"
+			return QGraphicsView.mousePressEvent(self,event)			
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
 		if item is not None:
@@ -96,8 +105,11 @@ class GraphicsView(QGraphicsView):
 		self.setCursor(Qt.ClosedHandCursor)
 	def mouseReleaseEvent(self,event):
 		if Qt.LeftButton == event.buttons():
-			return QGraphicsView.mouseReleaseEvent(self,event)		
-		self.setCursor(Qt.OpenHandCursor)
+			return QGraphicsView.mouseReleaseEvent(self,event)
+		if Qt.RightButton == event.buttons():
+			return QGraphicsView.mouseReleaseEvent(self,event)
+		#for panning
+		self.setCursor(Qt.ArrowCursor)
 		self.LastPanPoint = None
 	def mouseMoveEvent(self,event):
 		if Qt.LeftButton == event.buttons():
@@ -197,7 +209,9 @@ class Form(QDialog):
 	def addItem(self,text=None,position=None):
 		if text is None:
 			text='asdasdasd'
-		newNode=Node(self.getViewRange(),text,parent=self.scene)
+		if position is None:
+			position=getViewRange()
+		newNode=Node(position,text,parent=self.scene)
 		stackItems.append(newNode)
 		newNode.drawOnScene(self.scene)
 		print len(stackItems)
