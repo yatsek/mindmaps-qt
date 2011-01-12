@@ -2,6 +2,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import globalVars as globalV
 from textEdit import *
+from edge import *
 class TextItem(QGraphicsTextItem):
 	def __init__(self,text,position,font=globalV.fontNode,matrix=QMatrix()):
 		super(TextItem,self).__init__(text)
@@ -41,6 +42,21 @@ class Node(QGraphicsItemGroup):
 		self.addToGroup(self.ellipsis)
 		self.addToGroup(self.text)
 		self.setScale(1.41)
+
+		#added from example
+		self.edgeList=[]
+		self.newPos=QPointF()
+
+#added from example
+	def addEdge(self,edge):
+		self.edgeList.append(edge)
+		edge.adjust()
+	def itemChange(self,change,value):
+		return QGraphicsTextItem.itemChange(self,change,value)
+	def keyPressEvent(self,event):
+		print "Event"
+		return QGraphicsItem.keyPressEvent(self,event)
+
 	def shape(self):
 		#define shape of item
 		path=QPainterPath()
@@ -93,15 +109,15 @@ class inputOnView(QWidget):
 	class textEdit(QTextEdit):
 		def __init__(self,text,parent=None):
 			super(textEdit,self).__init__(parent)
-			self.setFocusPolicy(Qt.ClickFocus)
+			self.setFocusPolicy(Qt.StrongFocus)
 		def keyPressEvent(self,event):
 			print event.key()
 			if event.key() == Qt.Key_Enter:
 				self.selectAll()
 				text=self.textCursor(),selectedText()
 				self.emit(SIGNAL('endEdit'),text)
-			else:
-				return QWidget.keyPressEvent(self,event)
+#			else:
+#				return QWidget.keyPressEvent(self,event)
 		def focusOutEvent(self,event):
 			print "Focus in event"
 			return QWidget.focusOutEvent(self,event)
