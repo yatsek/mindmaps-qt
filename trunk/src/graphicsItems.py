@@ -9,7 +9,7 @@ class Node(QGraphicsItem):
 		super(Node,self).__init__()
 		self.setPos(position)
 		self.parent=parent #parent of the Node	
-		self.setFlags(QGraphicsItem.ItemIsSelectable|QGraphicsItem.ItemIsMovable)
+		self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
 		self.setZValue(-1) #being on top
 		
 		self.text=text
@@ -21,6 +21,13 @@ class Node(QGraphicsItem):
 	def addEdge(self,edge):
 		self.edgeList.append(edge)
 		edge.adjust()
+	def connectedWith(self,item):
+		#checks if node is connected with other
+		for edge in self.edgeList:
+			if edge.source == item or \
+					edge.dest == item:
+			   return True
+		return False
 	def shape(self):
 		#define shape of item
 		path=QPainterPath()
@@ -40,15 +47,13 @@ class Node(QGraphicsItem):
 	def ellipsisCenter(self):
 		return self.ellipsis.rect().center()
 	#very important function - handles item change and so on
-	def itemChange(self,change,variant):
-		#self.prepareGeometryChange()
-		if change == self.ItemPositionHasChanged:
-			print "Item position change"
-		else:
-			#print self.pos()
-			pass
-			#print change
-		return QGraphicsItemGroup.itemChange(self,change, variant)
+	def itemChange(self,change,value):
+		return QGraphicsItemGroup.itemChange(self,change,value)
+	def mouseMoveEvent(self,event):
+		#when moving item
+		for edge in self.edgeList:
+			edge.adjust()
+		return QGraphicsItem.mouseMoveEvent(self,event)
 	
 class inputOnView(QWidget):
 	def __init__(self,text="Overload",rect=None,_parent=None):

@@ -2,7 +2,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import  *
 from random import randrange,choice
-from graphicsItems import Node
+from graphicsItems import Node, Edge
 from createFromText import FormFromText
 from editTextDialog import editTextDialog
 import globalVars as globalV
@@ -12,18 +12,18 @@ class GraphicsView(QGraphicsView):
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
 		#initial config
-		self.setDragMode(QGraphicsView.RubberBandDrag)
+		#self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
-		self.setRenderHint(QPainter.TextAntialiasing)
 		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
-		self.setSceneRect(0,0,1000,1000)
+#		self.setResizeAnchor(self.AnchorViewCenter)
+		self.setSceneRect(-1000,-1000,1000,1000)
 		#for  tracking position of a mouse
-		self.setMouseTracking(True) #(maybe not required?)
+#		self.setMouseTracking(True) #(maybe not required?)
 		# variables for panning  
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
 		#setting current center
-		self.setCenter(QPointF(500.0,500.0))	
+		self.setCenter(QPointF(0.0,0.0))	
 	def wheelEvent(self,event):
 		"""For resizing  the view"""
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
@@ -110,9 +110,16 @@ class GraphicsView(QGraphicsView):
 			return QGraphicsView.mouseReleaseEvent(self,event)
 		#for panning
 		self.setCursor(Qt.ArrowCursor)
-		self.LastPanPoint = None
+		#self.LastPanPoint = None
+		self.update()
 	def mouseMoveEvent(self,event):
 		if Qt.LeftButton == event.buttons():
+			#check collision detection and connect items
+			item_moving=self.getSelectedItem()
+			if item_moving:
+				for item in self.scene().collidingItems(item_moving):
+					if isinstance(item,Node):
+						self.connectItems(item_moving,item)
 			return QGraphicsView.mouseMoveEvent(self,event)
 		if self.LastPanPoint is not None:
 			#get how much we panned
@@ -122,6 +129,16 @@ class GraphicsView(QGraphicsView):
 			self.setCenter(self.getCenter() + delta)
 		else:
 			return QGraphicsView.mouseMoveEvent(self,event)
+	def connectItems(self,item1,item2):
+		#check if nodes are already connected
+		if item1.connectedWith(item2):
+			return
+		new_edge = Edge(item1,item2)
+		item1.addEdge(new_edge)
+		item2.addEdge(new_edge)
+		self.scene().addItem(new_edge)
+		
+
 	def getCenter(self):
 		return self.CurrentCenterPoint
 		self.CurrentCenterPoint
@@ -147,9 +164,9 @@ class GraphicsView(QGraphicsView):
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
 		super(GraphicsScene,self).__init__(parent)
-		self.picture=QGraphicsPixmapItem(picture,scene=self)
-		self.picture.setZValue(-1) #always on background
-		self.addItem(self.picture)
+		#self.picture=QGraphicsPixmapItem(picture,scene=self)
+		#self.picture.setZValue(-1) #always on background
+		#self.addItem(self.picture)
 		self.editor =graphicsItems.inputOnView()
 		self.proxy=self.addWidget(self.editor,Qt.Widget)
 		self.editedItem=None
