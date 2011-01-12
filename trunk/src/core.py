@@ -48,12 +48,6 @@ class GraphicsView(QGraphicsView):
 			else:
 				item.runEditingText(pos_item)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
-#	def keyPressEvent(self,event):
-#		#TODO - grabbing 
-#		if self.scene().editor.isVisible():
-#			self.scene().editor.textedit.keyPressEvent(event)
-#		else:
-#			return QGraphicsView.keyPressEvent(self,event)
 	
 	#sets the current centerpoint
 	def setCenter(self,centerPoint):
@@ -123,6 +117,21 @@ class GraphicsView(QGraphicsView):
 		visibleArea=self.mapToScene(self.rect()).boundingRect()
 		self.setCenter(visibleArea.center())
 		return QGraphicsView.resizeEvent(self,event)
+
+	def keyPressEvent(self,event):
+		if event.key() == Qt.Key_Delete:
+			selectedItem=self.getSelectedItem()
+			if selectedItem:
+				self.scene().removeItem(selectedItem)
+				stackItems.pop(stackItems.index(selectedItem))
+		return QGraphicsView.keyPressEvent(self,event)
+	def getSelectedItem(self):
+		try:
+			return self.scene().selectedItems()[0]
+		except:
+			return False
+
+
 class GraphicsScene(QGraphicsScene):
 	def __init__(self,parent):
 		super(GraphicsScene,self).__init__(parent)
@@ -138,13 +147,20 @@ class GraphicsScene(QGraphicsScene):
 	def applyText(self,text):
 		print "editFinish signal"
 		pass
+	def drawBackground(self,painter,rect):
+		sceneRect = self.sceneRect()
+		brush=QBrush(Qt.gray)
+		painter.fillRect(sceneRect,brush)
+
+
+	
 		
-stack={}
+stackItems=[]
+stackEdges=[]
 
 class Form(QDialog):
-	def __init__(self,item=None,position=None,scene=None,parent=None):
-		super(Form,self).__init__(parent)
-		
+	def __init__(self):
+		super(Form,self).__init__()	
 		#initalize and show FormFromText
 		#self.textForm=FormFromText(self)
 		#self.textForm.show()
@@ -172,24 +188,19 @@ class Form(QDialog):
 	def showEditDialog(self):
 		self.editTextDialog.show()
 	def getViewRange(self):
-		x = randrange((-1)*self.scene.width()/2,self.scene.width()/2)
-		y = randrange((-1)*self.scene.height()/2,self.scene.height()/2)
-		#print "Added %s %s"%(x,y)
+		#sets random position of a item
+		print self.scene.width(), self.scene.height()
+		x = randrange(0,self.view.width()/2.0)
+		y = randrange(0,self.view.height()/2.0)
+		print "Added %s %s"%(x,y)
 		return QPointF(x,y)
 	def addItem(self,text=None,position=None):
-		#print "Width %s, height %s"%(self.view.width(),self.view.height())
-		#x=graphicsItems.inputOnView(text="asd",rect = QRectF(-257.0, -171.0,40,40))
-		#x.show() 	
-		#self.scene.addWidget(x)
-		#if x in self.scene.items():
-		#	print "Added proxy"
-		if text is not None:
-			stack[self.count]=Node(self.getViewRange(),text,parent=self.scene)
-		else:
-			stack[self.count]=Node(self.getViewRange(),parent=self.scene)
-		stack[self.count].drawOnScene(self.scene)
-		self.count+=1
-		print len(stack)
+		if text is None:
+			text='asdasdasd'
+		newNode=Node(self.getViewRange(),text,parent=self.scene)
+		stackItems.append(newNode)
+		newNode.drawOnScene(self.scene)
+		print len(stackItems)
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
