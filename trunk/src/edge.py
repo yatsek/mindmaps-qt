@@ -9,7 +9,7 @@ class Edge(QGraphicsItem):
 		self.sourcePoint=None
 		self.destPoint=None	
 		self.arrowSize=10
-
+		self.setFlags(self.ItemIsSelectable)
 		self.setAcceptedMouseButtons(Qt.NoButton)
 		self.source=sourceNode
 		self.dest=destNode

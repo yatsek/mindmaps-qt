@@ -17,4 +17,4 @@ nodeSize=QPointF(20,30)
 #FONT SECTION
 #
 fontFromText=QFont("Times",15)
-fontNode=QFont("Times",14) #for displaying and editing
+fontNode=QFont("Times",18) #for displaying and editing
