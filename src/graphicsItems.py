@@ -13,9 +13,11 @@ class Node(QGraphicsItem):
 		self.setZValue(-1) #being on top
 		
 		self.text=text
+		self.rectOverText=self.findBestSize(globalV.fontNode,self.text)
 		#added from example
 		self.edgeList=[]
 		self.newPos=QPointF()
+
 
 #added from example
 	def addEdge(self,edge):
@@ -26,21 +28,31 @@ class Node(QGraphicsItem):
 		for edge in self.edgeList:
 			if edge.source == item or \
 					edge.dest == item:
-			   return True
+			   return edge
 		return False
+	def removeConnection(self,edge):
+		self.edgeList.pop(self.edgeList.index(edge))
 	def shape(self):
 		#define shape of item
 		path=QPainterPath()
-		path.addEllipse(-10,-10,20,20)
+		r=self.rectOverText		
+		path.addEllipse(r.x(),r.y(),r.width(),r.height())
 		return path
 	def paint(self,painter,option=None,widget=None):
-		painter.setPen(Qt.NoPen)
+		#draw ellipsis
+		painter.setPen(Qt.SolidLine)
 		painter.setBrush(Qt.blue)
-		painter.drawEllipse(-10,-10,20,20)
+		r=self.rectOverText
+		painter.drawEllipse(r.x()-8,r.y()-4,r.width()+8,r.height()+4)
+
+		painter.setFont(globalV.fontNode)
+		painter.setPen(Qt.lightGray)
+		painter.drawText(r,self.text)
 	def boundingRect(self):
+		r=self.rectOverText
 		adjust=8.0
-		return QRectF(-10 - adjust, -10 - adjust, \
-				    20 + adjust, 20 + adjust)
+		return QRectF(r.x() - adjust, r.y() - adjust, \
+				    r.width() + adjust, r.height() + adjust)
 	
 	def drawOnScene(self,scene):
 		scene.addItem(self)
@@ -50,10 +62,21 @@ class Node(QGraphicsItem):
 	def itemChange(self,change,value):
 		return QGraphicsItemGroup.itemChange(self,change,value)
 	def mouseMoveEvent(self,event):
-		#when moving item
-		for edge in self.edgeList:
-			edge.adjust()
+		#when moving item, update all edges of all nodes
+		nodes=self.scene().selectedItems()
+		for node in nodes:
+			if isinstance(node,Node):
+				for edge in node.edgeList:
+					edge.adjust()
+					edge.update()
 		return QGraphicsItem.mouseMoveEvent(self,event)
+
+	def findBestSize(self, font, message):
+		fontMetrics=QFontMetrics(font)
+		#finds best size of text ratio and returns rect of text
+		rect = fontMetrics.boundingRect(message)
+		return QRectF(rect)
+
 	
 class inputOnView(QWidget):
 	def __init__(self,text="Overload",rect=None,_parent=None):

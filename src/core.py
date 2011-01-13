@@ -12,22 +12,29 @@ class GraphicsView(QGraphicsView):
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
 		#initial config
-		#self.setDragMode(QGraphicsView.RubberBandDrag)
+		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
 #		self.setResizeAnchor(self.AnchorViewCenter)
-		self.setSceneRect(-1000,-1000,1000,1000)
 		#for  tracking position of a mouse
 #		self.setMouseTracking(True) #(maybe not required?)
 		# variables for panning  
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
 		#setting current center
-		self.setCenter(QPointF(0.0,0.0))	
+		self.setSceneRect(0,0,1000,1000)		
+		self.scale(1,1)
+		self.setCenter(QPointF(500.0,500.0))	
 	def wheelEvent(self,event):
 		"""For resizing  the view"""
+		pointBeforeScale = self.mapToScene(event.pos())
+		screenCenter = self.getCenter()
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
 		self.scale(factor,factor)
+		pointAfterScale = self.mapToScene(event.pos())
+		offset = pointBeforeScale - pointAfterScale
+		newCenter = screenCenter + offset
+		self.setCenter(newCenter)
 	def mouseDoubleClickEvent(self,event):
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
@@ -35,21 +42,6 @@ class GraphicsView(QGraphicsView):
 			#add new item in the same position
 			pos_scene=self.mapToScene(event.pos())
 			self.parent().addItem(text="New Item",position=pos_scene)
-
-			return
-		if isinstance(item, graphicsItems.Node) or isinstance(item.parentItem(),graphicsItems.Node): #TODO - better recognition
-			if not isinstance(item,graphicsItems.Node):
-				print "mouse - " + str(event.pos())
-				pos_item=self.scene().selectedItems()[0].pos()
-				print "scene - " + str(pos_item)
-				#self.
-				pos,text=item.parentItem().runEditingText()
-				self.scene().editor.textedit.setText(text)
-				self.scene().editor.show()
-				self.scene().editedItem=item.parentItem()
-				self.scene().editor.setFocus()
-			else:
-				item.runEditingText(pos_item)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	
 	#sets the current centerpoint
@@ -83,6 +75,7 @@ class GraphicsView(QGraphicsView):
 					self.CurrentCenterPoint.setY(bounds.y() + bounds.height())
 				elif centerPoint.y() < bounds.y():
 					self.CurrentCenterPoint.setY(bounds.y())
+		#print "setCenter - %s %s"%(self.CurrentCenterPoint.x(),self.CurrentCenterPoint.y())
 		self.centerOn(self.CurrentCenterPoint)
 	def mousePressEvent(self,event):
 		if Qt.LeftButton == event.buttons():
@@ -93,42 +86,56 @@ class GraphicsView(QGraphicsView):
 		#for paning the view
 		if Qt.RightButton == event.buttons():
 			print "Context menu TODO"
-			return QGraphicsView.mousePressEvent(self,event)			
-		pos_scene=self.mapToScene(event.pos())
-		item=self.scene().itemAt(pos_scene)
-		if item is not None:
-			self.setCursor(Qt.ArrowCursor)
+			#recognize element type
+			#display context menu for each type
 			return QGraphicsView.mousePressEvent(self,event)
-		for x in self.scene().selectedItems():
-			x.setSelected(False)
-		self.LastPanPoint = event.pos()
-		self.setCursor(Qt.ClosedHandCursor)
+		elif event.buttons() == Qt.MidButton:
+			self.LastPanPoint = event.pos()
+			self.setCursor(Qt.ClosedHandCursor)
+			#return QGraphicsView.mousePressEvent(self,event)
 	def mouseReleaseEvent(self,event):
 		if Qt.LeftButton == event.buttons():
 			return QGraphicsView.mouseReleaseEvent(self,event)
-		if Qt.RightButton == event.buttons():
+		elif Qt.RightButton == event.buttons():
 			return QGraphicsView.mouseReleaseEvent(self,event)
 		#for panning
-		self.setCursor(Qt.ArrowCursor)
-		#self.LastPanPoint = None
-		self.update()
+		elif event.buttons() == Qt.MidButton:
+			self.setCursor(Qt.ArrowCursor)
+			self.LastPanPoint = QPoint() 
+			self.update()
+			return QGraphicsView.mouseReleaseEvent(self,event)
+		return QGraphicsView.mouseReleaseEvent(self,event)
+
 	def mouseMoveEvent(self,event):
+		self.update()
 		if Qt.LeftButton == event.buttons():
 			#check collision detection and connect items
 			item_moving=self.getSelectedItem()
-			if item_moving:
-				for item in self.scene().collidingItems(item_moving):
-					if isinstance(item,Node):
-						self.connectItems(item_moving,item)
-			return QGraphicsView.mouseMoveEvent(self,event)
-		if self.LastPanPoint is not None:
-			#get how much we panned
-			delta=self.mapToScene(self.LastPanPoint) - self.mapToScene(event.pos())
-			self.LastPanPoint = event.pos()
-			#update the center
-			self.setCenter(self.getCenter() + delta)
-		else:
-			return QGraphicsView.mouseMoveEvent(self,event)
+			try:
+				item_moving=item_moving[0]
+				if item_moving:
+					for item in self.scene().collidingItems(item_moving):
+						if isinstance(item,Node):
+							if event.modifiers() == Qt.ControlModifier:
+								self.disconnectItems(item_moving,item)
+							else:
+								self.connectItems(item_moving,item)
+			except:
+				return QGraphicsView.mouseMoveEvent(self,event)
+		#rest for panning
+		elif event.buttons() == Qt.MidButton:
+			if self.LastPanPoint <> None:
+				#get how much we panned
+				delta=self.mapToScene(self.LastPanPoint) - self.mapToScene(event.pos())
+				self.LastPanPoint = event.pos()
+				#update the center
+				#print "mouse pos - %s %s"%(event.pos().x(),event.pos().y())
+				self.setCenter(self.getCenter() + delta)
+		return QGraphicsView.mouseMoveEvent(self,event) 
+	def resizeEvent(self,event):
+		visibleArea = mapToScene(rect()).boundingRect();
+		self.setCenter(visibleArea.center())
+
 	def connectItems(self,item1,item2):
 		#check if nodes are already connected
 		if item1.connectedWith(item2):
@@ -137,6 +144,18 @@ class GraphicsView(QGraphicsView):
 		item1.addEdge(new_edge)
 		item2.addEdge(new_edge)
 		self.scene().addItem(new_edge)
+	def disconnectItems(self,item1,item2):
+		#check if nodeas are connected
+		edge = item1.connectedWith(item2)
+		edge2 = item2.connectedWith(item2)
+		if not edge:
+			return
+		item1.removeConnection(edge)
+		item2.removeConnection(edge)
+		stackEdges.remove(stackEdges.index(edge))
+		self.scene().removeItem(edge)
+		self.scene().removeItem(edge2)
+		self.scene().update()
 		
 
 	def getCenter(self):
@@ -156,7 +175,7 @@ class GraphicsView(QGraphicsView):
 		return QGraphicsView.keyPressEvent(self,event)
 	def getSelectedItem(self):
 		try:
-			return self.scene().selectedItems()[0]
+			return self.scene().selectedItems()
 		except:
 			return False
 
@@ -172,14 +191,7 @@ class GraphicsScene(QGraphicsScene):
 		self.editedItem=None
 		self.editor.hide()
 		self.editor.textedit.setText("S")
-		self.connect(self.editor, SIGNAL("editFinish"),self.applyText)
-	def applyText(self,text):
-		print "editFinish signal"
-		pass
-	def drawBackground(self,painter,rect):
-		sceneRect = self.sceneRect()
-		brush=QBrush(Qt.gray)
-		painter.fillRect(sceneRect,brush)
+	#	self.connect(self.editor, SIGNAL("editFinish"),self.applyText)
 
 
 	
@@ -203,17 +215,42 @@ class Form(QDialog):
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")
 		self.button2=QPushButton("DBG")
+		self.buttonPrint=QPushButton("Print")
 		self.layout=QVBoxLayout()
 		self.layout.addWidget(self.view,0)
 		self.layout.addWidget(self.button,1)
 		self.layout.addWidget(self.button2,2)
+		self.layout.addWidget(self.buttonPrint,3)		
 		self.setLayout(self.layout)
 		self.setWindowTitle("Test")
 		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
 		#self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
 		#self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
 		self.connect(self.button2, SIGNAL("clicked()"),self.showEditDialog)
+		self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
 		self.count=0
+
+		self.printer = QPrinter(QPrinter.HighResolution)
+		self.printer.setPageSize(QPrinter.Letter)
+
+	def showPrint(self):
+		dialog = QPrintDialog(self.printer)
+		preview_dialog = QPrintPreviewDialog(self.printer,self)
+		self.connect(preview_dialog,SIGNAL("paintRequested(QPrinter)"),self.showPrev)
+		if preview_dialog.exec_():
+			if dialog.exec_():
+				painter = QPainter(self.printer)
+				painter.setRenderHint(QPainter.Antialiasing)
+				painter.setRenderHint(QPainter.TextAntialiasing)
+				self.scene.clearSelection()
+				self.removeBorders()
+				self.scene.render(painter)
+				self.addBorders()
+	def showPrev(self,printer):
+		print "show prev"
+		painter = QPainter(self.printer)
+		self.scene.render(painter)
+
 	def showEditDialog(self):
 		self.editTextDialog.show()
 	def getViewRange(self):
@@ -227,7 +264,7 @@ class Form(QDialog):
 		if text is None:
 			text='asdasdasd'
 		if position is None:
-			position=getViewRange()
+			position=self.getViewRange()
 		newNode=Node(position,text,parent=self.scene)
 		stackItems.append(newNode)
 		newNode.drawOnScene(self.scene)
