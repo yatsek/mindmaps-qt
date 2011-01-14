@@ -11,7 +11,7 @@ class Node(QGraphicsItem):
 		self.parent=parent #parent of the Node	
 		self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
 		self.setZValue(-1) #being on top
-		
+		print self.scene()	
 		self.text=text
 		self.rectOverText=self.findBestSize(globalV.fontNode,self.text)
 		#added from example
