@@ -68,8 +68,8 @@
          qreal dy = line.dy();
          double l = 2.0 * (dx * dx + dy * dy);
          if (l > 0) {
-             xvel += (dx * 150.0) / l;
-             yvel += (dy * 150.0) / l;
+             xvel += (dx * 200.0) / l;
+             yvel += (dy * 200.0) / l;
          }
      }
 

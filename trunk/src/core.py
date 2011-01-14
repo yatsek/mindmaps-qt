@@ -168,7 +168,7 @@ class GraphicsView(QGraphicsView):
 		#check if nodes are already connected
 		if item1.connectedWith(item2):
 			return
-		new_edge = Edge(item1,item2)
+		new_edge = Edge(item1,item2,visible=False)
 		item1.addEdge(new_edge)
 		item2.addEdge(new_edge)
 		self.addEdge(new_edge)

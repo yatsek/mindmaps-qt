@@ -4,7 +4,7 @@ from math import sin,cos,pi,acos
 
 TwoPi = pi*2
 class Edge(QGraphicsItem):
-	def __init__(self,sourceNode, destNode):
+	def __init__(self,sourceNode, destNode,visible=True):
 		super(Edge,self).__init__()
 		self.sourcePoint=None
 		self.destPoint=None	
@@ -16,7 +16,10 @@ class Edge(QGraphicsItem):
 		self.source.addEdge(self)
 		self.dest.addEdge(self)
 
+		self.visible=visible
+
 		self.adjust()
+
 	def sourceNode(self):
 		return self.source
 	def setSourceNode(self,node):
@@ -50,13 +53,18 @@ class Edge(QGraphicsItem):
 		return QRectF(self.sourcePoint, QSizeF(self.destPoint.x() - self.sourcePoint.x(),self.destPoint.y() - self.sourcePoint.y())).normalized().adjusted(-extra,-extra,extra,extra)
 
 	def paint(self,painter, option=None, widget=None):
+		#not visible - don't paint
+		#if not self.visible:
+		#	return
 		if not self.source or not self.dest:
 			return
 		line=QLineF(self.sourcePoint,self.destPoint)
 		if line.length() == 0.0:
 			return
 		#draw the line itself
-		painter.setPen(QPen(Qt.black,1,Qt.SolidLine,Qt.RoundCap,Qt.RoundJoin))
+		color=QColor(Qt.black)
+		if not self.visible: color=QColor(Qt.green)
+		painter.setPen(QPen(color,1,Qt.SolidLine,Qt.RoundCap,Qt.RoundJoin))
 		painter.drawLine(line)
 
 		#draw the arrows
