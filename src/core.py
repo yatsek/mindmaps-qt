@@ -36,12 +36,14 @@ class GraphicsView(QGraphicsView):
 		newCenter = screenCenter + offset
 		self.setCenter(newCenter)
 	def mouseDoubleClickEvent(self,event):
+		#adds item in the position of a mouse
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
+		#check if no item is there
 		if type(item) == type(None):
 			#add new item in the same position
 			pos_scene=self.mapToScene(event.pos())
-			self.parent().addItem(text="New Item",position=pos_scene)
+			self.addItem(text="New Item",position=pos_scene)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	
 	#sets the current centerpoint
@@ -136,6 +138,32 @@ class GraphicsView(QGraphicsView):
 		visibleArea = mapToScene(rect()).boundingRect();
 		self.setCenter(visibleArea.center())
 
+	def getCenter(self):
+		return self.CurrentCenterPoint
+		self.CurrentCenterPoint
+	def resizeEvent(self,event):
+		#sets the center of the view on resizing event
+		visibleArea=self.mapToScene(self.rect()).boundingRect()
+		self.setCenter(visibleArea.center())
+		return QGraphicsView.resizeEvent(self,event)
+
+	def keyPressEvent(self,event):
+		#for deleting item
+		if event.key() == Qt.Key_Delete:
+			selectedItem=self.getSelectedItem()
+			if selectedItem:
+				for item in selectedItem:
+					self.deleteNode(item)
+		return QGraphicsView.keyPressEvent(self,event)
+	def getSelectedItem(self):
+		try:
+			return self.scene().selectedItems()
+		except:
+			return False
+	
+#item manipulation
+#connecting/disconnecting items
+#adding and removing items
 	def connectItems(self,item1,item2):
 		#check if nodes are already connected
 		if item1.connectedWith(item2):
@@ -143,148 +171,25 @@ class GraphicsView(QGraphicsView):
 		new_edge = Edge(item1,item2)
 		item1.addEdge(new_edge)
 		item2.addEdge(new_edge)
-		self.scene().addItem(new_edge)
+		self.addEdge(new_edge)
 	def disconnectItems(self,item1,item2):
 		#check if nodeas are connected
 		edge = item1.connectedWith(item2)
-		edge2 = item2.connectedWith(item2)
 		if not edge:
 			return
+		self.scene().removeItem(edge)		
 		item1.removeConnection(edge)
 		item2.removeConnection(edge)
-		stackEdges.remove(stackEdges.index(edge))
-		self.scene().removeItem(edge)
-		self.scene().removeItem(edge2)
-		self.scene().update()
-		
-
-	def getCenter(self):
-		return self.CurrentCenterPoint
-		self.CurrentCenterPoint
-	def resizeEvent(self,event):
-		visibleArea=self.mapToScene(self.rect()).boundingRect()
-		self.setCenter(visibleArea.center())
-		return QGraphicsView.resizeEvent(self,event)
-
-	def keyPressEvent(self,event):
-		if event.key() == Qt.Key_Delete:
-			selectedItem=self.getSelectedItem()
-			if selectedItem:
-				self.scene().removeItem(selectedItem)
-				stackItems.pop(stackItems.index(selectedItem))
-		return QGraphicsView.keyPressEvent(self,event)
-	def getSelectedItem(self):
 		try:
-			return self.scene().selectedItems()
+			stackEdges.remove(stackEdges.index(edge))
 		except:
-			return False
+			pass
+	def addEdge(self,node):
+		#check if node exists
+		if node in self.scene().items():
+			return
+		self.scene().addItem(node)
 
-
-class GraphicsScene(QGraphicsScene):
-	def __init__(self,parent):
-		super(GraphicsScene,self).__init__(parent)
-		#self.picture=QGraphicsPixmapItem(picture,scene=self)
-		#self.picture.setZValue(-1) #always on background
-		#self.addItem(self.picture)
-		self.editor =graphicsItems.inputOnView()
-		self.proxy=self.addWidget(self.editor,Qt.Widget)
-		self.editedItem=None
-		self.editor.hide()
-		self.editor.textedit.setText("S")
-	#	self.connect(self.editor, SIGNAL("editFinish"),self.applyText)
-
-
-	
-		
-stackItems=[]
-stackEdges=[]
-
-class Form(QDialog):
-	def __init__(self):
-		super(Form,self).__init__()	
-
-		self.filename=""
-
-		#initalize and show FormFromText
-		self.textForm=FormFromText(self)
-		self.textForm.show()
-		
-		#initalize editTextDialog
-		self.editTextDialog=editTextDialog(parent=self)
-		
-		self.view=GraphicsView(self)
-		self.scene =  GraphicsScene(self)
-		self.view.setScene(self.scene)
-		self.view.setCacheMode(QGraphicsView.CacheBackground)
-		self.button=QPushButton("Add")
-		self.button2=QPushButton("Save")
-		self.buttonPrint=QPushButton("Print")
-		self.layout=QVBoxLayout()
-		self.layout.addWidget(self.view,0)
-		self.layout.addWidget(self.button,1)
-		self.layout.addWidget(self.button2,2)
-		self.layout.addWidget(self.buttonPrint,3)
-		self.setLayout(self.layout)
-		self.setWindowTitle("Test")
-		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
-		self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
-		#self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
-		self.connect(self.button2, SIGNAL("clicked()"),self.save)
-		self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
-		self.count=0
-
-		self.printer = QPrinter(QPrinter.HighResolution)
-		self.printer.setPageSize(QPrinter.Letter)
-
-	def showPrint(self):
-		dialog = QPrintDialog(self.printer)
-		preview_dialog = QPrintPreviewDialog(self.printer,self)
-		self.connect(preview_dialog,SIGNAL("paintRequested(QPrinter)"),self.showPrev)
-		if preview_dialog.exec_():
-			if dialog.exec_():
-				painter = QPainter(self.printer)
-				painter.setRenderHint(QPainter.Antialiasing)
-				painter.setRenderHint(QPainter.TextAntialiasing)
-				self.scene.clearSelection()
-				self.removeBorders()
-				self.scene.render(painter)
-				self.addBorders()
-	def showPrev(self,printer):
-		print "show prev"
-		painter = QPainter(self.printer)
-		self.scene.render(painter)
-
-	def save(self):
-		if self.filename == "":
-			path = "."
-			fname = QFileDialog.getSaveFileName(self,"Save mindmap",path,"Mind maps (*.mindqt)")
-			if fname.isEmpty():
-				return
-			self.filename = fname
-		fh = None
-		try:
-			fh=QFile(self.filename)
-			if not fh.open(QIODevice.WriteOnly):
-				raise IOError, unicode(fh.errorString())
-			self.scene.clearSelection()
-			stream = QDataStream(fh)
-			stream.setVersion(QDataStream.Qt_4_2)
-			stream.writeInt32(12)
-			for item in self.scene.items():
-				self.writeItemToStream(stream,item)
-		except IOError, e:
-			QMessageBox.warning(self,"Save Error", "Failed to save %s"%(self.filename))
-		finally:
-			if fh is not None:
-				fh.close()
-
-	def getViewRange(self):
-		#sets random position of a item
-		print self.scene.width(), self.scene.height()
-		x = randrange(0,self.view.width()/2.0)
-		y = randrange(0,self.view.height()/2.0)
-		print "Added %s %s"%(x,y)
-		return QPointF(x,y)
 	def addItem(self,text=None,position=None):
 		if text is None:
 			text='asdasdasd'
@@ -292,30 +197,33 @@ class Form(QDialog):
 			position=self.getViewRange()
 		newNode=Node(position,text,parent=self.scene)
 		stackItems.append(newNode)
-		newNode.drawOnScene(self.scene)
-		print len(stackItems)
-	def deleteRandom(self):
-		self.scene.clearSelection()
-		if len(stack)>0:
-			try:
-				item=choice(self.scene.items())
-				self.scene.removeItem(item)
-			except:
-				pass
+		self.scene().addItem(newNode)
+	def deleteNode(self,node):
+		#check if node exists
+		if not isinstance(node,Node):
+			return
+		if node not in self.scene().items():
+			return
+		#get connections betweend and remove them
+		nodes=node.getConnectedNodes()
+		for conn_node in nodes:
+			self.disconnectItems(conn_node,node)
+		#remove node itself
+		self.scene().removeItem(node)
+		try:
+			stackItems.remove(stackItems.index(node))
+		except:
+			pass
 
-	def switchToTextEdit(self):
-		self.layout.removeItem(self.view)
-		self.layout.addWidget(self.textedit,0)
-	def switchToView(self):
-		self.layout.removeItem(self.textedit)
-		self.layout.addWidget(self.view,0)
-app=QApplication(sys.argv)
 
-picture=QPixmap('data/bg.jpg')
+			
 
-form=Form()
-rect=QApplication.desktop().availableGeometry()
-form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
-form.show()
 
-app.exec_()
+
+
+
+
+
+stackItems=[]
+stackEdges=[]
+
