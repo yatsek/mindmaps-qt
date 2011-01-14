@@ -17,7 +17,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 SCENESIZE = 500
-INTERVAL = 200
+INTERVAL = 100
 
 Running = False
 

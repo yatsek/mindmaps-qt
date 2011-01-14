@@ -82,7 +82,7 @@ class GraphicsView(QGraphicsView):
 	def mousePressEvent(self,event):
 		if Qt.LeftButton == event.buttons():
 			#change cursor when moving item
-			if self.getSelectedItem():
+			if self.getSelectedItems():
 				self.setCursor(Qt.PointingHandCursor)
 			return QGraphicsView.mousePressEvent(self,event)
 		#for paning the view
@@ -112,7 +112,7 @@ class GraphicsView(QGraphicsView):
 		self.update()
 		if Qt.LeftButton == event.buttons():
 			#check collision detection and connect items
-			item_moving=self.getSelectedItem()
+			item_moving=self.getSelectedItems()
 			try:
 				item_moving=item_moving[0]
 				if item_moving:
@@ -150,12 +150,12 @@ class GraphicsView(QGraphicsView):
 	def keyPressEvent(self,event):
 		#for deleting item
 		if event.key() == Qt.Key_Delete:
-			selectedItem=self.getSelectedItem()
-			if selectedItem:
-				for item in selectedItem:
+			selectedItems=self.getSelectedItems()
+			if selectedItems:
+				for item in selectedItems:
 					self.deleteNode(item)
 		return QGraphicsView.keyPressEvent(self,event)
-	def getSelectedItem(self):
+	def getSelectedItems(self):
 		try:
 			return self.scene().selectedItems()
 		except:
@@ -215,15 +215,7 @@ class GraphicsView(QGraphicsView):
 		except:
 			pass
 
-
-			
-
-
-
-
-
-
-
+#container for items and edges
 stackItems=[]
 stackEdges=[]
 
