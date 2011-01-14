@@ -202,9 +202,12 @@ stackEdges=[]
 class Form(QDialog):
 	def __init__(self):
 		super(Form,self).__init__()	
+
+		self.filename=""
+
 		#initalize and show FormFromText
-		#self.textForm=FormFromText(self)
-		#self.textForm.show()
+		self.textForm=FormFromText(self)
+		self.textForm.show()
 		
 		#initalize editTextDialog
 		self.editTextDialog=editTextDialog(parent=self)
@@ -214,19 +217,19 @@ class Form(QDialog):
 		self.view.setScene(self.scene)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")
-		self.button2=QPushButton("DBG")
+		self.button2=QPushButton("Save")
 		self.buttonPrint=QPushButton("Print")
 		self.layout=QVBoxLayout()
 		self.layout.addWidget(self.view,0)
 		self.layout.addWidget(self.button,1)
 		self.layout.addWidget(self.button2,2)
-		self.layout.addWidget(self.buttonPrint,3)		
+		self.layout.addWidget(self.buttonPrint,3)
 		self.setLayout(self.layout)
 		self.setWindowTitle("Test")
 		self.connect(self.button, SIGNAL("clicked()"),self.addItem)
-		#self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
+		self.connect(self.textForm, SIGNAL("addItem"),self.addItem)
 		#self.connect(self.button2, SIGNAL("clicked()"),self.deleteRandom)
-		self.connect(self.button2, SIGNAL("clicked()"),self.showEditDialog)
+		self.connect(self.button2, SIGNAL("clicked()"),self.save)
 		self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
 		self.count=0
 
@@ -251,8 +254,30 @@ class Form(QDialog):
 		painter = QPainter(self.printer)
 		self.scene.render(painter)
 
-	def showEditDialog(self):
-		self.editTextDialog.show()
+	def save(self):
+		if self.filename == "":
+			path = "."
+			fname = QFileDialog.getSaveFileName(self,"Save mindmap",path,"Mind maps (*.mindqt)")
+			if fname.isEmpty():
+				return
+			self.filename = fname
+		fh = None
+		try:
+			fh=QFile(self.filename)
+			if not fh.open(QIODevice.WriteOnly):
+				raise IOError, unicode(fh.errorString())
+			self.scene.clearSelection()
+			stream = QDataStream(fh)
+			stream.setVersion(QDataStream.Qt_4_2)
+			stream.writeInt32(12)
+			for item in self.scene.items():
+				self.writeItemToStream(stream,item)
+		except IOError, e:
+			QMessageBox.warning(self,"Save Error", "Failed to save %s"%(self.filename))
+		finally:
+			if fh is not None:
+				fh.close()
+
 	def getViewRange(self):
 		#sets random position of a item
 		print self.scene.width(), self.scene.height()
