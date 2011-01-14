@@ -5,7 +5,7 @@ from textEdit import *
 from edge import *
 class Node(QGraphicsItem):
 	"""Documentation"""
-	def __init__(self,position,text="Override",parent=None):
+	def __init__(self,position,text="Override",parent=None,level=1):
 		super(Node,self).__init__()
 		self.setPos(position)
 		self.parent=parent #parent of the Node	
@@ -18,8 +18,11 @@ class Node(QGraphicsItem):
 		self.edgeList=[]
 		self.newPos=QPointF()
 
+		#hierarchy of items
+		self.level=1
+		self.neighbours=[]
 
-#added from example
+
 	def addEdge(self,edge):
 		self.edgeList.append(edge)
 		edge.adjust()
@@ -40,6 +43,17 @@ class Node(QGraphicsItem):
 			else:
 				nodes.append(edge.dest)
 		return nodes
+
+#methods for neighbours
+	def setLeftNeighbour(self,node):
+		self.neighbours[0]=node
+	def getLeftNeighbour(self):
+		if self.neighbours[0]:
+			return self.neighbours[0]
+		return None
+	def popLeftNeighbour(self):
+		left=self.getLeftNeighbour()
+
 
 	def shape(self):
 		#define shape of item
