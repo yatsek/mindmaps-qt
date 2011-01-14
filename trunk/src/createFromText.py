@@ -40,12 +40,10 @@ class FormFromText(QDialog):
 		self.connect(self.btnContainer[index][1], SIGNAL("clicked()"),self.buttonDelClicked)
 		self.buttonLayout.addWidget(self.btnContainer[index][1], index,1)
 		
-		print self.btnContainer
 		index+=1
 	def buttonAddClicked(self):
 		"""Function which handles click of the button with text"""
 		button=self.sender()
-		print "Clicked!"
 		self.emit(SIGNAL("addItem"),button.text())
 		self.deleteButtons(button.stackIndex)
 	
@@ -67,5 +65,4 @@ class FormFromText(QDialog):
 	def buttonDelClicked(self):
 		"""Function which handles click of the button with X"""
 		button=self.sender()
-		print "Clicked DEL"
 		self.deleteButtons(button.stackIndex)

@@ -32,6 +32,15 @@ class Node(QGraphicsItem):
 		return False
 	def removeConnection(self,edge):
 		self.edgeList.pop(self.edgeList.index(edge))
+	def getConnectedNodes(self):
+		nodes=[]
+		for edge in self.edgeList:
+			if edge.dest == self:
+				nodes.append(edge.source)
+			else:
+				nodes.append(edge.dest)
+		return nodes
+
 	def shape(self):
 		#define shape of item
 		path=QPainterPath()
@@ -55,7 +64,7 @@ class Node(QGraphicsItem):
 				    r.width() + adjust, r.height() + adjust)
 	
 	def drawOnScene(self,scene):
-		scene.addItem(self)
+		self.parent.addItem(self)
 	def ellipsisCenter(self):
 		return self.ellipsis.rect().center()
 	#very important function - handles item change and so on
