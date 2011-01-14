@@ -1,0 +1,28 @@
+Rzeczy do zrobienia przed inżynierką: (do aktualizacji codziennie)
+dzisiaj - 2010-01-10
+termin oddania - 2010-01-20
+Dnia do oddania - 7 dni
+
+Do zrobienia
+Skończenie pisania części teoretycznej - 2 dni
+Skończenie programu - 4 dni (wersja optymistyczna)
+Napisanie tekstu części praktycznej - 4 dni
+TOTAL - 12 dni
+
+Rozplanowanie poszczególnych dni:
+
+
+
+Do zrobienia z programu:
+	- skończenie pisania obsługi QGraphicsView
+	- wrzucenie obsługi fizyki (z przykładu) do łączenia węzłów
+	- drukowanie
+	- interefejs (Qt Designer?)
+	- drukowanie
+	- cofanie wprowadzonych zmian 
+	- serializacja (wbudowana w QGraphicsScene? - jak w przykladzie z książki)
+	- zmiana stylów, połączeń, dodawkowe miejsca na wpisywanie rzeczy
+	- obsługa wrzucania obrazków?
+	- style
+
+
