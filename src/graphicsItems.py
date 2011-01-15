@@ -9,7 +9,11 @@ class Node(QGraphicsItem):
 		super(Node,self).__init__()
 		self.setPos(position)
 		self.parent=parent #parent of the Node	
-		self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
+		#if main node, can't move it
+		if level==0:
+			self.setFlags(self.ItemIsSelectable)
+		else:
+			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
 		self.setZValue(-1) #being on top
 		print self.scene()	
 		self.text=text
@@ -21,7 +25,9 @@ class Node(QGraphicsItem):
 		#hierarchy of items
 		self.level=1
 		self.neighbours=[]
-
+	#item doesn't have initalised scene, adding manually
+	def scene(self):
+		return self.parent.scene()
 
 	def addEdge(self,edge):
 		self.edgeList.append(edge)
@@ -101,37 +107,38 @@ class Node(QGraphicsItem):
 		return QRectF(rect)
 
 	
-class inputOnView(QWidget):
-	def __init__(self,text="Overload",rect=None,_parent=None):
-		super(inputOnView,self).__init__(_parent)
-		self.textedit=textEdit(text)
-		self.layout=QVBoxLayout()
-		self.layout.addWidget(self.textedit)
-		self.setLayout(self.layout)
-		self.connect(self.textedit, SIGNAL("endEdit"),self.applyText)
-	def focusOutEvent(self,event):
-		print "Focus in event"
-		return QWidget.focusOutEvent(self,event)
-	def focusInEvent(self,event):
-		print "Focus in event"
-		self.textedit.grabKeyboard()
-		return QWidget.focusInEvent(self,event)
-	def applyText(self,text):
-		self.textEdit.ungrabKeyboard()
-		self.emit(SIGNAL("editFinish"),text)
-	class textEdit(QTextEdit):
-		def __init__(self,text,parent=None):
-			super(textEdit,self).__init__(parent)
-			self.setFocusPolicy(Qt.StrongFocus)
-		def keyPressEvent(self,event):
-			print event.key()
-			if event.key() == Qt.Key_Enter:
-				self.selectAll()
-				text=self.textCursor(),selectedText()
-				self.emit(SIGNAL('endEdit'),text)
-#			else:
-#				return QWidget.keyPressEvent(self,event)
-		def focusOutEvent(self,event):
-			print "Focus in event"
-			return QWidget.focusOutEvent(self,event)
+	def calculateForces(self):
+		if not self.scene() or (self.scene().mouseGrabberItem() == self):
+			self.newPos = self.pos()
+			return
+		xvel=0.0
+		yvel=0.0
+		for item in self.scene().items():
+			if not isinstance(item,Node):
+				continue
+			node = item
+			line = QLineF(self.mapFromItem(node,0,0),QPointF())
+			dx=line.dx()
+			dy=line.dy()
+			l=2.0 * (dx*dx + dy*dy)
+			if l>0:
+				xvel+=(dx * 150.0) / l
+				yvel+=(dy * 150.0) / l
+
+
+		weight = (len(self.edgeList) + 1) * 10
+		for edge in self.edgeList:
+			if edge.sourceNode() == self:
+				pos = self.mapFromItem(edge.destNode(),0,0)
+			else:
+				pos = self.mapFromItem(edge.sourceNode(),0,0)
+			xvel +=pos.x() / weight
+			yvel +=pos.y() / weight
+
+		if abs(xvel) < 0.1 and abs(yvel) < 0.1:
+			xvel = yvel = 0
+		sceneRect = self.scene().sceneRect()
+		self.newPos = self.pos() + QPointF(xvel,yvel)
+		self.newPos.setX(min( max(self.newPos.x(), sceneRect.left()+10), sceneRect.right()-10))
+		self.newPos.setY(min( max(self.newPos.y(), sceneRect.top()+10), sceneRect.bottom()-10))
 

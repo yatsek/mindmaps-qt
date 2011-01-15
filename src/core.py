@@ -11,20 +11,24 @@ import graphicsItems
 class GraphicsView(QGraphicsView):
 	def __init__(self,parent=None):
 		super(GraphicsView, self).__init__(parent)
+
 		#initial config
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
 #		self.setResizeAnchor(self.AnchorViewCenter)
-		#for  tracking position of a mouse
-#		self.setMouseTracking(True) #(maybe not required?)
+
+
 		# variables for panning  
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
+
 		#setting current center
-		self.setSceneRect(0,0,1000,1000)		
+		self.setSceneRect(0,0,1000,1000)
 		self.scale(1,1)
-		self.setCenter(QPointF(500.0,500.0))	
+		self.setCenter(QPointF(500.0,500.0))
+		#timer for animations
+		self.timer=None 
 	def wheelEvent(self,event):
 		"""For resizing  the view"""
 		pointBeforeScale = self.mapToScene(event.pos())
@@ -195,7 +199,7 @@ class GraphicsView(QGraphicsView):
 			text='asdasdasd'
 		if position is None:
 			position=self.getViewRange()
-		newNode=Node(position,text,parent=self.scene)
+		newNode=Node(position,text,parent=self)
 		stackItems.append(newNode)
 		self.scene().addItem(newNode)
 	def deleteNode(self,node):
@@ -214,6 +218,30 @@ class GraphicsView(QGraphicsView):
 			stackItems.remove(stackItems.index(node))
 		except:
 			pass
+#animation methods
+	def timerEvent(self,event):
+		nodes=[]
+		#get all nodes
+		for item in self.scene().items():
+			if not isinstance(item,Node):
+				continue
+			nodes.append(item)
+		#calculate new positions of nodes
+		for node in nodes:
+			node.calculateForces()
+		itemMoved=False #for stopping the counter
+		#check if items moved after position calculations
+		for node in nodes:
+			if node.advance():
+				itemMoved=True
+		if not itemMoved:
+			self.killTimer(self.timer)
+			self.timer=0
+	#method fired from item on position change
+	def itemMoved(self):
+		if not self.timer:
+			self.timer=self.startTimer(1000.0/25.0)
+
 
 #container for items and edges
 stackItems=[]
