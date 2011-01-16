@@ -18,3 +18,9 @@ nodeSize=QPointF(20,30)
 #
 fontFromText=QFont("Times",15)
 fontNode=QFont("Times",18) #for displaying and editing
+
+#animation
+distance=600.0
+radius=4
+timerTime=1000/25.0
+factor=8

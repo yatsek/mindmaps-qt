@@ -23,8 +23,8 @@ class Form(QDialog):
 		#initalize editTextDialog
 		self.editTextDialog=editTextDialog(parent=self)
 		
-		self.view=GraphicsView(self)
 		self.scene =  QGraphicsScene(self)
+		self.view=GraphicsView(self)		
 		self.view.setScene(self.scene)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")

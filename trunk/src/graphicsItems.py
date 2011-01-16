@@ -5,16 +5,16 @@ from textEdit import *
 from edge import *
 class Node(QGraphicsItem):
 	"""Documentation"""
-	def __init__(self,position,text="Override",parent=None,level=1):
+	def __init__(self, position, text="Override", parent=None, lev=1, movable=True):
 		super(Node,self).__init__()
 		self.setPos(position)
 		self.parent=parent #parent of the Node	
 		#if main node, can't move it
-		if level==0:
+		if lev==0:
 			self.setFlags(self.ItemIsSelectable)
 		else:
 			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
-		self.setZValue(-1) #being on top
+		self.setZValue(1) #being on top
 		print self.scene()	
 		self.text=text
 		self.rectOverText=self.findBestSize(globalV.fontNode,self.text)
@@ -23,8 +23,11 @@ class Node(QGraphicsItem):
 		self.newPos=QPointF()
 
 		#hierarchy of items
-		self.level=1
-		self.neighbours=[]
+		self.level=lev
+		self.neighbours=[None,None]
+		#if item is movable
+		self.movable=movable
+	
 	#item doesn't have initalised scene, adding manually
 	def scene(self):
 		return self.parent.scene()
@@ -59,6 +62,19 @@ class Node(QGraphicsItem):
 		return None
 	def popLeftNeighbour(self):
 		left=self.getLeftNeighbour()
+		self.neighbours[0]=None
+		return left
+	def setRightNeighbour(self,node):
+		self.neighbours[1]=node
+	def getRightNeighbour(self):
+		if self.neighbours[1]:
+			return self.neighbours[1]
+		return None
+	def popRightNeighbour(self):
+		left=self.getRightNeighbour()
+		self.neighbours[1]=None
+		return left
+
 
 
 	def shape(self):
@@ -67,6 +83,7 @@ class Node(QGraphicsItem):
 		r=self.rectOverText		
 		path.addEllipse(r.x(),r.y(),r.width(),r.height())
 		return path
+
 	def paint(self,painter,option=None,widget=None):
 		#draw ellipsis
 		painter.setPen(Qt.SolidLine)
@@ -86,9 +103,11 @@ class Node(QGraphicsItem):
 	def drawOnScene(self,scene):
 		self.parent.addItem(self)
 	def ellipsisCenter(self):
-		return self.ellipsis.rect().center()
+		return self.boundingRect().center()
 	#very important function - handles item change and so on
 	def itemChange(self,change,value):
+		print "Change"
+		self.parent.itemMoved()
 		return QGraphicsItemGroup.itemChange(self,change,value)
 	def mouseMoveEvent(self,event):
 		#when moving item, update all edges of all nodes
@@ -122,11 +141,11 @@ class Node(QGraphicsItem):
 			dy=line.dy()
 			l=2.0 * (dx*dx + dy*dy)
 			if l>0:
-				xvel+=(dx * 150.0) / l
-				yvel+=(dy * 150.0) / l
+				xvel+=(dx * globalV.distance) / l
+				yvel+=(dy * globalV.distance) / l
 
 
-		weight = (len(self.edgeList) + 1) * 10
+		weight = ((len(self.edgeList) + 1) * 10 ) - (self.level-1)*globalV.factor
 		for edge in self.edgeList:
 			if edge.sourceNode() == self:
 				pos = self.mapFromItem(edge.destNode(),0,0)
@@ -141,4 +160,14 @@ class Node(QGraphicsItem):
 		self.newPos = self.pos() + QPointF(xvel,yvel)
 		self.newPos.setX(min( max(self.newPos.x(), sceneRect.left()+10), sceneRect.right()-10))
 		self.newPos.setY(min( max(self.newPos.y(), sceneRect.top()+10), sceneRect.bottom()-10))
+
+	def advance(self):
+		if self.newPos == self.pos():
+			return False
+		if not self.movable or self.level==0:
+			return False
+		for edge in self.edgeList:
+			edge.adjust()
+		self.setPos(self.newPos)
+		return True
 
