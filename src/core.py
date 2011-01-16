@@ -23,12 +23,19 @@ class GraphicsView(QGraphicsView):
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
 
-		#setting current center
-		self.setSceneRect(0,0,1000,1000)
+		#setting current center (for panning and zooming)
+		self.setSceneRect(-100,-100,100,100)
 		self.scale(1,1)
-		self.setCenter(QPointF(500.0,500.0))
+		#self.setCenter(QPointF(00.0,00.0))
+		self.centerOn(0,0)
 		#timer for animations
+		self.parent=parent
+		self.setScene(self.parent.scene)
+		print self.scene()
+
 		self.timer=None 
+		self.addItem("central node",QPointF(0,0),mov=False,level=0)
+
 	def wheelEvent(self,event):
 		"""For resizing  the view"""
 		pointBeforeScale = self.mapToScene(event.pos())
@@ -47,7 +54,8 @@ class GraphicsView(QGraphicsView):
 		if type(item) == type(None):
 			#add new item in the same position
 			pos_scene=self.mapToScene(event.pos())
-			self.addItem(text="New Item",position=pos_scene)
+			self.addItem(text="New Item",position=pos_scene,mov=False)
+			print "New item at: %s %s"%(pos_scene.x(),pos_scene.y())
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	
 	#sets the current centerpoint
@@ -101,6 +109,8 @@ class GraphicsView(QGraphicsView):
 			#return QGraphicsView.mousePressEvent(self,event)
 	def mouseReleaseEvent(self,event):
 		if Qt.LeftButton == event.buttons():
+			#unfreeze timer
+			self.timer=self.startTimer(globalV.timerTime)			
 			return QGraphicsView.mouseReleaseEvent(self,event)
 		elif Qt.RightButton == event.buttons():
 			return QGraphicsView.mouseReleaseEvent(self,event)
@@ -118,6 +128,8 @@ class GraphicsView(QGraphicsView):
 			#check collision detection and connect items
 			item_moving=self.getSelectedItems()
 			try:
+				#freeze the timer during movement
+				self.parent.timer=0
 				item_moving=item_moving[0]
 				if item_moving:
 					for item in self.scene().collidingItems(item_moving):
@@ -141,7 +153,6 @@ class GraphicsView(QGraphicsView):
 	def resizeEvent(self,event):
 		visibleArea = mapToScene(rect()).boundingRect();
 		self.setCenter(visibleArea.center())
-
 	def getCenter(self):
 		return self.CurrentCenterPoint
 		self.CurrentCenterPoint
@@ -172,10 +183,20 @@ class GraphicsView(QGraphicsView):
 		#check if nodes are already connected
 		if item1.connectedWith(item2):
 			return
-		new_edge = Edge(item1,item2,visible=False)
+		new_edge = Edge(item1,item2)
 		item1.addEdge(new_edge)
 		item2.addEdge(new_edge)
 		self.addEdge(new_edge)
+		item2.movable=True
+		#set movable flag to connected item
+		sel_item=self.getSelectedItems()[0]
+		if sel_item==item1:
+			sel_item.level=item2.level + 1
+		else:
+			sel_item.lebel=item1.level + 1
+		sel_item.movable=True
+
+
 	def disconnectItems(self,item1,item2):
 		#check if nodeas are connected
 		edge = item1.connectedWith(item2)
@@ -194,12 +215,12 @@ class GraphicsView(QGraphicsView):
 			return
 		self.scene().addItem(node)
 
-	def addItem(self,text=None,position=None):
+	def addItem(self,text=None,position=None, mov=True,level=1):
 		if text is None:
 			text='asdasdasd'
 		if position is None:
 			position=self.getViewRange()
-		newNode=Node(position,text,parent=self)
+		newNode=Node(position,text,parent=self,movable=mov,lev=level)
 		stackItems.append(newNode)
 		self.scene().addItem(newNode)
 	def deleteNode(self,node):
@@ -235,13 +256,15 @@ class GraphicsView(QGraphicsView):
 			if node.advance():
 				itemMoved=True
 		if not itemMoved:
-			self.killTimer(self.timer)
-			self.timer=0
+			self.stopTimer()
+			print "Not moved"
 	#method fired from item on position change
 	def itemMoved(self):
 		if not self.timer:
-			self.timer=self.startTimer(1000.0/25.0)
-
+			self.timer=self.startTimer(globalV.timerTime)
+	def stopTimer(self):
+		self.killTimer(self.timer)
+		self.timer=0
 
 #container for items and edges
 stackItems=[]

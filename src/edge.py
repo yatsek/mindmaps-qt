@@ -19,6 +19,7 @@ class Edge(QGraphicsItem):
 		self.visible=visible
 
 		self.adjust()
+		self.setZValue(-1)
 
 	def sourceNode(self):
 		return self.source
@@ -33,7 +34,10 @@ class Edge(QGraphicsItem):
 	def adjust(self):
 		if not self.source or not self.dest:
 			return
-		line=QLineF(self.mapFromItem(self.source,0,0), self.mapFromItem(self.dest,0,0))
+		srcCenter=self.source.ellipsisCenter()
+		dstCenter=self.dest.ellipsisCenter()
+		line=QLineF(self.mapFromItem(self.source,srcCenter.x(),srcCenter.y()), \
+				  self.mapFromItem(self.dest,dstCenter.x(),dstCenter.y()))
 		length = line.length()
 
 		self.prepareGeometryChange()
@@ -68,22 +72,22 @@ class Edge(QGraphicsItem):
 		painter.drawLine(line)
 
 		#draw the arrows
-		angle = acos(line.dx()/line.length())
-		if line.dy() >= 0:
-			angle = TwoPi - angle
-		sourceArrowP1= self.sourcePoint + QPointF(sin(angle + pi / 3 ) * self.arrowSize, \
-										  cos(angle + pi / 3 ) * self.arrowSize)
-		sourceArrowP2= self.sourcePoint + QPointF(sin(angle + pi - pi / 3 ) * self.arrowSize, \
-				                                cos(angle + pi - pi / 3 ) * self.arrowSize)
+		#angle = acos(line.dx()/line.length())
+		#if line.dy() >= 0:
+		#	angle = TwoPi - angle
+		#sourceArrowP1= self.sourcePoint + QPointF(sin(angle + pi / 3 ) * self.arrowSize, \
+		#								  cos(angle + pi / 3 ) * self.arrowSize)
+		#sourceArrowP2= self.sourcePoint + QPointF(sin(angle + pi - pi / 3 ) * self.arrowSize, \
+		#		                                cos(angle + pi - pi / 3 ) * self.arrowSize)
 
-		destArrowP1= self.destPoint + QPointF(sin(angle - pi / 3 ) * self.arrowSize, \
-				                            cos(angle - pi / 3 ) * self.arrowSize)
-		destArrowP2= self.destPoint + QPointF(sin(angle - pi + pi / 3 ) * self.arrowSize, \
-				                            cos(angle - pi + pi / 3 ) * self.arrowSize)
+		#destArrowP1= self.destPoint + QPointF(sin(angle - pi / 3 ) * self.arrowSize, \
+		#		                            cos(angle - pi / 3 ) * self.arrowSize)
+		#destArrowP2= self.destPoint + QPointF(sin(angle - pi + pi / 3 ) * self.arrowSize, \
+		#		                            cos(angle - pi + pi / 3 ) * self.arrowSize)
 
-		painter.setBrush(Qt.black)
-		points1=[line.p1(),sourceArrowP1,sourceArrowP2]
-		points2=[line.p2(),destArrowP1,destArrowP2]
-		painter.drawPolygon(QPolygonF(points1))
-		painter.drawPolygon(QPolygonF(points2))
+		#painter.setBrush(Qt.black)
+		#points1=[line.p1(),sourceArrowP1,sourceArrowP2]
+		#points2=[line.p2(),destArrowP1,destArrowP2]
+		#painter.drawPolygon(QPolygonF(points1))
+		#painter.drawPolygon(QPolygonF(points2))
 
