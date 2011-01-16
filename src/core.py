@@ -37,6 +37,10 @@ class GraphicsView(QGraphicsView):
 		self.addItem("central node",QPointF(0,0),mov=False,level=0)
 
 	def wheelEvent(self,event):
+		#check if object is selected
+		if self.getSelectedItems():
+			return self.getSelectedItems()[0].wheelEvent(event)
+
 		"""For resizing  the view"""
 		pointBeforeScale = self.mapToScene(event.pos())
 		screenCenter = self.getCenter()
@@ -228,6 +232,9 @@ class GraphicsView(QGraphicsView):
 		if not isinstance(node,Node):
 			return
 		if node not in self.scene().items():
+			return
+		#if it's base node, don't remove
+		if node.level==0:
 			return
 		#get connections betweend and remove them
 		nodes=node.getConnectedNodes()

@@ -85,6 +85,11 @@ class Node(QGraphicsItem):
 		return path
 
 	def paint(self,painter,option=None,widget=None):
+		#paint boundingRect if selected
+		if self in self.parent.getSelectedItems():
+			painter.setBrush(Qt.black)
+			painter.drawEllipse(self.boundingRect())
+
 		#draw ellipsis
 		painter.setPen(Qt.SolidLine)
 		painter.setBrush(Qt.blue)
@@ -118,7 +123,11 @@ class Node(QGraphicsItem):
 					edge.adjust()
 					edge.update()
 		return QGraphicsItem.mouseMoveEvent(self,event)
+	def scale(self,plus=True):
+		pass
 
+	def wheelEvent(self,event):
+		print "AAA"
 	def findBestSize(self, font, message):
 		fontMetrics=QFontMetrics(font)
 		#finds best size of text ratio and returns rect of text
