@@ -11,7 +11,7 @@ wheelFactor=1.41
 #
 #Geometry section
 #
-
+scaleFactor=1.2
 #
 #FONT SECTION
 #

@@ -37,9 +37,11 @@ class GraphicsView(QGraphicsView):
 		self.addItem("central node",QPointF(0,0),mov=False,level=0)
 
 	def wheelEvent(self,event):
-		#check if object is selected
+		#check if object is selected and pass the event
 		if self.getSelectedItems():
-			return self.getSelectedItems()[0].wheelEvent(event)
+			for node in self.getSelectedItems():
+				node.wheelEvent(event)
+			return
 
 		"""For resizing  the view"""
 		pointBeforeScale = self.mapToScene(event.pos())
@@ -107,7 +109,11 @@ class GraphicsView(QGraphicsView):
 			#recognize element type
 			#display context menu for each type
 			return QGraphicsView.mousePressEvent(self,event)
+
 		elif event.buttons() == Qt.MidButton:
+			if self.getSelectedItems():
+				for node in self.getSelectedItems():
+					node.toggleMovable()
 			self.LastPanPoint = event.pos()
 			self.setCursor(Qt.ClosedHandCursor)
 			#return QGraphicsView.mousePressEvent(self,event)

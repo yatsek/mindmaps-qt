@@ -17,21 +17,28 @@ class Node(QGraphicsItem):
 		self.setZValue(1) #being on top
 		print self.scene()	
 		self.text=text
-		self.rectOverText=self.findBestSize(globalV.fontNode,self.text)
+		self.font=globalV.fontNode
+		self.rectOverText=self.findBestSize(self.font,self.text)
 		#added from example
 		self.edgeList=[]
 		self.newPos=QPointF()
+		self.size=self.font.pointSize()
 
 		#hierarchy of items
 		self.level=lev
 		self.neighbours=[None,None]
 		#if item is movable
 		self.movable=movable
+		
+		#for scaling item
+		self.scaleSize=1
 	
 	#item doesn't have initalised scene, adding manually
 	def scene(self):
 		return self.parent.scene()
 
+	def toggleMovable(self):
+		self.movable=not self.movable
 	def addEdge(self,edge):
 		self.edgeList.append(edge)
 		edge.adjust()
@@ -52,30 +59,6 @@ class Node(QGraphicsItem):
 			else:
 				nodes.append(edge.dest)
 		return nodes
-
-#methods for neighbours
-	def setLeftNeighbour(self,node):
-		self.neighbours[0]=node
-	def getLeftNeighbour(self):
-		if self.neighbours[0]:
-			return self.neighbours[0]
-		return None
-	def popLeftNeighbour(self):
-		left=self.getLeftNeighbour()
-		self.neighbours[0]=None
-		return left
-	def setRightNeighbour(self,node):
-		self.neighbours[1]=node
-	def getRightNeighbour(self):
-		if self.neighbours[1]:
-			return self.neighbours[1]
-		return None
-	def popRightNeighbour(self):
-		left=self.getRightNeighbour()
-		self.neighbours[1]=None
-		return left
-
-
 
 	def shape(self):
 		#define shape of item
@@ -124,10 +107,21 @@ class Node(QGraphicsItem):
 					edge.update()
 		return QGraphicsItem.mouseMoveEvent(self,event)
 	def scale(self,plus=True):
-		pass
+		if plus:
+			self.font.setPointSize(self.font.pointSize()+1)			
+		else:
+			self.font.setPointSize(self.font.pointSize()-1)
+		self.rectOverText=self.findBestSize(self.font,self.text)
+
+
 
 	def wheelEvent(self,event):
-		print "AAA"
+		print "ev"
+		if event.delta() > 0:
+			self.scale()
+		else:
+			self.scale(False)
+		self.parent.itemMoved()
 	def findBestSize(self, font, message):
 		fontMetrics=QFontMetrics(font)
 		#finds best size of text ratio and returns rect of text
@@ -144,14 +138,15 @@ class Node(QGraphicsItem):
 		for item in self.scene().items():
 			if not isinstance(item,Node):
 				continue
+			distance=(self.size-14)*30
 			node = item
 			line = QLineF(self.mapFromItem(node,0,0),QPointF())
 			dx=line.dx()
 			dy=line.dy()
 			l=2.0 * (dx*dx + dy*dy)
 			if l>0:
-				xvel+=(dx * globalV.distance) / l
-				yvel+=(dy * globalV.distance) / l
+				xvel+=(dx * globalV.distance + distance) / l
+				yvel+=(dy * globalV.distance + distance) / l
 
 
 		weight = ((len(self.edgeList) + 1) * 10 ) - (self.level-1)*globalV.factor
@@ -171,8 +166,10 @@ class Node(QGraphicsItem):
 		self.newPos.setY(min( max(self.newPos.y(), sceneRect.top()+10), sceneRect.bottom()-10))
 
 	def advance(self):
+		#check if position changed
 		if self.newPos == self.pos():
 			return False
+		#check if is movable or main 
 		if not self.movable or self.level==0:
 			return False
 		for edge in self.edgeList:
