@@ -11,7 +11,6 @@ wheelFactor=1.41
 #
 #Geometry section
 #
-nodeSize=QPointF(20,30)
 
 #
 #FONT SECTION
