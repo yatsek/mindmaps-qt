@@ -1,0 +1,195 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language polish
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji
+ w oparciu o technikę Mind Mappingu
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Wstęp
+\end_layout
+
+\begin_layout Subsection
+Opis problemu i koncepcja jego rozwiązania
+\end_layout
+
+\begin_layout Paragraph*
+Żyjemy w czasach, gdzie komputery stały się łatwo dostępnym i używanym na
+ co dzień narzędziem pracy czy rozrywki.
+ Wykorzystuje się je do rozrywki, wzajemnej komunikacji, pogłębiania zainteresow
+ań, a także do nauki.
+ Internet stał się nieograniczonym źródłem informacji, w którym niekiedy
+ trudno się odnaleźć.
+ Spowodane jest to ogromną ilością dostępnych danych, przez co ich przyswajanie,
+ czyli nauka staje się problematyczna.
+\end_layout
+
+\begin_layout Paragraph
+Najpopularniejszą metodą uczenia się jest notowanie mówionego słowa, a następnie
+ powtarzanie przez wieloktrotne czytanie.
+ Jednakże nie jest to technika efektywna dla wszystkich.
+ Dlatego alternatywą może być wykorzystanie 
+\emph on
+Mind Mappingu
+\emph default
+, który pozwala na zapamiętanie większej ilości informacji w krótszym czasie.
+ Sprawia, że tworzenie notatek jest mniej uciążliwe, a system powtórek pozwala
+ na zapamiętanie informacji o dowolnej złożoności długofalowo.
+\end_layout
+
+\begin_layout Subsection
+Cel i zakres pracy
+\end_layout
+
+\begin_layout Paragraph
+Celem niniejszej pracy jest opracowanie aplikacji umożliwiającej wspomaganie
+ procesu uczenia się, przy wykorzystaniu metod efektywnej nauki.
+ Program będzie oparty o tworzenie map pamięci, system powtórek oraz funkcjonaln
+ość szybkiego tworzenia ww.
+ Map przy pomocy przeglądarki internetowej.
+ Zostanie również przeprowadzona analiza ergonomii interfejsu użytkownika
+ programu oraz objaśnienie działania tej techniki.
+\end_layout
+
+\begin_layout Subsection
+Omówienie pracy
+\end_layout
+
+\begin_layout Paragraph
+Praca została podzielona na dwie części - teoretyczną i praktyczną.
+\end_layout
+
+\begin_layout Subparagraph
+Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona technika
+ Mind Mappingu, omówienie procesów poznawczych towarzyszących nauce oraz
+ wprowadzeniu do ergonomii interfejsu użytkownika wraz z analizą istniejących
+ aplikacji wspomagających tworzenie map pamięci.
+\end_layout
+
+\begin_layout Subparagraph
+TODO - opis rozdziałów części praktycznej
+\end_layout
+
+\begin_layout Section
+Procesy poznawcze towarzyszące nauce
+\end_layout
+
+\begin_layout Subsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Paragraph
+By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeniem
+ się i zapamietywaniem potrzebne jest parę słów wstępu na temat procesów
+ poznawczych.
+ Ten rozdział jest podzielony na cztery podrozdziały które opisują poszczególny
+ fazy związane z uczeniem się.
+\end_layout
+
+\begin_layout Subsection
+Skupianie uwagi
+\end_layout
+
+\begin_layout Standard
+Skupianie uwagi jest pierwszym elementem towarzyszącym uczeniu się.
+ Jest bardzo ważny, gdyż bez koncentracji nie można przyswajać informacji.
+ By przybliżyć ten proces, należy przytoczyć dwie definicje.
+\end_layout
+
+\begin_layout Quotation
+Uwaga to system odpowiedzialny za selekcję informacji i zapobieganie negatywnym
+ skutkom przeładownia systemu poznawczego przez nadmiar danych.
+\end_layout
+
+\begin_layout Quotation
+Świadomość to zdawanie sobie przez podmiot sprawy z treści własnych procesów
+ psychicznych
+\end_layout
+
+\begin_layout Section
+Mind mapping
+\end_layout
+
+\begin_layout Subsection
+Wprowadzenie do techniki Mind Mappingu
+\end_layout
+
+\begin_layout Subsection
+Nauka a ludzki mózg
+\end_layout
+
+\begin_layout Standard
+Obrazowe metody utrwalania wiedzy i modelowania systemów były używane od
+ wieków w nauczaniu, wizualnym myśleniu i rozwiązywaniu problemów przez
+ inżynierów, nauczycieli, psychologów i innych.
+ Jeden z pierwszych przykładów takich graficznych zapisów został stworzony
+ przez Porfiriusza, greciego myśliciela żyjącego w III wieku n.e.
+ Pierwszym krokiem standaryzacji tego rodzaju organizacji myśli były 
+\emph on
+sieci semantyczne
+\emph default
+.
+ Są to sieci reprezentujące semantyczne relacje pomiędzy koncepcjami.
+ Zostały one opracowane przez Richarda H.
+ Richensa w celu zdefiniowania meta-języka do translacji maszynowej na języki
+ naturalne.
+ Przykład takiej sieci semantycznej ilustruje Rys 3.1
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
