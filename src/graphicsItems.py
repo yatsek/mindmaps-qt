@@ -17,7 +17,7 @@ class Node(QGraphicsItem):
 		self.setZValue(1) #being on top
 		print self.scene()	
 		self.text=text
-		self.font=globalV.fontNode
+		self.font=QFont(globalV.fontNode)
 		self.rectOverText=self.findBestSize(self.font,self.text)
 		#added from example
 		self.edgeList=[]
@@ -26,7 +26,6 @@ class Node(QGraphicsItem):
 
 		#hierarchy of items
 		self.level=lev
-		self.neighbours=[None,None]
 		#if item is movable
 		self.movable=movable
 		
