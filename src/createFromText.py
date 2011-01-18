@@ -4,9 +4,9 @@ from PyQt4.QtGui import *
 from textEdit import *
 import globalVars
 class FormFromText(QDialog):
-	def __init__(self,parent=None):
+	def __init__(self,parent=None,text="Override"):
 		super(FormFromText,self).__init__(parent)
-		self.textedit=textEdit(self)#text editor
+		self.textedit=textEdit(self,text=text)#text editor
 		self.btnContainer={} #storing buttons
 		
 		self.buttonOK=QPushButton("Done")
