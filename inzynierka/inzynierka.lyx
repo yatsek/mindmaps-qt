@@ -48,9 +48,23 @@ Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -121,6 +135,13 @@ Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona techni
 TODO - opis rozdziałów części praktycznej
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesy poznawcze towarzyszące nauce
 \end_layout
@@ -141,20 +162,84 @@ By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeni
 Skupianie uwagi
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Skupianie uwagi jest pierwszym elementem towarzyszącym uczeniu się.
  Jest bardzo ważny, gdyż bez koncentracji nie można przyswajać informacji.
- By przybliżyć ten proces, należy przytoczyć dwie definicje.
+ By dobrze zrozumieć ten proces, należy przytoczyć dwie definicje.
 \end_layout
 
-\begin_layout Quotation
-Uwaga to system odpowiedzialny za selekcję informacji i zapobieganie negatywnym
- skutkom przeładownia systemu poznawczego przez nadmiar danych.
+\begin_layout Subparagraph
+
+\emph on
+Uwaga
+\emph default
+ to system odpowiedzialny za selekcję informacji i zapobieganie negatywnym
+ skutkom przeładownia systemu poznawczego przez nadmiar danych [PSYCHO].
 \end_layout
 
-\begin_layout Quotation
-Świadomość to zdawanie sobie przez podmiot sprawy z treści własnych procesów
- psychicznych
+\begin_layout Subparagraph
+
+\emph on
+Świadomość
+\emph default
+ to zdawanie sobie przez podmiot sprawy z treści własnych procesów psychicznych
+ [PSYCHO].
+\end_layout
+
+\begin_layout Paragraph
+Głównym elementem procesu skupiania uwagi jest 
+\emph on
+przeszukiwanie pola percepcyjnego
+\emph default
+.
+ Mózg ludzki dokonuje tej czynności automatycznie.
+ Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
+ który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
+ w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
+ te wystąpienia.
+ Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
+ się od otoczenia kolorem, kształtem czy rozmiarem.
+\end_layout
+
+\begin_layout Paragraph
+Kolejnym ważnym elementem jest 
+\emph on
+podzielnośc uwagi
+\emph default
+, które ozacza dzielenie pewnej ograniczonej puli 
+\begin_inset Quotes eld
+\end_inset
+
+mocy obliczeniowej
+\begin_inset Quotes erd
+\end_inset
+
+ na więcej niż jedno zadanie.
+ Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
+ jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
+\end_layout
+
+\begin_layout Paragraph
+Również warto zwrócić uwagę na 
+\emph on
+przedłużoną koncentrację
+\emph default
+ (ang.
+ sustained attention).
+ Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
+ tym samym aspekcie otoczenia.
+ 
+\end_layout
+
+\begin_layout Subsection
+Odbieranie i analizowanie informacji
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -165,11 +250,7 @@ Mind mapping
 Wprowadzenie do techniki Mind Mappingu
 \end_layout
 
-\begin_layout Subsection
-Nauka a ludzki mózg
-\end_layout
-
-\begin_layout Standard
+\begin_layout Paragraph
 Obrazowe metody utrwalania wiedzy i modelowania systemów były używane od
  wieków w nauczaniu, wizualnym myśleniu i rozwiązywaniu problemów przez
  inżynierów, nauczycieli, psychologów i innych.
@@ -183,12 +264,277 @@ sieci semantyczne
  Są to sieci reprezentujące semantyczne relacje pomiędzy koncepcjami.
  Zostały one opracowane przez Richarda H.
  Richensa w celu zdefiniowania meta-języka do translacji maszynowej na języki
- naturalne.
+ naturalne [COGNI].
  Przykład takiej sieci semantycznej ilustruje Rys 3.1
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/3.1.jpg
+	lyxscale 50
+	width 50page%
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size small
+Rys 3.1 Przykład sieci semantycznej
+\end_layout
+
+\begin_layout Paragraph
+Technika 
+\emph on
+Mind Mappingu
+\emph default
+ została opracowna przez dwóch brytyjskich naukowców, Tony'ego i Barry'ego
+ Buzana w latach 60-tych XX wieku.
+ Służy do reprezentowania słów, idei, zadań i innych elementów połączonych
+ i ułożonych dookoła centralnego słowa-klucza bądź idei.
+ Mapy pamięci są wykorzystywane do wizualizacji oraz strukturyzacji.
+ Są przydatne przy rozwiązywaniu problemów, podczas podejmowania decyzji
+ oraz pisania.
+ Poprzez reprezentowanie idei w graficzny, promieniowy i nieliniowy sposób,
+ mapy pamięci są często wykorzystywane podczas 
+\begin_inset Quotes eld
+\end_inset
+
+burzy mózgów
+\begin_inset Quotes erd
+\end_inset
+
+ jako sposób reprezentacji planów i organizacji zadań.
+ Metoda ta stała się bardzo popularna i jest wykorzystywana przez miliony
+ ludzi na całym świecie.
+ [BUZAN2]
+\end_layout
+
+\begin_layout Subsection
+Nauka a ludzki mózg
+\end_layout
+
+\begin_layout Paragraph
+Mózg ludzki składa się dwóch półkul odpowiedzialnych za różne procesy myślowe.
+ Lewa półkula zajmuje się analizą słowa, logiką, liczbami, hierarchią, linearnoś
+cią i zbiorami.
+ Natomiast prawa połkula odpowiada za rytm, świadomość przestrzeni, obraz
+ całości, wyobraźnię, marzenia, postrzeganie kolorów i rozmiarów.
+ W czasie uczenia się z wykorzystaniem notatek linearnych wykorzystuje się
+ głównie lewą półkulę.
+ Rysunek 3.2 przedstawia podział półkul mózgowych na funkcje [COGNI].
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/3.2.png
+	lyxscale 30
+	width 50page%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 3.2 Funkcje półkul mózgowych
+\end_layout
+
+\begin_layout Paragraph
+Najczęściej spotykanymi sposobami notowania są [BUZAN1]:
+\end_layout
+
+\begin_layout Enumerate
+Notatki w formie narracyjnej - spisywanie treści komunikatu w formie ciągu
+ zdań
+\end_layout
+
+\begin_layout Enumerate
+Notatki w formie listy myśli w koleności pojawiania się
+\end_layout
+
+\begin_layout Enumerate
+Notatki w formie hierarchicznej - uporządkowanie wiedzy w strukturę, oznaczoną
+ literami lub liczbami
+\end_layout
+
+\begin_layout Standard
+Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
+ linii, zbiorów i logiki.
+ Patrząc na rysunek 3.2 można zauważyć, że analizą tych elementów zajmuje
+ się głównie lewa półkula.
+ By się efektywniej uczyć, należy uaktywnić w jak największym stopniu mózg
+ do działania.
+ Elementami które również można użyć podczas tworzenia notatek są: rytm
+ wizualny, schemat, kolor, obraz, wizualizacja, wymiar, zmysł przestrzeni
+ i skojarzenia.
+ Są to rzeczy, które również uczestniczą w procesie myślenia, zapamiętywania
+ i przypominania, dlatego warto wykorzystać je również podczas tworzenia
+ notatek.
+ Jedną z metod pobudzenia wszystkich obszarów mózgu jest technika tworzenia
+ map pamięci.
+ Przykład takiej mapy ilustruje rysunek 2.3
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/3.3.png
+	lyxscale 30
+	width 50page%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 3.3 Przykładowa mapa pamięci
+\end_layout
+
+\begin_layout Standard
+Tony Buzan skonstruował 4 podstawowe zasady potrzebne przy tworzeniu mapy
+ pamięci [BUZAN1]:
+\end_layout
+
+\begin_layout Itemize
+Temat mapy symbolizuje centralny rysunek
+\end_layout
+
+\begin_layout Itemize
+Główne zagadnienia w postaci gałęzi wybiegają promieniście z centralnego
+ rysunku
+\end_layout
+
+\begin_layout Itemize
+Gałęzie zawierają kluczowy rysunek lub słowo (wypisane dużymi literami nad
+ odpowiednią linią).
+ Zagadnienia poboczne lub mniej ważne reprezentowane są jako gałęzie podporządko
+wane gałęziom wyższego rzędu
+\end_layout
+
+\begin_layout Itemize
+Gałęzie tworzą sieć węzłów
+\end_layout
+
+\begin_layout Standard
+Ważne jest również, by wzbogacać je o kolory, rysunki oraz własne skróty
+ myślowe, gdyż dzięki temu pobudzana jest kreatywność i łatwiej sobie przypomnie
+ć wiedzę zgromadzoną na mapie pamięci.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ergonomia programów komputerowych
+\end_layout
+
+\begin_layout Subsection
+Zasady projektowania interfejsów użytkownika
+\end_layout
+
+\begin_layout Subsubsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Subsubsection
+Usability
+\end_layout
+
+\begin_layout Subsection
+Przegląd aplikacji do Mind Mappingu
+\end_layout
+
+\begin_layout Subsubsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Subsubsection
+Xmind
+\end_layout
+
+\begin_layout Subsubsection
+FreeMind
+\end_layout
+
+\begin_layout Subsubsection
+Buzan's iMindMap
+\end_layout
+
+\begin_layout Section*
+Bibliografia
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[BUZAN1] Buzan Tony, 
+\emph on
+Mapy twoich myśli
+\emph default
+, Ravi, Łódź 2003
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[BUZAN2] Buzan Tony, 
+\emph on
+Pamięć na zawołanie
+\emph default
+, Ravi, Łódź 2003
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[PSYCHO] Nęcki Edward, Orzechowski Jarosław, Szymura Błażej, 
+\emph on
+Psychologia poznawcza
+\emph default
+, PWN, Warszawa 2006
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[COGNI] Stilling Neil, Weisler Steven, Chase Christopher, 
+\emph on
+Cognitive Science an introduction
+\emph default
+, MIT Press, London 2005
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[THINK] Krug Steve,
+\emph on
+ Nie każ mi myśleć: O życiowym podejściu do funkcjonalności stron internetowych
+\emph default
+, Helion, Gliwice 2006
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[BRAIN] Nicholas Carr, 
+\emph on
+The Shallows: What the Internet is doing to our brains
+\emph default
+, W.
+ W.
+ Norton & Company, New York 2010
 \end_layout
 
 \end_body
