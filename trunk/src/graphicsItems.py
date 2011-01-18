@@ -1,8 +1,8 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import globalVars as globalV
-from textEdit import *
 from edge import *
+from editNode import editNode
 import random
 class Node(QGraphicsItem):
 	def __init__(self, pos=QPointF(), text="AAA", parent=None, lev=1, movable=True,array=None):
@@ -202,7 +202,10 @@ class Node(QGraphicsItem):
 
 
 	def mouseDoubleClickEvent(self,event):
-		pass
+		window=editNode(self.parent.parent,self,self.text,self.fontColor,self.insideColor)
+		window.show()
+
+		
 	
 	def calculateForces(self):
 		if not self.scene() or (self.scene().mouseGrabberItem() == self):
