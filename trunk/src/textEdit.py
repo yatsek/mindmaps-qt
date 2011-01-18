@@ -1,17 +1,11 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import globalVars as globalV
-str="""Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
-Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
-Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
-Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
-Lorem ipsum and so onLorem ipsum and so onLorem ipsum and so on
-"""
 class textEdit(QTextEdit):
-	def __init__(self,parent=None):
+	def __init__(self,parent=None,text="Override"):
 		super(textEdit,self).__init__(parent)
 		self.setCursorWidth(0) #nie chcemy kursora myszki 
-		self.setText(str)
+		self.setText(text)
 		self.setFont(globalV.fontFromText)
 		
 	def checkLength(self,text):

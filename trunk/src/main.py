@@ -2,23 +2,25 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import  *
 from random import randrange,choice
-from graphicsItems import Node, Edge
 from createFromText import FormFromText
 from editTextDialog import editTextDialog
 import globalVars as globalV
 import graphicsItems
 from core import GraphicsView
-
+import serialize
 
 class Form(QDialog):
-	def __init__(self):
-		super(Form,self).__init__()	
-		
-		self.filename=""
+	def __init__(self,textNode=False,filename=None,text=None):
+		super(Form,self).__init__()
+		#check filename
+		if filename: self.filename=filename
+		else: self.filename=""
 
-		#initalize and show FormFromText
-		#self.textForm=FormFromText(self)
-		#self.textForm.show()
+		#initalize and show FormFromText if specified in argument
+		if textNode:
+
+			self.textForm=FormFromText(self)
+			self.textForm.show()
 		
 		#initalize editTextDialog
 		self.editTextDialog=editTextDialog(parent=self)
@@ -39,10 +41,12 @@ class Form(QDialog):
 		self.setWindowTitle("Test")
 		self.connect(self.button2, SIGNAL("clicked()"),self.save)
 		self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
-		self.count=0
 
 		self.printer = QPrinter(QPrinter.HighResolution)
 		self.printer.setPageSize(QPrinter.Letter)
+
+		if self.filename:
+			self.loadFile()
 
 	def showPrint(self):
 		dialog = QPrintDialog(self.printer)
@@ -77,9 +81,8 @@ class Form(QDialog):
 			self.scene.clearSelection()
 			stream = QDataStream(fh)
 			stream.setVersion(QDataStream.Qt_4_2)
-			stream.writeInt32(12)
-			for item in self.scene.items():
-				self.writeItemToStream(stream,item)
+			
+
 		except IOError, e:
 			QMessageBox.warning(self,"Save Error", "Failed to save %s"%(self.filename))
 		finally:
@@ -101,11 +104,36 @@ class Form(QDialog):
 	def switchToView(self):
 		self.layout.removeItem(self.textedit)
 		self.layout.addWidget(self.view,0)
+	def loadFile(self):
+		a=QMessageBox()
+		if not serialize.load(self.filename,self.scene):
+			a.setText("Document couldn't be loaded")
+			a.exec_()
+		else:
+			a.setText("Document succesfully loaded")
+			a.exec_()
+	def saveFile(self):
+		a=QMessageBox()
+		if not serialize.save(self.filename,self.scene):
+			a.setText("Document couldn't be saved")
+			a.exec_()
+		else:
+			a.setText("Document succesfully saved")
+			a.exec_()
+
+
+
 app=QApplication(sys.argv)
-
-picture=QPixmap('data/bg.jpg')
-
-form=Form()
+if len(sys.argv) ==1:
+	form=Form()
+elif len(sys.argv)==2:
+	if "--text" in sys.argv:
+		form=Form(True)
+elif len(sys.argv)==3:
+	if "--file" in sys.argv:
+		form=Form(filename=sys.argv[2])
+	elif "--text" in sys.argv:
+		form=Form(True,text=sys.argv[2])
 rect=QApplication.desktop().availableGeometry()
 form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
 form.show()

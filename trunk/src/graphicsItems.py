@@ -3,40 +3,68 @@ from PyQt4.QtGui import *
 import globalVars as globalV
 from textEdit import *
 from edge import *
+import random
 class Node(QGraphicsItem):
 	"""Documentation"""
-	def __init__(self, position, text="Override", parent=None, lev=1, movable=True):
+	def __init__(self, position, text="AAA", parent=None, lev=1, movable=True):
 		super(Node,self).__init__()
+		#main fields
 		self.setPos(position)
 		self.parent=parent #parent of the Node	
-		#if main node, can't move it
+		self.text=text	
+		self.level=lev #hierarchy of items
+		self.id=self.randomHash() #for serialization		
+		self.movable=movable #if movable		
+
+		#if main node, make it not movable 
 		if lev==0:
 			self.setFlags(self.ItemIsSelectable)
 		else:
 			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
-		self.setZValue(1) #being on top
-		print self.scene()	
-		self.text=text
-		self.font=QFont(globalV.fontNode)
-		self.rectOverText=self.findBestSize(self.font,self.text)
-		#added from example
-		self.edgeList=[]
-		self.newPos=QPointF()
-		self.size=self.font.pointSize()
 
-		#hierarchy of items
-		self.level=lev
-		#if item is movable
-		self.movable=movable
+		self.setZValue(1) #being on top
+		self.font=QFont(globalV.fontNode)
+
+		#for node connections
+		self.edgeList=[]
+
+		#for style
+		self.insideColor=globalV.insideColor
+		self.outsideColor=globalV.outsideColor
+		self.fontColor=globalV.fontColor
+
+		#find rectangle over text
+		self.rectOverText=self.findBestSize(self.font,self.text)
+
+	def randomHash(self):
+		#returns random hash of an item
+		return "%016x"%random.getrandbits(128)
+
+	def getFullInfo(self):
+		r={}
+		r['id']=self.id
+		#basic information
+		r['position']=self.scenePos()
+		r['text']=self.text
+		r['level']=self.lev
+		r['movable']=self.movable
+		#style
+		r['fontColor']=self.fontColor
+		r['insideColor']=self.insideColor
+		r['outsideColor']=self.outsideColor
+		#connections
+		r['edges']=[]
+		for edge in self.edgeList:
+			pass
+			#r['edges'].append(edge.
+
 		
-		#for scaling item
-		self.scaleSize=1
-	
 	#item doesn't have initalised scene, adding manually
 	def scene(self):
 		return self.parent.scene()
 
 	def toggleMovable(self):
+		"""Toggle movable object"""
 		self.movable=not self.movable
 	def addEdge(self,edge):
 		self.edgeList.append(edge)
@@ -74,12 +102,14 @@ class Node(QGraphicsItem):
 
 		#draw ellipsis
 		painter.setPen(Qt.SolidLine)
-		painter.setBrush(Qt.blue)
+		painter.setBrush(self.insideColor)
 		r=self.rectOverText
-		painter.drawEllipse(r.x()-8,r.y()-4,r.width()+8,r.height()+4)
+		painter.drawEllipse(r.x(),r.y(),r.width(),r.height())
 
-		painter.setFont(globalV.fontNode)
-		painter.setPen(Qt.lightGray)
+		center_diff=self.rectOverText.center()
+
+		painter.setFont(self.font)
+		painter.setPen(self.fontColor)
 		painter.drawText(r,self.text)
 	def boundingRect(self):
 		r=self.rectOverText
@@ -93,7 +123,6 @@ class Node(QGraphicsItem):
 		return self.boundingRect().center()
 	#very important function - handles item change and so on
 	def itemChange(self,change,value):
-		print "Change"
 		self.parent.itemMoved()
 		return QGraphicsItemGroup.itemChange(self,change,value)
 	def mouseMoveEvent(self,event):
@@ -105,28 +134,61 @@ class Node(QGraphicsItem):
 					edge.adjust()
 					edge.update()
 		return QGraphicsItem.mouseMoveEvent(self,event)
+
+
+
 	def scale(self,plus=True):
+		"""Scale the object"""
 		if plus:
 			self.font.setPointSize(self.font.pointSize()+1)			
 		else:
 			self.font.setPointSize(self.font.pointSize()-1)
 		self.rectOverText=self.findBestSize(self.font,self.text)
-
-
+		#flush
+		self.prepareGeometryChange()
+		self.update()
 
 	def wheelEvent(self,event):
-		print "ev"
 		if event.delta() > 0:
 			self.scale()
 		else:
 			self.scale(False)
 		self.parent.itemMoved()
+
 	def findBestSize(self, font, message):
 		fontMetrics=QFontMetrics(font)
 		#finds best size of text ratio and returns rect of text
-		rect = fontMetrics.boundingRect(message)
+		#width=200
+		#height=200
+		rect=fontMetrics.boundingRect(message)
+		#rect = fontMetrics.boundingRect(0,0,width,height,Qt.AlignCenter or Qt.TextWordWrap,message)
+		#!!!!
+		return QRectF(rect)		
+		#!!!!
+		ratio = float(rect.width())/float(rect.height())
+		print rect 
+		print ratio
+		width=rect.width()
+		while ratio not in range(1,2.0):
+			if ratio < 1.5:
+				width+=1
+				print "plus"
+				height-=1
+			else:
+				width-=1
+				height+=1
+				print "minus"
+			rect = fontMetrics.boundingRect(0,0,width,height, Qt.AlignCenter or Qt.TextWordWrap,message)
+			ratio = float(rect.width())/float(rect.height())
+			print "ratio %s"%(ratio)
+			print "rect %s"%(rect)
+			print "width %s heighy %s"%(width,height)
+			dupa=raw_input("next step\n")
 		return QRectF(rect)
 
+
+	def mouseDoubleClickEvent(self,event):
+		pass
 	
 	def calculateForces(self):
 		if not self.scene() or (self.scene().mouseGrabberItem() == self):
@@ -137,7 +199,7 @@ class Node(QGraphicsItem):
 		for item in self.scene().items():
 			if not isinstance(item,Node):
 				continue
-			distance=(self.size-14)*30
+			distance=(self.font.pointSize()-14)*30
 			node = item
 			line = QLineF(self.mapFromItem(node,0,0),QPointF())
 			dx=line.dx()
