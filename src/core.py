@@ -215,7 +215,7 @@ class GraphicsView(QGraphicsView):
 			text='asdasdasd'
 		if position is None:
 			position=self.getViewRange()
-		newNode=Node(position,text,parent=self,movable=mov,lev=level)
+		newNode=Node(position,text=text,parent=self,movable=mov,lev=level)
 		self.scene().addItem(newNode)
 	def deleteNode(self,node):
 		#check if node exists

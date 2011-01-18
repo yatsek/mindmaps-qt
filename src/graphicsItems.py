@@ -5,59 +5,68 @@ from textEdit import *
 from edge import *
 import random
 class Node(QGraphicsItem):
-	"""Documentation"""
-	def __init__(self, position, text="AAA", parent=None, lev=1, movable=True):
+	def __init__(self, pos=QPointF(), text="AAA", parent=None, lev=1, movable=True,array=None):
 		super(Node,self).__init__()
 		#main fields
-		self.setPos(position)
+		if array: #for serialization
+			self.setFullInfo(array)
+		else:
+			self.setPos(pos)
+			self.text=text	
+			self.level=lev #hierarchy of items
+			self.id=self.randomHash() #for serialization		
+			self.movable=movable #if movable
+			#for style
+			self.insideColor=QColor(globalV.insideColor)
+			self.outsideColor=QColor(globalV.outsideColor)
+			self.fontColor=QColor(globalV.fontColor)
 		self.parent=parent #parent of the Node	
-		self.text=text	
-		self.level=lev #hierarchy of items
-		self.id=self.randomHash() #for serialization		
-		self.movable=movable #if movable		
-
 		#if main node, make it not movable 
 		if lev==0:
 			self.setFlags(self.ItemIsSelectable)
 		else:
 			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
-
 		self.setZValue(1) #being on top
 		self.font=QFont(globalV.fontNode)
 
 		#for node connections
 		self.edgeList=[]
-
-		#for style
-		self.insideColor=globalV.insideColor
-		self.outsideColor=globalV.outsideColor
-		self.fontColor=globalV.fontColor
-
 		#find rectangle over text
 		self.rectOverText=self.findBestSize(self.font,self.text)
 
 	def randomHash(self):
 		#returns random hash of an item
 		return "%016x"%random.getrandbits(128)
-
 	def getFullInfo(self):
+		#return all info requried for putting item on list
 		r={}
 		r['id']=self.id
 		#basic information
-		r['position']=self.scenePos()
+		r['posX']=self.scenePos().x()
+		r['posY']=self.scenePos().y()		
 		r['text']=self.text
-		r['level']=self.lev
+		r['level']=self.level
 		r['movable']=self.movable
 		#style
-		r['fontColor']=self.fontColor
-		r['insideColor']=self.insideColor
-		r['outsideColor']=self.outsideColor
+		r['fontColor']=self.fontColor.name().__str__()
+		r['insideColor']=self.insideColor.name().__str__()
+		r['outsideColor']=self.outsideColor.name().__str__()
 		#connections
 		r['edges']=[]
 		for edge in self.edgeList:
 			pass
-			#r['edges'].append(edge.
-
+		return r
+	def setFullInfo(self,r):
+		self.id=r['id']
+		self.setPos(r['posX'],r['posY'])
+		self.text=r['text']
+		self.lev=r['level']
+		self.movable=r['movable']
+		self.fontColor=QColor(r['fontColor'])
+		self.insideColor=QColor(r['insideColor'])
+		self.outsideColor=QColor(r['outsideColor'])
+		for edgeId in r['edges']:
+			pass
 		
 	#item doesn't have initalised scene, adding manually
 	def scene(self):
