@@ -9,7 +9,7 @@ import globalVars as globalV
 import graphicsItems
 
 class GraphicsView(QGraphicsView):
-	def __init__(self,parent=None):
+	def __init__(self,parent=None,centralNode=True):
 		super(GraphicsView, self).__init__(parent)
 
 		#initial config
@@ -33,7 +33,8 @@ class GraphicsView(QGraphicsView):
 		self.setScene(self.parent.scene)
 
 		self.timer=None 
-		self.addItem("Central idea",QPointF(2500,2500),level=0)
+		if centralNode:
+			self.addItem("Central idea",QPointF(2500,2500),level=0)
 
 	def wheelEvent(self,event):
 		#check if object is selected and pass the event
@@ -179,8 +180,10 @@ class GraphicsView(QGraphicsView):
 #item manipulation
 #connecting/disconnecting items
 #adding and removing items
-	def connectItems(self,item1,item2):
+	def connectItems(self,item1,item2,init=False):
 		#check if nodes are already connected
+		if item1 == None or item2 == None:
+			return
 		if not isinstance(item1,Node) and not isinstance(item1,Node):
 			return
 		if item1.connectedWith(item2):
@@ -189,6 +192,8 @@ class GraphicsView(QGraphicsView):
 		item1.addEdge(new_edge)
 		item2.addEdge(new_edge)
 		self.addEdge(new_edge)
+		if init:
+			return		
 		item2.movable=True
 		#set movable flag to connected item
 		sel_item=self.getSelectedItems()[0]
@@ -196,7 +201,8 @@ class GraphicsView(QGraphicsView):
 			sel_item.level=item2.level + 1
 		else:
 			sel_item.lebel=item1.level + 1
-		sel_item.movable=True
+		item1.movable=True
+		
 	def disconnectItems(self,item1,item2):
 		#check if nodeas are connected
 		edge = item1.connectedWith(item2)
@@ -205,6 +211,7 @@ class GraphicsView(QGraphicsView):
 		self.scene().removeItem(edge)		
 		item1.removeConnection(edge)
 		item2.removeConnection(edge)
+
 	def addEdge(self,node):
 		#check if node exists
 		if node in self.scene().items():
@@ -257,3 +264,9 @@ class GraphicsView(QGraphicsView):
 	def stopTimer(self):
 		self.killTimer(self.timer)
 		self.timer=0
+
+	def getNodeById(self,id):
+		for node in self.scene().items():
+			if isinstance(node,Node):
+				if node.id == id:
+					return node
