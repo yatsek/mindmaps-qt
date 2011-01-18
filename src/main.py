@@ -5,11 +5,14 @@ from random import randrange,choice
 from createFromText import FormFromText
 from editTextDialog import editTextDialog
 import globalVars as globalV
-import graphicsItems
+from graphicsItems import Node
 from core import GraphicsView
 import serialize
 
-class Form(QDialog):
+from gui.mainwindow import Ui_MainWindow
+
+
+class Form(QMainWindow):
 	def __init__(self,textNode=False,filename=None,text=None,centralNode=True):
 		super(Form,self).__init__()
 		#check filename
@@ -22,31 +25,113 @@ class Form(QDialog):
 			self.textForm=FormFromText(self)
 			self.textForm.show()
 		
-		#initalize editTextDialog
-		self.editTextDialog=editTextDialog(parent=self)
-		
+		self.addMenuBar()
+
 		self.scene =  QGraphicsScene(self)
 		self.view=GraphicsView(self,centralNode)
 		self.view.setScene(self.scene)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
-		self.button=QPushButton("Add")
-		self.button2=QPushButton("Save")
-		self.buttonPrint=QPushButton("Print")
-		self.layout=QVBoxLayout()
-		self.layout.addWidget(self.view,0)
-		self.layout.addWidget(self.button,1)
-		self.layout.addWidget(self.button2,2)
-		self.layout.addWidget(self.buttonPrint,3)
-		self.setLayout(self.layout)
-		self.setWindowTitle("Test")
-		self.connect(self.button2, SIGNAL("clicked()"),self.save)
-		self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
+		self.setCentralWidget(self.view)
+		self.setMenuBar(self.menuBar())
+		self.setWindowTitle("MindMapping")
+		#self.connect(self.button2, SIGNAL("clicked()"),self.save)
+		#self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
 
 		self.printer = QPrinter(QPrinter.HighResolution)
 		self.printer.setPageSize(QPrinter.Letter)
 
 		if self.filename:
 			self.loadFile()
+	def addMenuBar(self):
+		#menu bar and signals
+		self.menubar = QMenuBar(self)
+		self.menubar.setObjectName("menubar")
+		self.menuFile = self.menuBar().addMenu("File")
+		self.menuFile.setObjectName("menuFile")
+		self.menuEdit = self.menuBar().addMenu("Edit")
+		self.menuEdit.setObjectName("menuEdit")
+		self.menuHelp = self.menuBar().addMenu("Help") 
+		self.menuHelp.setObjectName("menuHelp")
+		self.actionNew = QAction(self)
+		self.actionNew.setText("New")
+		self.actionOpen =QAction(self)
+		self.actionOpen.setText("Open")
+		self.actionSave = QAction(self)
+		self.actionSave.setText("Save")
+		self.actionSave_as = QAction(self)
+		self.actionSave_as.setText("Save_as")
+		self.actionDelete = QAction(self)
+		self.actionDelete.setText("Delete")
+		self.actionMovable = QAction(self)
+		self.actionMovable.setText("Toggle movable")
+		self.actionAbout = QAction(self)
+		self.actionAbout.setText("About")
+		self.menuFile.addAction(self.actionNew)
+		self.menuFile.addAction(self.actionOpen)
+		self.menuFile.addAction(self.actionSave)
+		self.menuFile.addAction(self.actionSave_as)
+		self.menuEdit.addAction(self.actionDelete)
+		self.menuEdit.addAction(self.actionMovable)
+		self.menuHelp.addAction(self.actionAbout)
+		self.menubar.addAction(self.menuFile.menuAction())
+		self.menubar.addAction(self.menuEdit.menuAction())
+		self.menubar.addAction(self.menuHelp.menuAction())
+
+		self.connect(self.actionNew,SIGNAL("triggered()"),self.new)
+		self.connect(self.actionOpen,SIGNAL("triggered()"),self.load)
+		self.connect(self.actionSave,SIGNAL("triggered()"),self.save)
+		self.connect(self.actionSave_as,SIGNAL("triggered()"),self.save_as)
+		self.connect(self.actionDelete,SIGNAL("triggered()"),self.delete)
+		self.connect(self.actionMovable,SIGNAL("triggered()"),self.movable)
+		self.connect(self.actionAbout,SIGNAL("triggered()"),self.about)
+#menubar methods
+	def save(self):
+		if self.filename == "":
+			path = "."
+			fname = QFileDialog.getSaveFileName(self,"Save mindmap",path,"Mind maps (*.mindqt)")
+			if fname.isEmpty():
+				return
+			self.filename = fname
+			self.saveFile()
+		else:
+			self.saveFile()
+	def new(self):
+		#removes current state and creates new
+		self.scene=QGraphicsScene()
+		self.view = GraphicsView(self,True)
+		self.view.setScene(self.scene)
+		self.setCentralWidget(self.view)
+		self.view.setCacheMode(QGraphicsView.CacheBackground)
+	def save_as(self):
+		self.filename=""
+		self.save()
+	def load(self):
+		a=QMessageBox()
+		path = "."
+		fname = QFileDialog.getOpenFileName(self,"Open mindmap",path,"Mindmaps(*.mindqt)")
+		if fname.isEmpty():
+			return
+		self.filename=fname
+		self.new()
+		if not serialize.load(self.filename,self.view):
+			a.setText("Document couldn't be loaded")
+			a.exec_()
+		else:
+			a.setText("Document succesfully loaded")
+			a.exec_()
+	def delete(self):
+		for node in self.view.getSelectedItems():
+			self.view.deleteNode(node)
+	def movable(self):
+		for node in self.view.getSelectedItems():
+			if isinstance(node,Node):
+				node.toggleMovable()
+	def about(self):
+		a =  QMessageBox()
+		a.setText("Created by Wojciech Jurkowlaniec\nFor bachelor project\n2011")
+		a.exec_()
+
+
 
 	def showPrint(self):
 		dialog = QPrintDialog(self.printer)
@@ -66,16 +151,6 @@ class Form(QDialog):
 		painter = QPainter(self.printer)
 		self.scene.render(painter)
 
-	def save(self):
-		if self.filename == "":
-			path = "."
-			fname = QFileDialog.getSaveFileName(self,"Save mindmap",path,"Mind maps (*.mindqt)")
-			if fname.isEmpty():
-				return
-			self.filename = fname
-			self.saveFile()
-		else:
-			self.saveFile()
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
@@ -91,14 +166,6 @@ class Form(QDialog):
 	def switchToView(self):
 		self.layout.removeItem(self.textedit)
 		self.layout.addWidget(self.view,0)
-	def loadFile(self):
-		a=QMessageBox()
-		if not serialize.load(self.filename,self.view):
-			a.setText("Document couldn't be loaded")
-			a.exec_()
-		else:
-			a.setText("Document succesfully loaded")
-			a.exec_()
 	def saveFile(self):
 		a=QMessageBox()
 		if not serialize.save(self.filename,self.view):
