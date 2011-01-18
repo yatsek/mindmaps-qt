@@ -1,12 +1,29 @@
-from xml.etree import ElementTree as ET
 from graphicsItems import Node
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+import pickle
 
-def save(filename,scene):
-	pass
+def save(filename,view):
+	items=[]
 
-def load(filename,scene):
-	fd="None"
+	for item in view.scene().items():
+		if isinstance(item,Node):
+			items.append(item.getFullInfo())
 	try:
-		tree=ET.parse(filename)
+		fd=open(filename,'wb')
+		pickle.dump(items,fd)
+		fd.close()
+		return True
+	except:
+		return False
+def load(filename,view):
+	fd=open(filename,'r')
+	try:
+		items=pickle.load(fd)
+		for item in items:
+			print item
+			node=Node(parent=view,array=item)
+			view.scene().addItem(node)
+		return True
 	except:
 		return False

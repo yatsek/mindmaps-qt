@@ -73,22 +73,7 @@ class Form(QDialog):
 			if fname.isEmpty():
 				return
 			self.filename = fname
-		fh = None
-		try:
-			fh=QFile(self.filename)
-			if not fh.open(QIODevice.WriteOnly):
-				raise IOError, unicode(fh.errorString())
-			self.scene.clearSelection()
-			stream = QDataStream(fh)
-			stream.setVersion(QDataStream.Qt_4_2)
-			
-
-		except IOError, e:
-			QMessageBox.warning(self,"Save Error", "Failed to save %s"%(self.filename))
-		finally:
-			if fh is not None:
-				fh.close()
-
+			self.saveFile()
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
@@ -106,7 +91,7 @@ class Form(QDialog):
 		self.layout.addWidget(self.view,0)
 	def loadFile(self):
 		a=QMessageBox()
-		if not serialize.load(self.filename,self.scene):
+		if not serialize.load(self.filename,self.view):
 			a.setText("Document couldn't be loaded")
 			a.exec_()
 		else:
@@ -114,7 +99,7 @@ class Form(QDialog):
 			a.exec_()
 	def saveFile(self):
 		a=QMessageBox()
-		if not serialize.save(self.filename,self.scene):
+		if not serialize.save(self.filename,self.view):
 			a.setText("Document couldn't be saved")
 			a.exec_()
 		else:
