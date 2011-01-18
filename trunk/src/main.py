@@ -10,7 +10,7 @@ from core import GraphicsView
 import serialize
 
 class Form(QDialog):
-	def __init__(self,textNode=False,filename=None,text=None):
+	def __init__(self,textNode=False,filename=None,text=None,centralNode=True):
 		super(Form,self).__init__()
 		#check filename
 		if filename: self.filename=filename
@@ -26,7 +26,7 @@ class Form(QDialog):
 		self.editTextDialog=editTextDialog(parent=self)
 		
 		self.scene =  QGraphicsScene(self)
-		self.view=GraphicsView(self)		
+		self.view=GraphicsView(self,centralNode)
 		self.view.setScene(self.scene)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.button=QPushButton("Add")
@@ -74,6 +74,8 @@ class Form(QDialog):
 				return
 			self.filename = fname
 			self.saveFile()
+		else:
+			self.saveFile()
 	def deleteRandom(self):
 		self.scene.clearSelection()
 		if len(stack)>0:
@@ -116,7 +118,7 @@ elif len(sys.argv)==2:
 		form=Form(True)
 elif len(sys.argv)==3:
 	if "--file" in sys.argv:
-		form=Form(filename=sys.argv[2])
+		form=Form(filename=sys.argv[2],centralNode=False)
 	elif "--text" in sys.argv:
 		form=Form(True,text=sys.argv[2])
 rect=QApplication.desktop().availableGeometry()

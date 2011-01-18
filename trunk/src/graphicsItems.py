@@ -8,6 +8,12 @@ class Node(QGraphicsItem):
 	def __init__(self, pos=QPointF(), text="AAA", parent=None, lev=1, movable=True,array=None):
 		super(Node,self).__init__()
 		#main fields
+		self.parent=parent #parent of the Node
+		#for node connections
+		self.edgeList=[]
+
+		self.font=QFont(globalV.fontNode)		
+
 		if array: #for serialization
 			self.setFullInfo(array)
 		else:
@@ -20,17 +26,13 @@ class Node(QGraphicsItem):
 			self.insideColor=QColor(globalV.insideColor)
 			self.outsideColor=QColor(globalV.outsideColor)
 			self.fontColor=QColor(globalV.fontColor)
-		self.parent=parent #parent of the Node	
 		#if main node, make it not movable 
 		if lev==0:
 			self.setFlags(self.ItemIsSelectable)
 		else:
 			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
 		self.setZValue(1) #being on top
-		self.font=QFont(globalV.fontNode)
 
-		#for node connections
-		self.edgeList=[]
 		#find rectangle over text
 		self.rectOverText=self.findBestSize(self.font,self.text)
 
@@ -52,21 +54,24 @@ class Node(QGraphicsItem):
 		r['insideColor']=self.insideColor.name().__str__()
 		r['outsideColor']=self.outsideColor.name().__str__()
 		#connections
-		r['edges']=[]
-		for edge in self.edgeList:
-			pass
+		r['connections']=[]
+		for edge in self.getConnectedNodes():
+			r['connections'].append(edge.id)
 		return r
 	def setFullInfo(self,r):
 		self.id=r['id']
 		self.setPos(r['posX'],r['posY'])
 		self.text=r['text']
-		self.lev=r['level']
+		self.level=r['level']
 		self.movable=r['movable']
 		self.fontColor=QColor(r['fontColor'])
 		self.insideColor=QColor(r['insideColor'])
 		self.outsideColor=QColor(r['outsideColor'])
-		for edgeId in r['edges']:
-			pass
+		self.rectOverText=self.findBestSize(self.font,self.text)		
+		for conn in r['connections']:
+			n=self.parent.getNodeById(conn)
+			self.parent.connectItems(self,n,init=True)
+
 		
 	#item doesn't have initalised scene, adding manually
 	def scene(self):

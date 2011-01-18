@@ -5,7 +5,6 @@ import pickle
 
 def save(filename,view):
 	items=[]
-
 	for item in view.scene().items():
 		if isinstance(item,Node):
 			items.append(item.getFullInfo())
@@ -21,7 +20,6 @@ def load(filename,view):
 	try:
 		items=pickle.load(fd)
 		for item in items:
-			print item
 			node=Node(parent=view,array=item)
 			view.scene().addItem(node)
 		return True
