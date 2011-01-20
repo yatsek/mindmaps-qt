@@ -9,7 +9,6 @@ from graphicsItems import Node
 from core import GraphicsView
 import serialize
 
-from gui.mainwindow import Ui_MainWindow
 
 
 class Form(QMainWindow):
@@ -22,7 +21,7 @@ class Form(QMainWindow):
 		#initalize and show FormFromText if specified in argument
 		if textNode:
 
-			self.textForm=FormFromText(self)
+			self.textForm=FormFromText(self,text)
 			self.textForm.show()
 		
 		self.addMenuBar()
@@ -61,6 +60,8 @@ class Form(QMainWindow):
 		self.actionSave_as = QAction(self)
 		self.actionSave_as.setText("Save_as")
 		self.actionDelete = QAction(self)
+		self.actionPrint = QAction(self)
+		self.actionPrint.setText("Print")
 		self.actionDelete.setText("Delete")
 		self.actionMovable = QAction(self)
 		self.actionMovable.setText("Toggle movable")
@@ -70,6 +71,7 @@ class Form(QMainWindow):
 		self.menuFile.addAction(self.actionOpen)
 		self.menuFile.addAction(self.actionSave)
 		self.menuFile.addAction(self.actionSave_as)
+		self.menuFile.addAction(self.actionPrint)
 		self.menuEdit.addAction(self.actionDelete)
 		self.menuEdit.addAction(self.actionMovable)
 		self.menuHelp.addAction(self.actionAbout)
@@ -84,6 +86,7 @@ class Form(QMainWindow):
 		self.connect(self.actionDelete,SIGNAL("triggered()"),self.delete)
 		self.connect(self.actionMovable,SIGNAL("triggered()"),self.movable)
 		self.connect(self.actionAbout,SIGNAL("triggered()"),self.about)
+		self.connect(self.actionPrint,SIGNAL("triggered()"),self.showPrint)
 #menubar methods
 	def save(self):
 		if self.filename == "":
@@ -136,7 +139,7 @@ class Form(QMainWindow):
 	def showPrint(self):
 		dialog = QPrintDialog(self.printer)
 		preview_dialog = QPrintPreviewDialog(self.printer,self)
-		self.connect(preview_dialog,SIGNAL("paintRequested(QPrinter)"),self.showPrev)
+		self.connect(preview_dialog,SIGNAL("paintRequested(QPrinter*)"),self.showPrev)
 		if preview_dialog.exec_():
 			if dialog.exec_():
 				painter = QPainter(self.printer)
@@ -149,7 +152,7 @@ class Form(QMainWindow):
 	def showPrev(self,printer):
 		print "show prev"
 		painter = QPainter(self.printer)
-		self.scene.render(painter)
+		self.view.render(painter)
 
 	def deleteRandom(self):
 		self.scene.clearSelection()
