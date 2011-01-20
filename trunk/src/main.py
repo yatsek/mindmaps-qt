@@ -22,11 +22,11 @@ class Form(QMainWindow):
 		if textNode:
 			self.textForm=FormFromText(self,text)
 			self.textForm.show()
+			self.connect(self.textForm,SIGNAL("addItem"),self.addItem)
 		self.addMenuBar()
 		self.scene =  QGraphicsScene(self)
 		self.view=GraphicsView(self,centralNode)
 		self.view.setScene(self.scene)
-		self.view.setCacheMode(QGraphicsView.CacheBackground)
 		self.setCentralWidget(self.view)
 		self.setMenuBar(self.menuBar())
 		self.setWindowTitle("MindMapping")
@@ -34,6 +34,9 @@ class Form(QMainWindow):
 		self.printer.setPageSize(QPrinter.Letter)
 		if self.filename:
 			self.load()
+
+	def addItem(self,text):
+		self.view.addItem(text,position=QPointF(2600,2600),mov=False)
 
 	def addMenuBar(self):
 		"""Sets all the menuBar items and connects signals"""
