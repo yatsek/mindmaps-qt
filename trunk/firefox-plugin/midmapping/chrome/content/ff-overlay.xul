@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://mindmapping/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://mindmapping/locale/overlay.dtd">
+<overlay id="mindmapping-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <script src="ff-overlay.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="mindmapping-strings" src="chrome://mindmapping/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <popup id="contentAreaContextMenu">
+    <menuitem id="context-mindmapping" label="&mindmappingContext.label;"
+              accesskey="&mindmappingContext.accesskey;"
+              insertafter="context-stop"
+              oncommand="mindmapping.onMenuItemCommand(event)"/>
+  </popup>
+
+
+
+
+</overlay>
