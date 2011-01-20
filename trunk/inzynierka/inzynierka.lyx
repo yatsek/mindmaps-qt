@@ -544,7 +544,7 @@ Publikowanie map pamięci w na stronach internetowych
 
 \begin_layout Standard
 \align center
-Rys 4.1 Przykładowa mapa pamięci
+Rys 4.1 Wygląd interfejsu użytkownika programu XMind
 \end_layout
 
 \begin_layout Subsubsection
@@ -553,6 +553,13 @@ FreeMind
 
 \begin_layout Subsubsection
 Buzan's iMindMap
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -567,48 +574,100 @@ Lista funkcjonalności
 Wstępna konstrukcja programu
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Specyfikacja wymagań funkcjonalnych
 \end_layout
 
 \begin_layout Subsection
-Tworzenie map pamięci
+Tworzenie mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Tworzenie map pamięci powinno umożliwiać:
+\end_layout
+
+\begin_layout Standard
+Tworzenie węzłów
+\end_layout
+
+\begin_layout Standard
+Łączenie węzłów w sposób dowolny ze sobą
+\end_layout
+
+\begin_layout Standard
+Zmianę koloru i kształtu węzłów
+\end_layout
+
+\begin_layout Standard
+Automatyczne rozmieszczanie pozycji węzłów względem ich połączeń
 \end_layout
 
 \begin_layout Subsection
-Prezentacja map pamięci
+Prezentacja mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Prezentacja mapy pamięci ma być płynne i animowane.
+ Powinna być również możliwość drukowania mapy pamięci oraz zapisywanie
+ jej w formie pliku graficznego.
 \end_layout
 
 \begin_layout Subsection
 Struktura serializacji
 \end_layout
 
+\begin_layout Standard
+Aplikacja ma umożliwiać zapisywanie i odczytywanie mapy pamięci w sposób
+ transparentny dla użytkownika.
+\end_layout
+
 \begin_layout Subsection
 Interakcja z przeglądarką internetową
 \end_layout
 
-\begin_layout Section
-Opis implementacji
+\begin_layout Standard
+W ramach szybkiego tworzenia map pamięci, aplikacja powinna 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Wykorzystane technologie i narzędzia
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Wymagania technologiczne aplikacji
 \end_layout
 
-\begin_layout Subsubsection
-Głównym założeniem aplikacji jest jej działanie na wielu platformach.
+\begin_layout Standard
+Głównym założeniem aplikacji jest możliwość uruchomienia jej na wielu platformac
+h, bez potrzeby dostosowywania jej do każdej z nich.
+ Ma być obsługiwana za pomocą klawiatury, myszki i ekranu dotykowego.
  
 \end_layout
 
-\begin_layout Subsubsection
-Technologie i języki
+\begin_layout Standard
+Program ma działać szybko na komputerach o słabej mocy obliczeniowej, nie
+ zamując dużo miejsca w pamięci operacyjnej.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
+Biblioteki i języki programowania
+\end_layout
+
+\begin_layout Subsubsection
 Python
 \end_layout
 
@@ -626,24 +685,36 @@ Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
 Qt
 \end_layout
 
-\begin_layout Standard
-QT jest zbiorem bibliotek ogólnego zastosowania stworzonych przez firmę
- Trolltech, następnie przejętą przez firmę Nokia.
- 
+\begin_layout Paragraph
+QT jest zbiorem bibliotek stworzonych przez firmę Trolltech, następnie przejętą
+ przez firmę Nokia.
+ Obejmuje kilkaset klas odpowiedzialnych za projektowanie interfejsu użytkownika
+, programowanie wielowątkowe, współdzielenie pamięci, komunikację z bazami
+ danych, grafikę OpenGL, dostęp do multimediów, obsługę XML, komunikację
+ międzyprocesową, sieciową, grafikę wektorową i innych.
+ Programy które używają tych bibliotek można uruchomić na następujących
+ platformach: Linux, Windows, Mac OS X, Embedded Linux, Windows CE, Symbian
+ i Maemo.
+ Są też dostępne porty na inne platformy, jak iPhone, Android, webOS, openSolari
+s czy OS/2.
+ Bibliotek Qt można używać za pomocą języka C++, jednak dzięki zastosowaniu
+ MOC (ang.
+ Meta Object Compiler) jest możliwość pisania swoich aplikacji w innych
+ językach programowania, takich jak Java, C#, Lisp, Pascal, Python czhy
+ Ruby.
 \end_layout
 
 \begin_layout Subsubsection
 PyQt
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 PyQt jest nakładką stworzoną by używać bibliotek QT wraz z językiem programowani
 a Python.
  Została stworzona poprzez narzędzie SIP, które automatycznie generuje moduły
  Pythona z plików nagłówkowych bibliotek C++.
  To narzędzie zostało stworzone na potrzeby stworzenia tej nakładki, przez
  firmę Riverbank Computing.
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -675,15 +746,14 @@ XPCOM is a cross platform component object model, similar to Microsoft COM.
  Gecko or Necko) or by an application or even by an extension.
 \end_layout
 
-\begin_layout Subsubsection
-Biblioteki programistyczne
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsubsection
-Narzędzia
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Section
 Architektura programu
 \end_layout
 
@@ -699,16 +769,38 @@ Struktura kodu
 Listing kodu
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Interfejs użytkownika
 \end_layout
 
 \begin_layout Standard
-Tworzenie map pamięci
+Tworzenie map pamięci odbywa się za pomocą myszk.
+ Klikając dwukrotnie na 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Uwagi końcowe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
