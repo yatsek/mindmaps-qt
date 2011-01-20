@@ -1,8 +1,0 @@
-{
-	"name": "MindMapping extension",
-	"version": "1.0",
-	"description": "Mindmapping copy text",
-	"permissions": ["contextMenus"],
-	"background_page":"background.html"
-
-} 
