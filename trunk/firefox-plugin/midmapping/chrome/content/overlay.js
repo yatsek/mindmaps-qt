@@ -11,18 +11,17 @@ var mindmapping = {
 		var programPath = prefManager.getCharPref("extensions.mindmapping.programPath");
 		//get selected text
 		var selectedText=content.getSelection().toString();
-		alert(selectedText);
 		if (selectedText.length > 5)
 		{
+			alert(selectedText);
 			var file=Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
-			file.initWithPath(programPath);
+			file.initWithPath('/usr/bin/python');
 			var process=Components.classes["@mozilla.org/process/util;1"].createInstance(Components.interfaces.nsIProcess);
-			var args=["-info"];
+			process.init(file);
+			var argument='\"' + selectedText + '\"';
+			var args= [programPath, '--text', argument];
+			process.run(false,args,3);
 
-			var argument="\"" + selected_text + "\"";			
-			var args= ["--text", argument];
-			process.run(false,args,2);
-			alert("DUPA");
 
 		}
 
