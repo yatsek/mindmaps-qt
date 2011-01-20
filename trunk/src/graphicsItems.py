@@ -4,6 +4,7 @@ import globalVars as globalV
 from edge import *
 from editNode import editNode
 import random
+from math import sqrt
 class Node(QGraphicsItem):
 	def __init__(self, pos=QPointF(), text="AAA", parent=None, lev=1, movable=True,array=None):
 		super(Node,self).__init__()
@@ -104,8 +105,8 @@ class Node(QGraphicsItem):
 	def shape(self):
 		#define shape of item
 		path=QPainterPath()
-		r=self.rectOverText		
-		path.addEllipse(r.x(),r.y(),r.width(),r.height())
+		
+		path.addEllipse(self.boundingRect())
 		return path
 
 	def paint(self,painter,option=None,widget=None):
@@ -115,19 +116,20 @@ class Node(QGraphicsItem):
 			painter.drawEllipse(self.boundingRect())
 
 		#draw ellipsis
+		adjust=8.0
 		painter.setPen(Qt.SolidLine)
 		painter.setBrush(self.insideColor)
 		r=self.rectOverText
-		painter.drawEllipse(r.x(),r.y(),r.width(),r.height())
+		painter.drawEllipse(r)
 
 		center_diff=self.rectOverText.center()
-
+		#draw text
 		painter.setFont(self.font)
 		painter.setPen(self.fontColor)
-		painter.drawText(r,self.text)
+		painter.drawText(9,26,self.text)
 	def boundingRect(self):
 		r=self.rectOverText
-		adjust=8.0
+		adjust=12.0
 		return QRectF(r.x() - adjust, r.y() - adjust, \
 				    r.width() + adjust, r.height() + adjust)
 	
@@ -138,7 +140,7 @@ class Node(QGraphicsItem):
 	#very important function - handles item change and so on
 	def itemChange(self,change,value):
 		self.parent.itemMoved()
-		return QGraphicsItemGroup.itemChange(self,change,value)
+		return QGraphicsItem.itemChange(self,change,value)
 	def mouseMoveEvent(self,event):
 		#when moving item, update all edges of all nodes
 		nodes=self.scene().selectedItems()
@@ -170,36 +172,17 @@ class Node(QGraphicsItem):
 		self.parent.itemMoved()
 
 	def findBestSize(self, font, message):
+		offset=25
 		fontMetrics=QFontMetrics(font)
-		#finds best size of text ratio and returns rect of text
-		#width=200
-		#height=200
 		rect=fontMetrics.boundingRect(message)
-		#rect = fontMetrics.boundingRect(0,0,width,height,Qt.AlignCenter or Qt.TextWordWrap,message)
-		#!!!!
-		return QRectF(rect)		
-		#!!!!
-		ratio = float(rect.width())/float(rect.height())
-		print rect 
-		print ratio
-		width=rect.width()
-		while ratio not in range(1,2.0):
-			if ratio < 1.5:
-				width+=1
-				print "plus"
-				height-=1
-			else:
-				width-=1
-				height+=1
-				print "minus"
-			rect = fontMetrics.boundingRect(0,0,width,height, Qt.AlignCenter or Qt.TextWordWrap,message)
-			ratio = float(rect.width())/float(rect.height())
-			print "ratio %s"%(ratio)
-			print "rect %s"%(rect)
-			print "width %s heighy %s"%(width,height)
-			dupa=raw_input("next step\n")
-		return QRectF(rect)
-
+		w=rect.width()
+		h=rect.height()
+		a=sqrt( (w*w+h*h)/(1+(h/w)*(h/w))  )
+		b=a*h/w
+		test=QRectF()
+		test.setHeight(b+offset-8)
+		test.setWidth(a+offset)
+		return test 
 
 	def mouseDoubleClickEvent(self,event):
 		window=editNode(self.parent.parent,self,self.text,self.fontColor,self.insideColor)

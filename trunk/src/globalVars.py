@@ -17,7 +17,7 @@ fontNode=QFont("Times",18) #for displaying and editing
 #default style
 insideColor=Qt.green
 outsideColor=Qt.black
-fontColor=Qt.yellow
+fontColor=Qt.black
 
 #animation
 distance=700.0
