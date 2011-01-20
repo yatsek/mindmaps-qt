@@ -1,0 +1,8 @@
+<!ENTITY mindmapping.label "Your localized menuitem">
+<!ENTITY mindmappingContext.label "Add to MindMap">
+<!ENTITY mindmappingContext.accesskey "Y">
+<!ENTITY mindmappingToolbarButton.label "Your Toolbar Button">
+<!ENTITY mindmappingToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY mindmappingSidebar.label "Your Sidebar">
+<!ENTITY mindmappingToolbar.name  "example">
+<!ENTITY mindmappingToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &mindmappingToolbar.name;">
