@@ -13,19 +13,16 @@ import serialize
 
 class Form(QMainWindow):
 	def __init__(self,textNode=False,filename=None,text=None,centralNode=True):
+		"""Constructor, sets all the initial data"""
 		super(Form,self).__init__()
 		#check filename
 		if filename: self.filename=filename
 		else: self.filename=""
-
 		#initalize and show FormFromText if specified in argument
 		if textNode:
-
 			self.textForm=FormFromText(self,text)
 			self.textForm.show()
-		
 		self.addMenuBar()
-
 		self.scene =  QGraphicsScene(self)
 		self.view=GraphicsView(self,centralNode)
 		self.view.setScene(self.scene)
@@ -33,24 +30,23 @@ class Form(QMainWindow):
 		self.setCentralWidget(self.view)
 		self.setMenuBar(self.menuBar())
 		self.setWindowTitle("MindMapping")
-		#self.connect(self.button2, SIGNAL("clicked()"),self.save)
-		#self.connect(self.buttonPrint, SIGNAL("clicked()"), self.showPrint)
-
 		self.printer = QPrinter(QPrinter.HighResolution)
 		self.printer.setPageSize(QPrinter.Letter)
-
 		if self.filename:
-			self.loadFile()
+			self.load()
+
 	def addMenuBar(self):
-		#menu bar and signals
+		"""Sets all the menuBar items and connects signals"""
 		self.menubar = QMenuBar(self)
 		self.menubar.setObjectName("menubar")
+		#sets menus
 		self.menuFile = self.menuBar().addMenu("File")
 		self.menuFile.setObjectName("menuFile")
 		self.menuEdit = self.menuBar().addMenu("Edit")
 		self.menuEdit.setObjectName("menuEdit")
 		self.menuHelp = self.menuBar().addMenu("Help") 
 		self.menuHelp.setObjectName("menuHelp")
+		#defines actions
 		self.actionNew = QAction(self)
 		self.actionNew.setText("New")
 		self.actionOpen =QAction(self)
@@ -67,6 +63,7 @@ class Form(QMainWindow):
 		self.actionMovable.setText("Toggle movable")
 		self.actionAbout = QAction(self)
 		self.actionAbout.setText("About")
+		#attaches actions to menu
 		self.menuFile.addAction(self.actionNew)
 		self.menuFile.addAction(self.actionOpen)
 		self.menuFile.addAction(self.actionSave)
@@ -78,7 +75,7 @@ class Form(QMainWindow):
 		self.menubar.addAction(self.menuFile.menuAction())
 		self.menubar.addAction(self.menuEdit.menuAction())
 		self.menubar.addAction(self.menuHelp.menuAction())
-
+		#connects signals
 		self.connect(self.actionNew,SIGNAL("triggered()"),self.new)
 		self.connect(self.actionOpen,SIGNAL("triggered()"),self.load)
 		self.connect(self.actionSave,SIGNAL("triggered()"),self.save)
@@ -87,28 +84,40 @@ class Form(QMainWindow):
 		self.connect(self.actionMovable,SIGNAL("triggered()"),self.movable)
 		self.connect(self.actionAbout,SIGNAL("triggered()"),self.about)
 		self.connect(self.actionPrint,SIGNAL("triggered()"),self.showPrint)
-#menubar methods
+
 	def save(self):
+		"""Method which checks if filename is defined.
+		   If not, asks where to save and saves"""
+		a=QMessageBox()
 		if self.filename == "":
 			path = "."
 			fname = QFileDialog.getSaveFileName(self,"Save mindmap",path,"Mind maps (*.mindqt)")
 			if fname.isEmpty():
 				return
 			self.filename = fname
-			self.saveFile()
+		if not serialize.save(self.filename,self.view):
+			a.setText("Document couldn't be saved")
+			a.exec_()
 		else:
-			self.saveFile()
+			a.setText("Document succesfully saved")
+			a.exec_()
+
 	def new(self):
+		"""Clears everything"""
 		#removes current state and creates new
 		self.scene=QGraphicsScene()
 		self.view = GraphicsView(self,True)
 		self.view.setScene(self.scene)
 		self.setCentralWidget(self.view)
 		self.view.setCacheMode(QGraphicsView.CacheBackground)
+
 	def save_as(self):
+		"""Clears the filename and fires save()"""
 		self.filename=""
 		self.save()
+
 	def load(self):
+		"""Loads the mindmap. if no filename defined, asks for file"""
 		a=QMessageBox()
 		path = "."
 		fname = QFileDialog.getOpenFileName(self,"Open mindmap",path,"Mindmaps(*.mindqt)")
@@ -122,21 +131,26 @@ class Form(QMainWindow):
 		else:
 			a.setText("Document succesfully loaded")
 			a.exec_()
+
 	def delete(self):
+		"""Delete current selected items. Fired by menuItem"""
 		for node in self.view.getSelectedItems():
 			self.view.deleteNode(node)
+
 	def movable(self):
+		"""Changes the selected item to movable. Fired by menuItem"""
 		for node in self.view.getSelectedItems():
 			if isinstance(node,Node):
 				node.toggleMovable()
+
 	def about(self):
+		"""Shows about window"""
 		a =  QMessageBox()
 		a.setText("Created by Wojciech Jurkowlaniec\nFor bachelor project\n2011")
 		a.exec_()
 
-
-
 	def showPrint(self):
+		"""Shows print preview and prints if accepted"""
 		dialog = QPrintDialog(self.printer)
 		preview_dialog = QPrintPreviewDialog(self.printer,self)
 		self.connect(preview_dialog,SIGNAL("paintRequested(QPrinter*)"),self.showPrev)
@@ -146,44 +160,17 @@ class Form(QMainWindow):
 				painter.setRenderHint(QPainter.Antialiasing)
 				painter.setRenderHint(QPainter.TextAntialiasing)
 				self.scene.clearSelection()
-				self.removeBorders()
 				self.scene.render(painter)
-				self.addBorders()
+
 	def showPrev(self,printer):
+		"""Trigger function on print acceptance"""
 		print "show prev"
 		painter = QPainter(self.printer)
 		self.view.render(painter)
 
-	def deleteRandom(self):
-		self.scene.clearSelection()
-		if len(stack)>0:
-			try:
-				item=choice(self.scene.items())
-				self.scene.removeItem(item)
-			except:
-				pass
-
-	def switchToTextEdit(self):
-		self.layout.removeItem(self.view)
-		self.layout.addWidget(self.textedit,0)
-	def switchToView(self):
-		self.layout.removeItem(self.textedit)
-		self.layout.addWidget(self.view,0)
-	def saveFile(self):
-		a=QMessageBox()
-		if not serialize.save(self.filename,self.view):
-			a.setText("Document couldn't be saved")
-			a.exec_()
-		else:
-			a.setText("Document succesfully saved")
-			a.exec_()
-
-
-
 app=QApplication(sys.argv)
-if len(sys.argv) ==1:
-	form=Form()
-elif len(sys.argv)==2:
+form=Form()
+if len(sys.argv)==2:
 	if "--text" in sys.argv:
 		form=Form(True)
 elif len(sys.argv)==3:
@@ -194,6 +181,4 @@ elif len(sys.argv)==3:
 rect=QApplication.desktop().availableGeometry()
 form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
 form.show()
-
 app.exec_()
-
