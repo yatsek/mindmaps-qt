@@ -477,6 +477,78 @@ FreeMind
 Buzan's iMindMap
 \end_layout
 
+\begin_layout Section
+Idea konstrukcji programu
+\end_layout
+
+\begin_layout Standard
+Lista funkcjonalności
+\end_layout
+
+\begin_layout Standard
+Wstępna konstrukcja programu
+\end_layout
+
+\begin_layout Section
+Wykorzystane technologie i narzędzia
+\end_layout
+
+\begin_layout Standard
+Wymagania technologiczne aplikacji
+\end_layout
+
+\begin_layout Standard
+Technologie i języki
+\end_layout
+
+\begin_layout Standard
+Biblioteki programistyczne
+\end_layout
+
+\begin_layout Standard
+Narzędzia
+\end_layout
+
+\begin_layout Section
+Specyfikacja wymagań funkcjonalnych
+\end_layout
+
+\begin_layout Standard
+Tworzenie map pamięci
+\end_layout
+
+\begin_layout Standard
+Prezentacja map pamięci
+\end_layout
+
+\begin_layout Standard
+Struktura serializacji
+\end_layout
+
+\begin_layout Standard
+Interakcja z przeglądarką internetową
+\end_layout
+
+\begin_layout Standard
+Architektura programu
+\end_layout
+
+\begin_layout Standard
+Perspektwa
+\end_layout
+
+\begin_layout Section
+Opis implementacji
+\end_layout
+
+\begin_layout Section
+Interfejs użytkownika
+\end_layout
+
+\begin_layout Section
+Uwagi końcowe
+\end_layout
+
 \begin_layout Section*
 Bibliografia
 \end_layout
