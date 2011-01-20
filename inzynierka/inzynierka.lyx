@@ -334,7 +334,7 @@ cią i zbiorami.
 \begin_inset Graphics
 	filename img/3.2.png
 	lyxscale 30
-	width 50page%
+	width 100text%
 	rotateOrigin center
 	groupId 1
 
@@ -389,7 +389,7 @@ Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
 \begin_inset Graphics
 	filename img/3.3.png
 	lyxscale 30
-	width 50page%
+	width 100text%
 	rotateOrigin center
 	groupId 1
 
@@ -465,8 +465,86 @@ Przegląd aplikacji do Mind Mappingu
 Uwagi wstępne
 \end_layout
 
+\begin_layout Standard
+Na rynku komputerowym istnieje parę programów do tworzenia map pamięci.
+ Najczęściej są one prostym edytorem graficznym grafiki wektorowej który
+ pozwala na łączenie ze sobą informacji w sposób zgodny z zasadami tworzenia
+ map pamięci.
+ Podsawowe funkcje obejmują:
+\end_layout
+
+\begin_layout Itemize
+kolorowanie węzłów
+\end_layout
+
+\begin_layout Itemize
+dodawanie ikonek do węzłów
+\end_layout
+
+\begin_layout Itemize
+tworzenie węzłów według struktury drzewa
+\end_layout
+
+\begin_layout Itemize
+drukowanie
+\end_layout
+
 \begin_layout Subsubsection
 Xmind
+\end_layout
+
+\begin_layout Standard
+Xmind jest programem Open Source stworzonym za pomocą języka Java oraz Eclipse
+ Rich Client Platform i Eclipse Graphical Editing Framework.
+ Użycie bibliotek Eclipse pozwoliło na stworzenie interfejsu który jest
+ przystępny użytkownikom.
+ Aplikacja jest rozwijana od 2007 roku, a od końca 2008 roku jest dostępna
+ na licencji LGPL.
+ Jego funkcjonalność pozwala na: 
+\end_layout
+
+\begin_layout Itemize
+tworzenie map o różnej strukturze (diagramy drzewa, Ishkawy , wykresy organizacy
+jne czy arkusze kalkulacyjne) 
+\end_layout
+
+\begin_layout Itemize
+tworzenie węzłów o dowolnym poziomie zagnieżdżenia 
+\end_layout
+
+\begin_layout Itemize
+użycie zdefiniowanych stylów kolorowania węzłów mapy pamięci 
+\end_layout
+
+\begin_layout Itemize
+dodawanie notatek w dowolnym miejscu struktury mapy 
+\end_layout
+
+\begin_layout Itemize
+Zagnieżdżanie map wewnątrz innych (w ramach jednego dokumentu)
+\end_layout
+
+\begin_layout Itemize
+Publikowanie map pamięci w na stronach internetowych
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/xmind.png
+	lyxscale 30
+	width 100text%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 4.1 Przykładowa mapa pamięci
 \end_layout
 
 \begin_layout Subsubsection
@@ -481,55 +559,131 @@ Buzan's iMindMap
 Idea konstrukcji programu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Lista funkcjonalności
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Wstępna konstrukcja programu
-\end_layout
-
-\begin_layout Section
-Wykorzystane technologie i narzędzia
-\end_layout
-
-\begin_layout Standard
-Wymagania technologiczne aplikacji
-\end_layout
-
-\begin_layout Standard
-Technologie i języki
-\end_layout
-
-\begin_layout Standard
-Biblioteki programistyczne
-\end_layout
-
-\begin_layout Standard
-Narzędzia
 \end_layout
 
 \begin_layout Section
 Specyfikacja wymagań funkcjonalnych
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Tworzenie map pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Prezentacja map pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Struktura serializacji
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Interakcja z przeglądarką internetową
 \end_layout
 
+\begin_layout Section
+Opis implementacji
+\end_layout
+
+\begin_layout Subsection
+Wykorzystane technologie i narzędzia
+\end_layout
+
+\begin_layout Subsubsection
+Wymagania technologiczne aplikacji
+\end_layout
+
+\begin_layout Subsubsection
+Głównym założeniem aplikacji jest jej działanie na wielu platformach.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Technologie i języki
+\end_layout
+
+\begin_layout Paragraph
+Python
+\end_layout
+
+\begin_layout Paragraph
+Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
+ programowania.
+ Jego składnia jest bardzo charakterystyczna ze względu na umieszczanie
+ wcięć w kodzie zamiast nawiasów, dzięki czemu kod staje się bardzo czytelny.
+ Istnieją setki gotowych modułów do pythona która umożliwiają na użycie
+ bibilotek napisanych w innych językach programowania.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Qt
+\end_layout
+
 \begin_layout Standard
+QT jest zbiorem bibliotek ogólnego zastosowania stworzonych przez firmę
+ Trolltech, następnie przejętą przez firmę Nokia.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+PyQt
+\end_layout
+
+\begin_layout Standard
+PyQt jest nakładką stworzoną by używać bibliotek QT wraz z językiem programowani
+a Python.
+ Została stworzona poprzez narzędzie SIP, które automatycznie generuje moduły
+ Pythona z plików nagłówkowych bibliotek C++.
+ To narzędzie zostało stworzone na potrzeby stworzenia tej nakładki, przez
+ firmę Riverbank Computing.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Javascript, XUL i XPCOM
+\end_layout
+
+\begin_layout Standard
+Javascript -> XPCom
+\end_layout
+
+\begin_layout Standard
+XUL (ang.
+ XML-based User-interface Language) jest językiem XML przeznaczonym do definiown
+ia interfejsów użytkownika.
+ Jest używany głównie przez produkty fundacji Mozilli typu Firefox, Flock
+ czy Thunderbird.
+\end_layout
+
+\begin_layout Standard
+XPCOM is a cross platform component object model, similar to Microsoft COM.
+ It has multiple language bindings, letting the XPCOM components be used
+ and implemented in JavaScript, Java, and Python in addition to C++.
+ Interfaces in XPCOM are defined in a dialect of IDL called XPIDL.
+ XPCOM itself provides a set of core components and classes, e.g.
+ file and memory management, threads, basic data structures (strings, arrays,
+ variants), etc.
+ The majority of XPCOM components are not part of this core set and is provided
+ by other parts of the platform (e.g.
+ Gecko or Necko) or by an application or even by an extension.
+\end_layout
+
+\begin_layout Subsubsection
+Biblioteki programistyczne
+\end_layout
+
+\begin_layout Subsubsection
+Narzędzia
+\end_layout
+
+\begin_layout Subsection
 Architektura programu
 \end_layout
 
@@ -537,12 +691,20 @@ Architektura programu
 Perspektwa
 \end_layout
 
-\begin_layout Section
-Opis implementacji
+\begin_layout Subsection
+Struktura kodu
+\end_layout
+
+\begin_layout Subsection
+Listing kodu
 \end_layout
 
 \begin_layout Section
 Interfejs użytkownika
+\end_layout
+
+\begin_layout Standard
+Tworzenie map pamięci
 \end_layout
 
 \begin_layout Section
