@@ -20,7 +20,7 @@ outsideColor=Qt.black
 fontColor=Qt.black
 
 #animation
-distance=700.0
+distance=800.0
 radius=4
 timerTime=1000/25.0
 factor=8

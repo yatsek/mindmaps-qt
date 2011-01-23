@@ -3,7 +3,6 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import  *
 from random import randrange,choice
 from createFromText import FormFromText
-from editTextDialog import editTextDialog
 import globalVars as globalV
 from graphicsItems import Node
 from core import GraphicsView
@@ -22,6 +21,7 @@ class Form(QMainWindow):
 		if textNode:
 			self.textForm=FormFromText(self,text)
 			self.textForm.show()
+			#connect signal of button acceptance
 			self.connect(self.textForm,SIGNAL("addItem"),self.addItem)
 		self.addMenuBar()
 		self.scene =  QGraphicsScene(self)
@@ -36,6 +36,8 @@ class Form(QMainWindow):
 			self.load()
 
 	def addItem(self,text):
+		"""Signal handler for adding new elements
+		   based on FormFromText"""
 		self.view.addItem(text,position=QPointF(2600,2600),mov=False)
 
 	def addMenuBar(self):

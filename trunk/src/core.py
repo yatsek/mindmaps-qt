@@ -2,27 +2,29 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import  *
 from random import randrange,choice
-from graphicsItems import Node, Edge
+from graphicsItems import Node
+from graphicsItems import Edge
 from createFromText import FormFromText
-from editTextDialog import editTextDialog
 import globalVars as globalV
 import graphicsItems
 
-class GraphicsView(QGraphicsView):
-	def __init__(self,parent=None,centralNode=True):
-		super(GraphicsView, self).__init__(parent)
 
+class GraphicsView(QGraphicsView):
+	"""Overload of QGraphicsView to handle objects maangement
+	   and custom mouse and keyboard events"""
+
+	def __init__(self,parent=None,centralNode=True):
+		"""Constructor which works in two modes:
+		   1. creates view and central node (new document)
+		   2. creates view without any elements (deserializing)"""
+		super(GraphicsView, self).__init__(parent)
 		#initial config
 		self.setDragMode(QGraphicsView.RubberBandDrag)
 		self.setRenderHint(QPainter.Antialiasing)
 		self.ViewportAnchor= QGraphicsView.AnchorUnderMouse
-#		self.setResizeAnchor(self.AnchorViewCenter)
-
-
 		# variables for panning  
 		self.CurrentCenterPoint=None
 		self.LastPanPoint=None
-
 		#setting current center (for panning and zooming)
 		self.setSceneRect(0,0,5000,5000)
 		self.scale(1,1)
@@ -31,20 +33,23 @@ class GraphicsView(QGraphicsView):
 		#timer for animations
 		self.parent=parent
 		self.setScene(self.parent.scene)
-
 		self.timer=None 
 		if centralNode:
 			self.addItem("Central idea",QPointF(2500,2500),level=0)
 
 	def wheelEvent(self,event):
-		#check if object is selected and pass the event
+		"""Handles mouse wheel events on the view
+		   if nodes are selected, resizes them
+		   otherwise resizes the view based on the 
+		   mouse position"""
+		#check position
 		if self.getSelectedItems():
 			for node in self.getSelectedItems():
 				if isinstance(node,Node):
+					#pass the wheel event to items
 					node.wheelEvent(event)
 			return
-
-		"""For resizing  the view"""
+		#resizes the view
 		pointBeforeScale = self.mapToScene(event.pos())
 		screenCenter = self.getCenter()
 		factor =globalV.wheelFactor **(-event.delta()/240.0)
@@ -53,7 +58,11 @@ class GraphicsView(QGraphicsView):
 		offset = pointBeforeScale - pointAfterScale
 		newCenter = screenCenter + offset
 		self.setCenter(newCenter)
+
 	def mouseDoubleClickEvent(self,event):
+		"""Handles mouse double-click events on the view
+		   if no element is selected, adds new,
+		   otherwise passes the event to the selected item"""
 		#adds item in the position of a mouse
 		pos_scene=self.mapToScene(event.pos())
 		item=self.scene().itemAt(pos_scene)
@@ -64,8 +73,9 @@ class GraphicsView(QGraphicsView):
 			self.addItem(text="New Item",position=pos_scene,mov=False)
 		return QGraphicsView.mouseDoubleClickEvent(self,event)
 	
-	#sets the current centerpoint
 	def setCenter(self,centerPoint):
+		"""sets the center point of the view
+		used for resizing and panning"""
 		#get the rectangle of the visible area in scene coords
 		visibleArea = self.mapToScene(self.rect()).boundingRect()
 		#get the scene area
@@ -78,25 +88,29 @@ class GraphicsView(QGraphicsView):
 		if bounds.contains(centerPoint):
 			#we are within the bounds
 			self.CurrentCenterPoint = centerPoint
+			self.centerOn(self.CurrentCenterPoint)
+			return
+		#else
+		#we need to clamp or use the center of the screen
+		if visibleArea.contains(sceneBounds):
+			#use the center of scene ie. we can see the whole scene
+			self.CurrentCenterPoint = sceneBounds.center()
 		else:
-			#we need to clamp or use the center of the screen
-			if visibleArea.contains(sceneBounds):
-				#use the center of scene ie. we can see the whole scene
-				self.CurrentCenterPoint = sceneBounds.center()
-			else:
-				self.CurrentCenterPoint = centerPoint
-				#we need to clamp the center. The centerPoint is too large
-				if centerPoint.x() > bounds.x() + bounds.width():
-					self.CurrentCenterPoint.setX(bounds.x() + bounds.width())
-				elif centerPoint.x() < bounds.x():
-					self.CurrentCenterPoint.setX(bounds.x())
-				
-				if centerPoint.y() > bounds.y() + bounds.height():
-					self.CurrentCenterPoint.setY(bounds.y() + bounds.height())
-				elif centerPoint.y() < bounds.y():
-					self.CurrentCenterPoint.setY(bounds.y())
+			self.CurrentCenterPoint = centerPoint
+			#we need to clamp the center. The centerPoint is too large
+			if centerPoint.x() > bounds.x() + bounds.width():
+				self.CurrentCenterPoint.setX(bounds.x() + bounds.width())
+			elif centerPoint.x() < bounds.x():
+				self.CurrentCenterPoint.setX(bounds.x())
+			if centerPoint.y() > bounds.y() + bounds.height():
+				self.CurrentCenterPoint.setY(bounds.y() + bounds.height())
+			elif centerPoint.y() < bounds.y():
+				self.CurrentCenterPoint.setY(bounds.y())
 		self.centerOn(self.CurrentCenterPoint)
+
 	def mousePressEvent(self,event):
+		"""Handles mouse press events
+		   changes mouse cursor when selecting items"""
 		if Qt.LeftButton == event.buttons():
 			#change cursor when moving item
 			if self.getSelectedItems():
@@ -113,7 +127,9 @@ class GraphicsView(QGraphicsView):
 
 			self.LastPanPoint = event.pos()
 			self.setCursor(Qt.ClosedHandCursor)
+
 	def mouseReleaseEvent(self,event):
+		"""Handles mouse release events"""
 		if Qt.LeftButton == event.buttons():
 			#unfreeze timer
 			self.timer=self.startTimer(globalV.timerTime)			
@@ -127,6 +143,10 @@ class GraphicsView(QGraphicsView):
 		return QGraphicsView.mouseReleaseEvent(self,event)
 
 	def mouseMoveEvent(self,event):
+		"""Handles mouse move events
+		   if dragging object, checks for collisions
+		   and connects the items (disconnects with CTRL
+		   if right/mid button, panning the view"""
 		self.update()
 		if Qt.LeftButton == event.buttons():
 			#check collision detection and connect items
@@ -151,19 +171,20 @@ class GraphicsView(QGraphicsView):
 				#update the center
 				self.setCenter(self.getCenter() + delta)
 		return QGraphicsView.mouseMoveEvent(self,event) 
-	def resizeEvent(self,event):
-		visibleArea = mapToScene(rect()).boundingRect();
-		self.setCenter(visibleArea.center())
+
 	def getCenter(self):
+		"""Wrapper for getting center of a view"""
 		return self.CurrentCenterPoint
-		self.CurrentCenterPoint
 	def resizeEvent(self,event):
+		"""Handles resize of a view, by setting center"""
 		#sets the center of the view on resizing event
 		visibleArea=self.mapToScene(self.rect()).boundingRect()
 		self.setCenter(visibleArea.center())
 		return QGraphicsView.resizeEvent(self,event)
 
 	def keyPressEvent(self,event):
+		"""Handle key press events
+		   deletes nodes which are selected while DEL"""
 		#for deleting item
 		if event.key() == Qt.Key_Delete:
 			selectedItems=self.getSelectedItems()
@@ -171,7 +192,10 @@ class GraphicsView(QGraphicsView):
 				for item in selectedItems:
 					self.deleteNode(item)
 		return QGraphicsView.keyPressEvent(self,event)
+
 	def getSelectedItems(self):
+		"""function for getting selected items on the view
+		   returns list of elements or False"""
 		try:
 			return self.scene().selectedItems()
 		except:
@@ -181,6 +205,10 @@ class GraphicsView(QGraphicsView):
 #connecting/disconnecting items
 #adding and removing items
 	def connectItems(self,item1,item2,init=False):
+		"""Method for connecting nodes
+		   checks if nodes are already connected
+		   and creates one edge for two nodes, connects them
+		   and addes to scene"""
 		#check if nodes are already connected
 		if item1 == None or item2 == None:
 			return
@@ -193,7 +221,7 @@ class GraphicsView(QGraphicsView):
 		item2.addEdge(new_edge)
 		self.addEdge(new_edge)
 		if init:
-			return		
+			return
 		item2.movable=True
 		#set movable flag to connected item
 		sel_item=self.getSelectedItems()[0]
@@ -202,29 +230,39 @@ class GraphicsView(QGraphicsView):
 		else:
 			sel_item.lebel=item1.level + 1
 		item1.movable=True
-		
+
 	def disconnectItems(self,item1,item2):
+		"""Method for disconnecting nodes
+		   checks if are connecten
+		   then removews edge from a scene
+		   and removes connection"""
 		#check if nodeas are connected
 		edge = item1.connectedWith(item2)
 		if not edge:
 			return
-		self.scene().removeItem(edge)		
+		self.scene().removeItem(edge)
 		item1.removeConnection(edge)
 		item2.removeConnection(edge)
 
 	def addEdge(self,node):
+		"""Adding edge to a scene"""
 		#check if node exists
 		if node in self.scene().items():
 			return
 		self.scene().addItem(node)
+
 	def addItem(self,text=None,position=None, mov=True,level=1):
+		"""Adds new node to a scene"""
 		if text is None:
-			text='asdasdasd'
+			text='New Node'
 		if position is None:
-			position=self.getViewRange()
+			position=QPointF()
 		newNode=Node(position,text=text,parent=self,movable=mov,lev=level)
 		self.scene().addItem(newNode)
+
 	def deleteNode(self,node):
+		"""Deletes node from a scene,
+		   if it's a main node, not removing"""
 		#check if node exists
 		if not isinstance(node,Node):
 			return
@@ -239,8 +277,11 @@ class GraphicsView(QGraphicsView):
 			self.disconnectItems(conn_node,node)
 		#remove node itself
 		self.scene().removeItem(node)
+
 #animation methods
 	def timerEvent(self,event):
+		"""timer tick event, calculates forces for every node,
+		   if no item moved, stops the timer"""
 		nodes=[]
 		#get all nodes
 		for item in self.scene().items():
@@ -257,16 +298,22 @@ class GraphicsView(QGraphicsView):
 				itemMoved=True
 		if not itemMoved:
 			self.stopTimer()
-	#method fired from item on position change
+
 	def itemMoved(self):
+		"""Method fired from inside node object, starts the timer
+		   if node position changed"""
 		if not self.timer:
 			self.timer=self.startTimer(globalV.timerTime)
+
 	def stopTimer(self):
+		"""stops the timer"""
 		self.killTimer(self.timer)
 		self.timer=0
 
 	def getNodeById(self,id):
+		"""gets node by id"""
 		for node in self.scene().items():
 			if isinstance(node,Node):
 				if node.id == id:
 					return node
+		return False

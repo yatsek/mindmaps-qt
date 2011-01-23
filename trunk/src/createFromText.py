@@ -3,15 +3,15 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from textEdit import *
 import globalVars
+
+
 class FormFromText(QDialog):
+
 	def __init__(self,parent=None,text="Override"):
 		super(FormFromText,self).__init__(parent)
 		self.textedit=textEdit(self,text=text)#text editor
 		self.btnContainer={} #storing buttons
-		
 		self.buttonOK=QPushButton("Done")
-		
-		
 		self.mainLayout=QGridLayout()
 		self.buttonLayout=QGridLayout() #nested layout
 		self.buttonLayout.addWidget(self.buttonOK)
@@ -23,6 +23,7 @@ class FormFromText(QDialog):
 		#connects 
 		self.connect(self.textedit, SIGNAL("addItemToList"),self.addButton)
 		self.connect(self.buttonOK, SIGNAL("clicked()"),SLOT("close()"))
+
 	def addButton(self,text):
 		"""Adds two buttons to the list (accept and delete)
 		and connects signals to it
@@ -39,8 +40,8 @@ class FormFromText(QDialog):
 		self.btnContainer[index][1].stackIndex=index
 		self.connect(self.btnContainer[index][1], SIGNAL("clicked()"),self.buttonDelClicked)
 		self.buttonLayout.addWidget(self.btnContainer[index][1], index,1)
-		
 		index+=1
+
 	def buttonAddClicked(self):
 		"""Function which handles click of the button with text"""
 		button=self.sender()
@@ -60,7 +61,6 @@ class FormFromText(QDialog):
 			self.buttonOK.show()
 		else:
 			self.buttonOK.hide()
-			
 		
 	def buttonDelClicked(self):
 		"""Function which handles click of the button with X"""
