@@ -3,8 +3,13 @@ from PyQt4.QtGui import *
 from math import sin,cos,pi,acos
 
 TwoPi = pi*2
+
 class Edge(QGraphicsItem):
+	"""Overrid of QGraphicsItem to handle
+	   drawing of edge connecting nodes"""
 	def __init__(self,sourceNode, destNode,visible=True):
+		"""Constructor which connects nodes 
+		   together"""
 		super(Edge,self).__init__()
 		self.sourcePoint=None
 		self.destPoint=None	
@@ -15,29 +20,37 @@ class Edge(QGraphicsItem):
 		self.dest=destNode
 		self.source.addEdge(self)
 		self.dest.addEdge(self)
-
 		self.visible=visible
-
 		self.adjust()
 		self.setZValue(-1)
 
 	def sourceNode(self):
+		"""returns the source node"""
 		return self.source
+
 	def setSourceNode(self,node):
+		""" sets the source node"""
 		self.source=node
 		adjust()
+
 	def destNode(self):
+		"""returns destination node"""
 		return self.dest
+
 	def setDestNode(self,node):
+		"""sets destination node"""
 		self.dest=node
 		adjust()
+
 	def adjust(self):
+		"""Calculates new position of end points
+		   based on node positions"""
 		if not self.source or not self.dest:
 			return
 		srcCenter=self.source.ellipsisCenter()
 		dstCenter=self.dest.ellipsisCenter()
 		line=QLineF(self.mapFromItem(self.source,srcCenter.x(),srcCenter.y()), \
-				  self.mapFromItem(self.dest,dstCenter.x(),dstCenter.y()))
+				self.mapFromItem(self.dest,dstCenter.x(),dstCenter.y()))
 		length = line.length()
 
 		self.prepareGeometryChange()
@@ -50,6 +63,7 @@ class Edge(QGraphicsItem):
 			self.sourcePoint = self.destPoint = line.p1()
 
 	def boundingRect(self):
+		"""Sets bounding rectangle of a scene"""
 		if not self.source or not self.dest:
 			return QRectF()
 		penWidth=1
@@ -57,9 +71,7 @@ class Edge(QGraphicsItem):
 		return QRectF(self.sourcePoint, QSizeF(self.destPoint.x() - self.sourcePoint.x(),self.destPoint.y() - self.sourcePoint.y())).normalized().adjusted(-extra,-extra,extra,extra)
 
 	def paint(self,painter, option=None, widget=None):
-		#not visible - don't paint
-		#if not self.visible:
-		#	return
+		"""Paint edge on a scene"""
 		if not self.source or not self.dest:
 			return
 		line=QLineF(self.sourcePoint,self.destPoint)
@@ -70,24 +82,3 @@ class Edge(QGraphicsItem):
 		if not self.visible: color=QColor(Qt.green)
 		painter.setPen(QPen(color,1,Qt.SolidLine,Qt.RoundCap,Qt.RoundJoin))
 		painter.drawLine(line)
-
-		#draw the arrows
-		#angle = acos(line.dx()/line.length())
-		#if line.dy() >= 0:
-		#	angle = TwoPi - angle
-		#sourceArrowP1= self.sourcePoint + QPointF(sin(angle + pi / 3 ) * self.arrowSize, \
-		#								  cos(angle + pi / 3 ) * self.arrowSize)
-		#sourceArrowP2= self.sourcePoint + QPointF(sin(angle + pi - pi / 3 ) * self.arrowSize, \
-		#		                                cos(angle + pi - pi / 3 ) * self.arrowSize)
-
-		#destArrowP1= self.destPoint + QPointF(sin(angle - pi / 3 ) * self.arrowSize, \
-		#		                            cos(angle - pi / 3 ) * self.arrowSize)
-		#destArrowP2= self.destPoint + QPointF(sin(angle - pi + pi / 3 ) * self.arrowSize, \
-		#		                            cos(angle - pi + pi / 3 ) * self.arrowSize)
-
-		#painter.setBrush(Qt.black)
-		#points1=[line.p1(),sourceArrowP1,sourceArrowP2]
-		#points2=[line.p2(),destArrowP1,destArrowP2]
-		#painter.drawPolygon(QPolygonF(points1))
-		#painter.drawPolygon(QPolygonF(points2))
-

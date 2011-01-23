@@ -5,16 +5,19 @@ from edge import *
 from editNode import editNode
 import random
 from math import sqrt
+
+
 class Node(QGraphicsItem):
+	"""Overload of QGraphicsItem to handle custom drawing, positioning,
+	   animations, serialization and shape"""	
 	def __init__(self, pos=QPointF(), text="AAA", parent=None, lev=1, movable=True,array=None):
+		"""Constructor works in two modes - normal and serialization"""
 		super(Node,self).__init__()
 		#main fields
 		self.parent=parent #parent of the Node
 		#for node connections
 		self.edgeList=[]
-
 		self.font=QFont(globalV.fontNode)		
-
 		if array: #for serialization
 			self.setFullInfo(array)
 		else:
@@ -32,16 +35,17 @@ class Node(QGraphicsItem):
 			self.setFlags(self.ItemIsSelectable)
 		else:
 			self.setFlags(self.ItemIsSelectable|self.ItemIsMovable)
-		self.setZValue(1) #being on top
-
+		self.setZValue(1) #set on top
 		#find rectangle over text
 		self.rectOverText=self.findBestSize(self.font,self.text)
 
 	def randomHash(self):
-		#returns random hash of an item
+		"""Returns random hash of an item for serialization"""
 		return "%016x"%random.getrandbits(128)
+
 	def getFullInfo(self):
-		#return all info requried for putting item on list
+		"""Returns dict of all information requried
+		   for serialization"""
 		r={}
 		r['id']=self.id
 		#basic information
@@ -59,7 +63,9 @@ class Node(QGraphicsItem):
 		for edge in self.getConnectedNodes():
 			r['connections'].append(edge.id)
 		return r
+
 	def setFullInfo(self,r):
+		"""Sets all the information from serialization"""
 		self.id=r['id']
 		self.setPos(r['posX'],r['posY'])
 		self.text=r['text']
@@ -72,28 +78,35 @@ class Node(QGraphicsItem):
 		for conn in r['connections']:
 			n=self.parent.getNodeById(conn)
 			self.parent.connectItems(self,n,init=True)
-
 		
-	#item doesn't have initalised scene, adding manually
 	def scene(self):
+		"""Wrapper for scene parent item"""
 		return self.parent.scene()
 
 	def toggleMovable(self):
 		"""Toggle movable object"""
 		self.movable=not self.movable
+
 	def addEdge(self,edge):
+		"""Adds edge to a node"""
 		self.edgeList.append(edge)
 		edge.adjust()
+
 	def connectedWith(self,item):
-		#checks if node is connected with other
+		"""Checks if node is connected
+		   directly with other"""
 		for edge in self.edgeList:
 			if edge.source == item or \
 					edge.dest == item:
 			   return edge
 		return False
+
 	def removeConnection(self,edge):
+		"""Removes connection with item"""
 		self.edgeList.pop(self.edgeList.index(edge))
+
 	def getConnectedNodes(self):
+		"""Returns connected nodes"""
 		nodes=[]
 		for edge in self.edgeList:
 			if edge.dest == self:
@@ -103,18 +116,17 @@ class Node(QGraphicsItem):
 		return nodes
 
 	def shape(self):
-		#define shape of item
+		"""Defines shape of a node"""
 		path=QPainterPath()
-		
 		path.addEllipse(self.boundingRect())
 		return path
 
 	def paint(self,painter,option=None,widget=None):
+		"""Method for painting the item"""
 		#paint boundingRect if selected
 		if self in self.parent.getSelectedItems():
 			painter.setBrush(Qt.black)
 			painter.drawEllipse(self.boundingRect())
-
 		#draw ellipsis
 		adjust=8.0
 		painter.setPen(Qt.SolidLine)
@@ -127,21 +139,30 @@ class Node(QGraphicsItem):
 		painter.setFont(self.font)
 		painter.setPen(self.fontColor)
 		painter.drawText(9,26,self.text)
+
 	def boundingRect(self):
+		"""Sets the bounding rectangle of a node"""
 		r=self.rectOverText
 		adjust=12.0
 		return QRectF(r.x() - adjust, r.y() - adjust, \
 				    r.width() + adjust, r.height() + adjust)
 	
 	def drawOnScene(self,scene):
+		"""Adds item to a scene"""
 		self.parent.addItem(self)
+
 	def ellipsisCenter(self):
+		"""Gets the ellipsis center"""
 		return self.boundingRect().center()
-	#very important function - handles item change and so on
+
 	def itemChange(self,change,value):
+		"""Fired when item changes, executes itemMoved
+		   which starts timer"""
 		self.parent.itemMoved()
 		return QGraphicsItem.itemChange(self,change,value)
+
 	def mouseMoveEvent(self,event):
+		"""Handles mouse move, updates all the edges"""
 		#when moving item, update all edges of all nodes
 		nodes=self.scene().selectedItems()
 		for node in nodes:
@@ -150,8 +171,6 @@ class Node(QGraphicsItem):
 					edge.adjust()
 					edge.update()
 		return QGraphicsItem.mouseMoveEvent(self,event)
-
-
 
 	def scale(self,plus=True):
 		"""Scale the object"""
@@ -165,6 +184,7 @@ class Node(QGraphicsItem):
 		self.update()
 
 	def wheelEvent(self,event):
+		"""Handles mouse wheel events, fires self.scale"""
 		if event.delta() > 0:
 			self.scale()
 		else:
@@ -172,6 +192,7 @@ class Node(QGraphicsItem):
 		self.parent.itemMoved()
 
 	def findBestSize(self, font, message):
+		"""Returns best rectangle for text over ellipsis"""
 		offset=25
 		fontMetrics=QFontMetrics(font)
 		rect=fontMetrics.boundingRect(message)
@@ -185,12 +206,14 @@ class Node(QGraphicsItem):
 		return test 
 
 	def mouseDoubleClickEvent(self,event):
+		"""Handles mouse double click event,
+		   shows window for editing node"""
 		window=editNode(self.parent.parent,self,self.text,self.fontColor,self.insideColor)
 		window.show()
-
-		
 	
 	def calculateForces(self):
+		"""Calculates position change of an item 
+		   based on other items"""
 		if not self.scene() or (self.scene().mouseGrabberItem() == self):
 			self.newPos = self.pos()
 			return
@@ -227,6 +250,8 @@ class Node(QGraphicsItem):
 		self.newPos.setY(min( max(self.newPos.y(), sceneRect.top()+10), sceneRect.bottom()-10))
 
 	def advance(self):
+		"""Checks if position changed.
+		   Returns True if did"""
 		#check if position changed
 		if self.newPos == self.pos():
 			return False
@@ -237,4 +262,3 @@ class Node(QGraphicsItem):
 			edge.adjust()
 		self.setPos(self.newPos)
 		return True
-
