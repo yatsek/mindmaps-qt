@@ -470,7 +470,7 @@ Na rynku komputerowym istnieje parę programów do tworzenia map pamięci.
  Najczęściej są one prostym edytorem graficznym grafiki wektorowej który
  pozwala na łączenie ze sobą informacji w sposób zgodny z zasadami tworzenia
  map pamięci.
- Podsawowe funkcje obejmują:
+ Podstawowe funkcje obejmują:
 \end_layout
 
 \begin_layout Itemize
@@ -486,7 +486,7 @@ tworzenie węzłów według struktury drzewa
 \end_layout
 
 \begin_layout Itemize
-drukowanie
+drukowanie i import do pliku graficznego
 \end_layout
 
 \begin_layout Subsubsection
@@ -572,6 +572,65 @@ Lista funkcjonalności
 
 \begin_layout Subsection
 Wstępna konstrukcja programu
+\end_layout
+
+\begin_layout Standard
+Program powinien być skonstruowany w taki sposób, by oddzielić od siebie
+ poszczególne elementy.
+ Zapewni to łatwość rozszerzania aplikacji i naprawy błędów.
+ Przewidziano następujące elementy aplikacji:
+\end_layout
+
+\begin_layout Itemize
+Interfejs użytkownika
+\end_layout
+
+\begin_layout Itemize
+Prezentacja map pamięci
+\end_layout
+
+\begin_layout Itemize
+Manipulacja każdym elementem
+\end_layout
+
+\begin_layout Itemize
+Interakcja z użytkownikiem
+\end_layout
+
+\begin_layout Itemize
+Serializacja
+\end_layout
+
+\begin_layout Itemize
+Interakcja z przeglądarką internetową
+\end_layout
+
+\begin_layout Standard
+Interfejs dodawania mapy pamięci powinien działać jak najwydajniej, z uwagi
+ na możliwość uruchomienia go na różnych platformach o różnej mocy obliczeniowej.
+ Większość produktów programistycznych jest dostępnych w formie binarnej,
+ i mimo dużej możliwości dostosowywania ich działania, czasami istnieje
+ potrzeba głębszej modyfikacji, co nie zawsze jest możliwowe.
+ Dzięki społeczności OpenSource wiele rozwiązań posiada swoje kompilacje
+ na różne platformy sprzętowe i systemowe, co w tym przypadku ma duże znaczenie.
+ Przejawem tego podejścia jest użycie następujących technologii:
+\end_layout
+
+\begin_layout Itemize
+Python - język programowania z otwartym kodem źródłowym
+\end_layout
+
+\begin_layout Itemize
+QT - otwarty zbiór bibliotek programistycznych
+\end_layout
+
+\begin_layout Itemize
+PyQT - nakładka biblioteki QT na język Python
+\end_layout
+
+\begin_layout Itemize
+XUL, Javascript i XPCOM - zbór technologii wykorzystywany do tworzenia rozszerze
+ń do produktów Mozilli
 \end_layout
 
 \begin_layout Standard
@@ -700,8 +759,7 @@ s czy OS/2.
  Bibliotek Qt można używać za pomocą języka C++, jednak dzięki zastosowaniu
  MOC (ang.
  Meta Object Compiler) jest możliwość pisania swoich aplikacji w innych
- językach programowania, takich jak Java, C#, Lisp, Pascal, Python czhy
- Ruby.
+ językach programowania, takich jak Java, C#, Lisp, Pascal, Python czy Ruby.
 \end_layout
 
 \begin_layout Subsubsection
@@ -717,12 +775,15 @@ a Python.
  firmę Riverbank Computing.
 \end_layout
 
-\begin_layout Subsubsection
-Javascript, XUL i XPCOM
+\begin_layout Standard
+Javascript jest interpretowanym, obiektowym językiem programowania wykorzystywan
+ym głównie na stronach Internetowych.
+ Stosuje się go głównie do zapewnienia interaktywności stron Internetowych
+ po stronie klienta
 \end_layout
 
-\begin_layout Standard
-Javascript -> XPCom
+\begin_layout Subsubsection
+Javascript, XUL i XPCOM
 \end_layout
 
 \begin_layout Standard
@@ -757,12 +818,12 @@ XPCOM is a cross platform component object model, similar to Microsoft COM.
 Architektura programu
 \end_layout
 
-\begin_layout Standard
-Perspektwa
+\begin_layout Subsection
+Uwagi wstępne
 \end_layout
 
 \begin_layout Subsection
-Struktura kodu
+Struktura kodu aplikacji
 \end_layout
 
 \begin_layout Subsection
@@ -780,9 +841,94 @@ Listing kodu
 Interfejs użytkownika
 \end_layout
 
+\begin_layout Subsection
+Uwagi wstępne
+\end_layout
+
 \begin_layout Standard
-Tworzenie map pamięci odbywa się za pomocą myszk.
- Klikając dwukrotnie na 
+Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowych
+ programów, w poniższym rozdziale zostanie omówiona interakcja programu
+ z użytkownikiem.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/app_mainWindow.png
+	lyxscale 30
+	width 100text%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 9.1 Wygląd interfejsu użytkownika programu
+\end_layout
+
+\begin_layout Standard
+Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
+ jak największej przestrzeni do oglądania mapy pamięci.
+ Główną część okna zajmuje widok mapy pamięci, wraz z paskiem menu programu.
+ Interakcja z programem odbywa się za pomocą klawiatury i myszki.
+ Zaleca się korzystanie z myszy zewnętrznej lub touchpada skonfigurowanego
+ do naciskania środkowego przycisku myszy i funkcji przewijania tekstu.
+\end_layout
+
+\begin_layout Subsection
+Poruszanie się w widoku mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
+ lub środkowego przycisku i poruszania myszy.
+\end_layout
+
+\begin_layout Subsection
+Dodawanie węzłów
+\end_layout
+
+\begin_layout Standard
+By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
+ miejscu w widoku mapy pamięci.
+ Stworzy to nowy element i otworzy okno edycji tekstu i stylu węzła.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename img/app_nodeEdit.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Usuwanie węzłów
+\end_layout
+
+\begin_layout Subsection
+Łączenie węzłów
+\end_layout
+
+\begin_layout Subsection
+Rozłączanie węzłów
+\end_layout
+
+\begin_layout Subsection
+Ustawianie automatycznego pozycjonowania węzła
+\end_layout
+
+\begin_layout Subsection
+Dodawanie węzłów z tekstu
 \end_layout
 
 \begin_layout Standard
@@ -794,6 +940,14 @@ Tworzenie map pamięci odbywa się za pomocą myszk.
 
 \begin_layout Section
 Uwagi końcowe
+\end_layout
+
+\begin_layout Standard
+Instalacja programu
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -861,6 +1015,12 @@ The Shallows: What the Internet is doing to our brains
 , W.
  W.
  Norton & Company, New York 2010
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[PYTHON] Summerfield Mar, Rapid GUI programming with Python and QT, Prentice
+ Hall, New York 2008
 \end_layout
 
 \end_body
