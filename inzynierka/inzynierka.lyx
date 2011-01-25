@@ -20,12 +20,16 @@
 \spacing single
 \use_hyperref false
 \papersize a4paper
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -70,6 +74,29 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Wstęp
 \end_layout
@@ -78,7 +105,7 @@ Wstęp
 Opis problemu i koncepcja jego rozwiązania
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subparagraph
 Żyjemy w czasach, gdzie komputery stały się łatwo dostępnym i używanym na
  co dzień narzędziem pracy czy rozrywki.
  Wykorzystuje się je do rozrywki, wzajemnej komunikacji, pogłębiania zainteresow
@@ -89,7 +116,7 @@ ań, a także do nauki.
  czyli nauka staje się problematyczna.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Najpopularniejszą metodą uczenia się jest notowanie mówionego słowa, a następnie
  powtarzanie przez wieloktrotne czytanie.
  Jednakże nie jest to technika efektywna dla wszystkich.
@@ -106,7 +133,7 @@ Mind Mappingu
 Cel i zakres pracy
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Celem niniejszej pracy jest opracowanie aplikacji umożliwiającej wspomaganie
  procesu uczenia się, przy wykorzystaniu metod efektywnej nauki.
  Program będzie oparty o tworzenie map pamięci, system powtórek oraz funkcjonaln
@@ -150,7 +177,7 @@ Procesy poznawcze towarzyszące nauce
 Uwagi wstępne
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeniem
  się i zapamietywaniem potrzebne jest parę słów wstępu na temat procesów
  poznawczych.
@@ -162,7 +189,7 @@ By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeni
 Skupianie uwagi
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Skupianie uwagi jest pierwszym elementem towarzyszącym uczeniu się.
  Jest bardzo ważny, gdyż bez koncentracji nie można przyswajać informacji.
  By dobrze zrozumieć ten proces, należy przytoczyć dwie definicje.
@@ -186,7 +213,7 @@ Uwaga
  [PSYCHO].
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Głównym elementem procesu skupiania uwagi jest 
 \emph on
 przeszukiwanie pola percepcyjnego
@@ -201,7 +228,7 @@ przeszukiwanie pola percepcyjnego
  się od otoczenia kolorem, kształtem czy rozmiarem.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Kolejnym ważnym elementem jest 
 \emph on
 podzielnośc uwagi
@@ -219,7 +246,7 @@ mocy obliczeniowej
  jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Również warto zwrócić uwagę na 
 \emph on
 przedłużoną koncentrację
@@ -250,7 +277,7 @@ Mind mapping
 Wprowadzenie do techniki Mind Mappingu
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Obrazowe metody utrwalania wiedzy i modelowania systemów były używane od
  wieków w nauczaniu, wizualnym myśleniu i rozwiązywaniu problemów przez
  inżynierów, nauczycieli, psychologów i innych.
@@ -287,7 +314,7 @@ sieci semantyczne
 Rys 3.1 Przykład sieci semantycznej
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Technika 
 \emph on
 Mind Mappingu
@@ -318,7 +345,7 @@ burzy mózgów
 Nauka a ludzki mózg
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Mózg ludzki składa się dwóch półkul odpowiedzialnych za różne procesy myślowe.
  Lewa półkula zajmuje się analizą słowa, logiką, liczbami, hierarchią, linearnoś
 cią i zbiorami.
@@ -366,7 +393,7 @@ Notatki w formie hierarchicznej - uporządkowanie wiedzy w strukturę, oznaczon�
  literami lub liczbami
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
  linii, zbiorów i logiki.
  Patrząc na rysunek 3.2 można zauważyć, że analizą tych elementów zajmuje
@@ -465,7 +492,7 @@ Przegląd aplikacji do Mind Mappingu
 Uwagi wstępne
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Na rynku komputerowym istnieje parę programów do tworzenia map pamięci.
  Najczęściej są one prostym edytorem graficznym grafiki wektorowej który
  pozwala na łączenie ze sobą informacji w sposób zgodny z zasadami tworzenia
@@ -493,7 +520,7 @@ drukowanie i import do pliku graficznego
 Xmind
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Xmind jest programem Open Source stworzonym za pomocą języka Java oraz Eclipse
  Rich Client Platform i Eclipse Graphical Editing Framework.
  Użycie bibliotek Eclipse pozwoliło na stworzenie interfejsu który jest
@@ -574,7 +601,7 @@ Lista funkcjonalności
 Wstępna konstrukcja programu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Program powinien być skonstruowany w taki sposób, by oddzielić od siebie
  poszczególne elementy.
  Zapewni to łatwość rozszerzania aplikacji i naprawy błędów.
@@ -605,7 +632,7 @@ Serializacja
 Interakcja z przeglądarką internetową
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Interfejs dodawania mapy pamięci powinien działać jak najwydajniej, z uwagi
  na możliwość uruchomienia go na różnych platformach o różnej mocy obliczeniowej.
  Większość produktów programistycznych jest dostępnych w formie binarnej,
@@ -710,14 +737,14 @@ Wykorzystane technologie i narzędzia
 Wymagania technologiczne aplikacji
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Głównym założeniem aplikacji jest możliwość uruchomienia jej na wielu platformac
 h, bez potrzeby dostosowywania jej do każdej z nich.
  Ma być obsługiwana za pomocą klawiatury, myszki i ekranu dotykowego.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Program ma działać szybko na komputerach o słabej mocy obliczeniowej, nie
  zamując dużo miejsca w pamięci operacyjnej.
 \end_layout
@@ -730,7 +757,7 @@ Biblioteki i języki programowania
 Python
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
  programowania.
  Jego składnia jest bardzo charakterystyczna ze względu na umieszczanie
@@ -744,7 +771,7 @@ Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
 Qt
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 QT jest zbiorem bibliotek stworzonych przez firmę Trolltech, następnie przejętą
  przez firmę Nokia.
  Obejmuje kilkaset klas odpowiedzialnych za projektowanie interfejsu użytkownika
@@ -766,7 +793,7 @@ s czy OS/2.
 PyQt
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 PyQt jest nakładką stworzoną by używać bibliotek QT wraz z językiem programowani
 a Python.
  Została stworzona poprzez narzędzie SIP, które automatycznie generuje moduły
@@ -775,18 +802,18 @@ a Python.
  firmę Riverbank Computing.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
+Javascript, XUL i XPCOM
+\end_layout
+
+\begin_layout Subparagraph
 Javascript jest interpretowanym, obiektowym językiem programowania wykorzystywan
 ym głównie na stronach Internetowych.
  Stosuje się go głównie do zapewnienia interaktywności stron Internetowych
  po stronie klienta
 \end_layout
 
-\begin_layout Subsubsection
-Javascript, XUL i XPCOM
-\end_layout
-
-\begin_layout Standard
+\begin_layout Subparagraph
 XUL (ang.
  XML-based User-interface Language) jest językiem XML przeznaczonym do definiown
 ia interfejsów użytkownika.
@@ -794,7 +821,7 @@ ia interfejsów użytkownika.
  czy Thunderbird.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 XPCOM is a cross platform component object model, similar to Microsoft COM.
  It has multiple language bindings, letting the XPCOM components be used
  and implemented in JavaScript, Java, and Python in addition to C++.
@@ -845,7 +872,7 @@ Interfejs użytkownika
 Uwagi wstępne
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowych
  programów, w poniższym rozdziale zostanie omówiona interakcja programu
  z użytkownikiem.
@@ -870,7 +897,7 @@ Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowyc
 Rys 9.1 Wygląd interfejsu użytkownika programu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
  jak największej przestrzeni do oglądania mapy pamięci.
  Główną część okna zajmuje widok mapy pamięci, wraz z paskiem menu programu.
@@ -883,7 +910,7 @@ Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
 Poruszanie się w widoku mapy pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
  lub środkowego przycisku i poruszania myszy.
 \end_layout
@@ -892,13 +919,14 @@ Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
 Dodawanie węzłów
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
  miejscu w widoku mapy pamięci.
  Stworzy to nowy element i otworzy okno edycji tekstu i stylu węzła.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename img/app_nodeEdit.png
 
@@ -908,27 +936,99 @@ By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
 \end_layout
 
 \begin_layout Standard
-
+\align center
+Rys 9.2 Wygląd okna edycji węzła
 \end_layout
 
 \begin_layout Subsection
 Usuwanie węzłów
 \end_layout
 
+\begin_layout Subparagraph
+Zaznaczając dowolne elementy można je usunąć naciskając przycisk DELETE
+ lub wybierając z górnego menu Edit->Delete.
+\end_layout
+
 \begin_layout Subsection
 Łączenie węzłów
+\end_layout
+
+\begin_layout Subparagraph
+Łączenie węzłów odbywa się poprzez przeciągnięcie dowolnego elementu na
+ inny.
 \end_layout
 
 \begin_layout Subsection
 Rozłączanie węzłów
 \end_layout
 
+\begin_layout Subparagraph
+Rozłączanie węzłów odbywa się w analogiczny sposób co łączenie, tylko należy
+ przy tej operacji trzymać wciśnięty przycisk CTRL i najechać elementem
+ na inny który chcemy rozłączyć.
+\end_layout
+
 \begin_layout Subsection
 Ustawianie automatycznego pozycjonowania węzła
 \end_layout
 
+\begin_layout Subparagraph
+Zaznaczając element i naciskając środkowy przycisk myszki można sprawić,
+ by element się nie animował i nie przemieszczał.
+ Umożliwia to dokładnie wypozycjonowanie elementów jeżeli automatyczne zawodzi.
+\end_layout
+
 \begin_layout Subsection
 Dodawanie węzłów z tekstu
+\end_layout
+
+\begin_layout Subparagraph
+Kolejnym elementem interfejsu jest tworze mapy pamięci z tekstu ze strony
+ Internetowej.
+ Jeżeli zainstalowany został dodatek do przeglądarki Firefox, można zaznaczyć
+ w przeglądarce dowolny tekst, i z menu kontekstowego kliknąć pozycję 
+\begin_inset Quotes eld
+\end_inset
+
+Add to Mindmap
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Pojawi się wtedy okno tworzenia węzłów z tekstu.
+ Interfejs tej funkcjonalności pokazuje Rys 9.3.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/app_nodeFromText.png
+	lyxscale 80
+	width 100text%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 9.3 Wygląd okna dodawania węzłów z tekstu
+\end_layout
+
+\begin_layout Subparagraph
+By przekształcić dany fragment tekstu na węzeł w mapie pamięci, należy za
+ pomocą myszki zaznaczyć dany tekst.
+ Po zaznaczeniu pojawią się dwa przyciski.
+ Jeden (z zaznaczonym tekstem) służy do dodania go do mapy pamięci, drugi
+ do usunięcia zaznaczenia tekstu.
+ Po kliknięciu na przycisk z tekstem znikają oba przyciski i pojawia się
+ węzeł na mapie pamięci.
+ Po zdecydowaniu co zrobić z wszystkimi zaznaczeniami tekstu zostanie przycisk
+ zamknięcia okienka.
 \end_layout
 
 \begin_layout Standard
@@ -942,12 +1042,158 @@ Dodawanie węzłów z tekstu
 Uwagi końcowe
 \end_layout
 
+\begin_layout Subsection
+Wymagania systemowe
+\end_layout
+
+\begin_layout Subparagraph
+Aplikacja posiada następujące wymagania systemowe:
+\end_layout
+
+\begin_layout Itemize
+Interpreter języka Python w wersji 2.6 - 2.7
+\end_layout
+
+\begin_layout Itemize
+Biblioteki QT w wersji 4.7 lub nowszej
+\end_layout
+
+\begin_layout Itemize
+Nakładki PyQt w wersji 4.7 lub nowszej
+\end_layout
+
+\begin_layout Itemize
+Przeglądarki internetowej Firefox w wersji 3.5
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie programu
+\end_layout
+
+\begin_layout Subsubsection
+GNU/Linux
+\end_layout
+
+\begin_layout Subparagraph
+By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
+ interpreter python, biblioteki QT oraz PyQt.
+\end_layout
+
 \begin_layout Standard
-Instalacja programu
+W systemach opartych na dystrybucji Debian (np.
+ Ubuntu, Mint) wystarczy wydać polecenie z terminalu z dostępem adminstracyjnym:
 \end_layout
 
 \begin_layout Standard
 
+\emph on
+sudo apt-get install python python-qt4 libqt4-core libqt4-gui
+\end_layout
+
+\begin_layout Standard
+Następnie uruchamiamy program plikiem 
+\emph on
+runner.sh.
+\end_layout
+
+\begin_layout Subsubsection
+Microsoft Windows
+\end_layout
+
+\begin_layout Subparagraph
+Do uruchomienia aplikacji pod systemami operacyjnymi z rodziny Microsoft
+ Windows wystarczy odpakować archiwum 
+\emph on
+mindmapping-win32.zip
+\emph default
+ na dysku lokalnym i uruchomić plik wykonywalny 
+\emph on
+mindmapping.exe
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Instalacja rozszerzenia do przeglądarki Firefox
+\end_layout
+
+\begin_layout Subparagraph
+Aplikacja posiada dwa osobne rozszerzenia, w zależności od systemu operacyjnego
+ na którym zostaje uruchomiona.
+ By zainstalować rozszerzenie, należy uruchomić przeglądarkę Firefox i wpisać
+ w pasku adresu ścieżkę do pliku z roszerzeniem.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+W systemie operacyjnym Linux, gdy aplikację mamy w folderze 
+\emph on
+/home/user/mindmapping
+\emph default
+, wpisujemy:
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+file:///home/user/mindmapping/mindmapping.xpi
+\end_layout
+
+\begin_layout Subparagraph
+Następnie po zainstalowaniu rozszerzenia i uruchomieniu ponownym przeglądarki
+ musimy skonfigurować ścieżkę z której będzie uruchamiania aplikacja.
+ W tym celu uruchamiamy Narzędzia->Dodatki, i w preferencjach rozszerzenia
+ podajemy bezwzględną ścieżkę do pliku wykonywalnego.
+ W systemie Linux musimy podać plik 
+\emph on
+main.py, 
+\emph default
+natomiast w systemie Windows mindmapping.exe.
+\end_layout
+
+\begin_layout Subsection
+Uruchamiania aplikacji z argumentami
+\end_layout
+
+\begin_layout Standard
+Aplikacja umożliwia uruchomienie w trzech trybach.
+\end_layout
+
+\begin_layout Subsubsection
+Tryb nowego dokumentu
+\end_layout
+
+\begin_layout Standard
+Należy uruchomić aplikację bez argumentów
+\end_layout
+
+\begin_layout Subsubsection
+Tryb tworzenia mapy pamięci z tekstu
+\end_layout
+
+\begin_layout Standard
+Należy dodać dwa argumenty: 
+\emph on
+--text 
+\begin_inset Quotes eld
+\end_inset
+
+Tekst z którego chcemy stworzyć mapę pamięci
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tryb Wczytania pliku przy uruchomieniu
+\end_layout
+
+\begin_layout Standard
+Należy dodać dwa argumenty: 
+\emph on
+--file /ścieżka/do/pliku.mindqt
 \end_layout
 
 \begin_layout Standard
