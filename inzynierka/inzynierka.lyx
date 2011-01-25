@@ -46,9 +46,145 @@
 
 \begin_body
 
-\begin_layout Title
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Wyższa Szkoła Komunikacji i Zarządzania w Poznaniu
+\end_layout
+
+\begin_layout Standard
+\align center
+Instytut Informatyki
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Wojciech Jurkowlaniec
+\end_layout
+
+\begin_layout Standard
+\align center
+nr albumu: 17373
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
 Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji
  w oparciu o technikę Mind Mappingu
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Praca dyplomowa inżynierska
+\end_layout
+
+\begin_layout Standard
+\align center
+kierunek: Informatyka
+\end_layout
+
+\begin_layout Standard
+\align center
+specjalność: Technologie i zastosowania internetu
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Promotor:
+\end_layout
+
+\begin_layout Standard
+\align center
+dr inż.
+ Ewa Idzikowska
+\end_layout
+
+\begin_layout Standard
+\align center
+Instytut Informatyki
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Poznań 2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -74,20 +210,58 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
+\begin_layout Section*
+Spis rysunków
 \end_layout
 
-\begin_layout Standard
-\begin_inset FloatList figure
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.1 Przykład sieci semantycznej
+\end_layout
 
-\end_inset
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.2 Funkcje półkul mózgowych
+\end_layout
 
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.3 Przykładowa mapa pamięci
+\end_layout
 
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.1 Wygląd interfejsu użytkownika programu XMind
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.2 Wygląd interfejsu użytkownika programu FreeMind
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.3 Wygląd interfejsu użytkownika programu Buzan's iMindMap
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.1
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.2
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.3
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.4
 \end_layout
 
 \begin_layout Standard
@@ -163,6 +337,10 @@ TODO - opis rozdziałów części praktycznej
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -263,6 +441,10 @@ Odbieranie i analizowanie informacji
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -466,29 +648,17 @@ Ważne jest również, by wzbogacać je o kolory, rysunki oraz własne skróty
 \end_inset
 
 
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Ergonomia programów komputerowych
+Przegląd aplikacji do tworzenia map pamięci
 \end_layout
 
 \begin_layout Subsection
-Zasady projektowania interfejsów użytkownika
-\end_layout
-
-\begin_layout Subsubsection
-Uwagi wstępne
-\end_layout
-
-\begin_layout Subsubsection
-Usability
-\end_layout
-
-\begin_layout Subsection
-Przegląd aplikacji do Mind Mappingu
-\end_layout
-
-\begin_layout Subsubsection
 Uwagi wstępne
 \end_layout
 
@@ -516,7 +686,7 @@ tworzenie węzłów według struktury drzewa
 drukowanie i import do pliku graficznego
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Xmind
 \end_layout
 
@@ -527,32 +697,7 @@ Xmind jest programem Open Source stworzonym za pomocą języka Java oraz Eclipse
  przystępny użytkownikom.
  Aplikacja jest rozwijana od 2007 roku, a od końca 2008 roku jest dostępna
  na licencji LGPL.
- Jego funkcjonalność pozwala na: 
-\end_layout
-
-\begin_layout Itemize
-tworzenie map o różnej strukturze (diagramy drzewa, Ishkawy , wykresy organizacy
-jne czy arkusze kalkulacyjne) 
-\end_layout
-
-\begin_layout Itemize
-tworzenie węzłów o dowolnym poziomie zagnieżdżenia 
-\end_layout
-
-\begin_layout Itemize
-użycie zdefiniowanych stylów kolorowania węzłów mapy pamięci 
-\end_layout
-
-\begin_layout Itemize
-dodawanie notatek w dowolnym miejscu struktury mapy 
-\end_layout
-
-\begin_layout Itemize
-Zagnieżdżanie map wewnątrz innych (w ramach jednego dokumentu)
-\end_layout
-
-\begin_layout Itemize
-Publikowanie map pamięci w na stronach internetowych
+ 
 \end_layout
 
 \begin_layout Standard
@@ -574,12 +719,121 @@ Publikowanie map pamięci w na stronach internetowych
 Rys 4.1 Wygląd interfejsu użytkownika programu XMind
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subparagraph
+Jego funkcjonalność pozwala na:
+\end_layout
+
+\begin_layout Itemize
+tworzenie map o różnej strukturze (diagramy drzewa, Ishkawy , wykresy organizacy
+jne czy arkusze kalkulacyjne) 
+\end_layout
+
+\begin_layout Itemize
+tworzenie węzłów o dowolnym poziomie zagnieżdżenia 
+\end_layout
+
+\begin_layout Itemize
+użycie zdefiniowanych stylów kolorowania węzłów mapy pamięci 
+\end_layout
+
+\begin_layout Itemize
+dodawanie notatek w dowolnym miejscu struktury mapy 
+\end_layout
+
+\begin_layout Itemize
+zagnieżdżanie map wewnątrz innych (w ramach jednego dokumentu)
+\end_layout
+
+\begin_layout Itemize
+publikowanie map pamięci w na stronach internetowych
+\end_layout
+
+\begin_layout Subsection
 FreeMind
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+FreeMind jest aplikacją typu open source wydaną na licencji GPL.
+ Została stworzona za pomocą języka programowania Java i zestawu narzędzi
+ Swing do tworzenia interfejsu użytkownika.
+ Jest rozwijana od roku 2000.
+ Przykładowy zrzut ekranu został przedstawiony na rys 4.2.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/freeMind.png
+	lyxscale 30
+	width 100text%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 4.2 Wygląd interfejsu użytkownika programu FreeMind
+\end_layout
+
+\begin_layout Standard
+Jej funkcjonalność pozwala na:
+\end_layout
+
+\begin_layout Itemize
+zapisywanie dokumentu w wielu formatach, uwzględniając XML, HTML, OpenDocument
+ czy PDF
+\end_layout
+
+\begin_layout Itemize
+prezentacja na stronach internetowych w technologii Flash i Java
+\end_layout
+
+\begin_layout Itemize
+wyszukiwanie wewnątrz mapy pamięci
+\end_layout
+
+\begin_layout Itemize
+tworzenie hiperłącz w danych węzłach
+\end_layout
+
+\begin_layout Itemize
+rozszerzenia do wielu systemów CMS (ang Content Management System)
+\end_layout
+
+\begin_layout Subsection
 Buzan's iMindMap
+\end_layout
+
+\begin_layout Standard
+Buzan's iMindMap jest komercyjnym oprogramowaniem stworzonym przez firmę
+ ThinkBuzan Ltd.
+ Jej funcjonalność wykracza poza zwykłe tworzenie map pamięci i umożliwia
+ ponadto zarządzanie projektami i planowanie.
+ Rysunek 4.3 prezentuje wygląd aplikacji.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/IMindMap.jpg
+	lyxscale 30
+	width 100text%
+	rotateOrigin center
+	groupId 1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 4.3 Przykładowa mapa pamięci
 \end_layout
 
 \begin_layout Standard
@@ -587,17 +841,84 @@ Buzan's iMindMap
 \end_inset
 
 
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Idea konstrukcji programu
+Specyfikacja wymagań funkcjonalnych programu
 \end_layout
 
 \begin_layout Subsection
-Lista funkcjonalności
+Tworzenie mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Tworzenie map pamięci powinno umożliwiać:
+\end_layout
+
+\begin_layout Itemize
+Tworzenie węzłów
+\end_layout
+
+\begin_layout Itemize
+Łączenie węzłów w sposób dowolny ze sobą
+\end_layout
+
+\begin_layout Itemize
+Zmianę koloru i kształtu węzłów
+\end_layout
+
+\begin_layout Itemize
+Automatyczne rozmieszczanie pozycji węzłów uwzględniając połączenia pomiędzy
+ nimi
 \end_layout
 
 \begin_layout Subsection
+Prezentacja mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Prezentacja mapy pamięci ma być płynne i animowane.
+ Powinna być również możliwość drukowania mapy pamięci oraz zapisywanie
+ jej w formie pliku graficznego.
+ Powinna być możliwość przesuwania widoku mapy za pomocą myszki oraz zmianę
+ powiększenia prezentacji.
+\end_layout
+
+\begin_layout Subsection
+Struktura serializacji
+\end_layout
+
+\begin_layout Standard
+Aplikacja ma umożliwiać zapisywanie i odczytywanie mapy pamięci w sposób
+ transparentny dla użytkownika.
+\end_layout
+
+\begin_layout Subsection
+Interakcja z przeglądarką internetową
+\end_layout
+
+\begin_layout Standard
+W ramach szybkiego tworzenia map pamięci, przeglądarka internetowa powinna
+ umożliwić kopiowanie w wygodny sposób dowolnego tekstu ze strony internetowej
+ do przeglądarki i szybkie tworzenie elementów bazowanych na tym tekście.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Wstępna konstrukcja programu
 \end_layout
 
@@ -665,64 +986,6 @@ XUL, Javascript i XPCOM - zbór technologii wykorzystywany do tworzenia rozszerz
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Specyfikacja wymagań funkcjonalnych
-\end_layout
-
-\begin_layout Subsection
-Tworzenie mapy pamięci
-\end_layout
-
-\begin_layout Standard
-Tworzenie map pamięci powinno umożliwiać:
-\end_layout
-
-\begin_layout Standard
-Tworzenie węzłów
-\end_layout
-
-\begin_layout Standard
-Łączenie węzłów w sposób dowolny ze sobą
-\end_layout
-
-\begin_layout Standard
-Zmianę koloru i kształtu węzłów
-\end_layout
-
-\begin_layout Standard
-Automatyczne rozmieszczanie pozycji węzłów względem ich połączeń
-\end_layout
-
-\begin_layout Subsection
-Prezentacja mapy pamięci
-\end_layout
-
-\begin_layout Standard
-Prezentacja mapy pamięci ma być płynne i animowane.
- Powinna być również możliwość drukowania mapy pamięci oraz zapisywanie
- jej w formie pliku graficznego.
-\end_layout
-
-\begin_layout Subsection
-Struktura serializacji
-\end_layout
-
-\begin_layout Standard
-Aplikacja ma umożliwiać zapisywanie i odczytywanie mapy pamięci w sposób
- transparentny dla użytkownika.
-\end_layout
-
-\begin_layout Subsection
-Interakcja z przeglądarką internetową
-\end_layout
-
-\begin_layout Standard
-W ramach szybkiego tworzenia map pamięci, aplikacja powinna 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -822,19 +1085,27 @@ ia interfejsów użytkownika.
 \end_layout
 
 \begin_layout Subparagraph
-XPCOM is a cross platform component object model, similar to Microsoft COM.
- It has multiple language bindings, letting the XPCOM components be used
- and implemented in JavaScript, Java, and Python in addition to C++.
- Interfaces in XPCOM are defined in a dialect of IDL called XPIDL.
- XPCOM itself provides a set of core components and classes, e.g.
- file and memory management, threads, basic data structures (strings, arrays,
- variants), etc.
- The majority of XPCOM components are not part of this core set and is provided
- by other parts of the platform (e.g.
- Gecko or Necko) or by an application or even by an extension.
+XPCOM (ang.
+ Cross Platform Component Object Model) jest przenośną platformą obiektów
+ COM, podobną do Microsoft COM.
+ Posiada dowiązań do wielu języków programowania.
+ Interfejsy w XPCOM są definiowane jako dialekty IDL (ang.
+ Interface Definition Language) zwane XPIDL.
+ XPCOM dostarcza zestaw componentów i klas pozwalających na zarządzanie
+ plikami i pamięcia, wątki, struktury danych i inne.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Zestaw tych trzech technologii pozwala na tworzenie rozszerzeń do aplikacji
+ Firefox i Thunderbird.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -845,8 +1116,8 @@ XPCOM is a cross platform component object model, similar to Microsoft COM.
 Architektura programu
 \end_layout
 
-\begin_layout Subsection
-Uwagi wstępne
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
@@ -858,6 +1129,10 @@ Listing kodu
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -900,10 +1175,11 @@ Rys 9.1 Wygląd interfejsu użytkownika programu
 \begin_layout Subparagraph
 Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
  jak największej przestrzeni do oglądania mapy pamięci.
+ Ma to na celu umożliwienie pełnego skupienia się przy tworzeniu mapy.
  Główną część okna zajmuje widok mapy pamięci, wraz z paskiem menu programu.
  Interakcja z programem odbywa się za pomocą klawiatury i myszki.
  Zaleca się korzystanie z myszy zewnętrznej lub touchpada skonfigurowanego
- do naciskania środkowego przycisku myszy i funkcji przewijania tekstu.
+ do naciskania środkowego przycisku myszy i funkcji rolki.
 \end_layout
 
 \begin_layout Subsection
@@ -913,16 +1189,21 @@ Poruszanie się w widoku mapy pamięci
 \begin_layout Subparagraph
 Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
  lub środkowego przycisku i poruszania myszy.
+ Zwiększanie lub zmniejszanie widoku wielkości mapy pamięci odbywa się za
+ pomocą używania rolki na myszce.
+ Należy zwrócić uwagę by nie był zaznaczony żaden element przy używaniu
+ rolki.
 \end_layout
 
 \begin_layout Subsection
-Dodawanie węzłów
+Dodawanie i edycja węzłów
 \end_layout
 
 \begin_layout Subparagraph
 By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
  miejscu w widoku mapy pamięci.
  Stworzy to nowy element i otworzy okno edycji tekstu i stylu węzła.
+ Widok okna edycji pokazuje rys 9.2.
 \end_layout
 
 \begin_layout Standard
@@ -938,6 +1219,12 @@ By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
 \begin_layout Standard
 \align center
 Rys 9.2 Wygląd okna edycji węzła
+\end_layout
+
+\begin_layout Subparagraph
+Po zamknięciu okna edycji uaktualnia się wygląd węzła.
+ Przywołać to okno można ponownie klikając dwukrotnie na obiekcie.
+ By edytować wielkość węzła, należy zaznaczyć element i użyć rolki.
 \end_layout
 
 \begin_layout Subsection
@@ -1032,6 +1319,10 @@ By przekształcić dany fragment tekstu na węzeł w mapie pamięci, należy za
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
