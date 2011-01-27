@@ -1117,6 +1117,97 @@ Architektura programu
 \end_layout
 
 \begin_layout Subsection
+System sygnałów i slotów
+\end_layout
+
+\begin_layout Standard
+Biblioteka QT umożliwia na bardzo proste zarządzanie zdarzeniami na obiektach.
+ Posiada ona system sygnałów i slotów, który implementuje wzorzec projektowy
+ obserwatora (ang.
+ 
+\emph on
+Observer pattern
+\emph default
+).
+ Obiekty mogą emitować sygnały (również z przekazywanymi wartościami) i
+ inne obiekty mogą reagować na te sygnały podłączające je do slotów.
+ Podejście takie jest bardzo elastyczne, gdyż do jednego slotu można podłączyć
+ wiele sygnałów jak również sygnał może być obsługiwany przez wiele slotów.
+ Każdy sygnał ma swoją nazwę po której jest identyfikowany i jest możliwe
+ również przekazywanie wartości podczas emitowania sygnału.
+ Niektóre obiekty zawierają predefiniowane sygnały i sloty, dzięki czemu
+ można przekierowywać zdarzenia poszczególnych obiektów.
+ Na przykład klasa QPushButton która implementuje przyciski na widgecie
+ emituje sygnał 
+\begin_inset Quotes eld
+\end_inset
+
+clicked()
+\begin_inset Quotes erd
+\end_inset
+
+ w momencie kliknięcia na niego.
+\end_layout
+
+\begin_layout Standard
+System sygnałów i slotów jest wykorzystywany głównie w klasie 
+\emph on
+FormFromText
+\emph default
+ oraz 
+\emph on
+textEdit
+\emph default
+.
+ Obiekt 
+\emph on
+pierwszej klasy
+\emph default
+ nasłuchuje sygnału o nazwie 
+\begin_inset Quotes eld
+\end_inset
+
+addItemToList
+\begin_inset Quotes erd
+\end_inset
+
+ który emitowany jest w momencie gdy zostaje zaznaczony tekst.
+ Następnie tworzy dynamicznie dwa przyciski.
+ Pierwszy zawiera tekst który został zaznaczony, drugi napis 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Od razu do obu przycisków są podłączane sygnały kliknięcia, które są obsługiwan
+e przez dwie metody w klasie FormFromText.
+ Jeżeli użytkownik naciśnie pierwszy przycisk, zostaje emitowany sygnał
+ 
+\begin_inset Quotes eld
+\end_inset
+
+addItem
+\begin_inset Quotes erd
+\end_inset
+
+ który jest podłączony pośrednio do klasy 
+\emph on
+GraphicsView, 
+\emph default
+która otrzymuje informacje jaki tekst został wybrany i tworzy nowy element
+ na scenie razem z tym tekstem.
+ Jednak gdy użytkownik naciśnie drugi przycisk, oba przyciski zostają usunięte
+ z okna.
+\end_layout
+
+\begin_layout Standard
+Architektura obiekt - scena
+\end_layout
+
+\begin_layout Subsection
 Opis klas
 \end_layout
 
@@ -1147,6 +1238,8 @@ Jest to główna klasa aplikacji.
  Dziedziczy po klasie QMainWindow.
  Zawiera główne okno oraz metody związane z serializacją, deserializacją
  oraz drukowaniem.
+ Konstruktor w zależności od podanych argumentów tworzy nowy dokument, wczytuje
+ istniejący lub uruchamia nowy dokument z oknem tworzenia dokumentu z tekstu.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1176,11 +1269,20 @@ Jest to klasa odpowiedzialna za wszelką interakcją z użytkownikiem, dodawanie
  usuwaniem, łączeniem i rozłączaniem elementów.
  Dziedziczy po QGraphicsView, które jest prezentacją sceny QGraphicScene
  zawierającej wszelkie elementy.
- 
-\end_layout
-
-\begin_layout Standard
-wheelEvent -> jest odpowiedzialna za odbiór 
+ Grupa metod 
+\emph on
+mousePressEvent
+\emph default
+, 
+\emph on
+mouseReleaseEvent
+\emph default
+ i 
+\emph on
+mouseMoveEvent
+\emph default
+ zarządza wszelkimi zdarzeniami związanymi z przemieszczaniem elementów,
+ zmienianiem powiększenia, przesuwaniem widoku i tworzeniem nowych elementów.
 \end_layout
 
 \begin_layout Subsubsection
