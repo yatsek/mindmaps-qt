@@ -1117,6 +1117,60 @@ Architektura programu
 \end_layout
 
 \begin_layout Subsection
+Zarządzanie mapami pamięci
+\end_layout
+
+\begin_layout Standard
+Głównym systemem zarządzającym obiektami na mapie pamięci oraz ich wyświetlaniem
+ jest 
+\emph on
+Graphics View Framework 
+\emph default
+który jest zawarty w bibliotekach QT.
+ Zawiera on 3 podstawowe elementy:
+\end_layout
+
+\begin_layout Itemize
+QGraphicsScene - scena w której przechowywane są obiekty wraz z ich położeniem
+\end_layout
+
+\begin_layout Itemize
+QGraphicsView - widok danej sceny
+\end_layout
+
+\begin_layout Itemize
+QGraphicsItem - obiekt sceny
+\end_layout
+
+\begin_layout Standard
+Scena jest kontenerem na obiekty, zapewniając szybki dostęp do nich.
+ Jej zaletą jest zarządzanie stanem obiektów, detekcją kolizji i propagacją
+ zdarzeń.
+ QGraphicsScene używa algorytmu 
+\emph on
+Binary Space Positioning 
+\emph default
+do efektywnego zarządzania widzialnością danych obiektów.
+ System propagacji zdarzeń wysyła zdarzenia do obiektów do których się dane
+ zdarzenie odnosi.
+ Jeżeli scena otrzyma zdarzenie kliknięcia myszą w danym miejscu, przekazuje
+ to zdarzenie do obiektu który znajduje się na danej pozycji.
+\end_layout
+
+\begin_layout Standard
+Widok dostarcza kontrolkę która wizualizuje zawartość sceny.
+ Możliwe jest podłączenie wielu widoków do jednej sceny by zapewnić wiele
+ rzutni na dany zbiór obiektów.
+ Widok otrzymuje bezpośrednio zdarzenia klawiatury i myszki i tłumaczy je
+ na zdarzenia sceny przetwarzając koordynaty widoku na koordynaty sceny.
+\end_layout
+
+\begin_layout Standard
+Obiekt sceny jest bazową klasą dla każdego graficznego elementu sceny.
+ 
+\end_layout
+
+\begin_layout Subsection
 System sygnałów i slotów
 \end_layout
 
@@ -1172,7 +1226,7 @@ addItemToList
 \end_inset
 
  który emitowany jest w momencie gdy zostaje zaznaczony tekst.
- Następnie tworzy dynamicznie dwa przyciski.
+ Następnie tworzy w oknie dynamicznie dwa przyciski.
  Pierwszy zawiera tekst który został zaznaczony, drugi napis 
 \begin_inset Quotes eld
 \end_inset
