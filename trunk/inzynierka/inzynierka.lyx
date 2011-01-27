@@ -1116,12 +1116,225 @@ Zestaw tych trzech technologii pozwala na tworzenie rozszerzeń do aplikacji
 Architektura programu
 \end_layout
 
+\begin_layout Subsection
+Opis klas
+\end_layout
+
+\begin_layout Subsubsection
+Form
+\end_layout
+
 \begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/form.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
-Struktura kodu aplikacji
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa Form
+\end_layout
+
+\begin_layout Standard
+Jest to główna klasa aplikacji.
+ Dziedziczy po klasie QMainWindow.
+ Zawiera główne okno oraz metody związane z serializacją, deserializacją
+ oraz drukowaniem.
+\end_layout
+
+\begin_layout Subsubsection
+GraphicView
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/graphicsView.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa GraphicsView
+\end_layout
+
+\begin_layout Standard
+Jest to klasa odpowiedzialna za wszelką interakcją z użytkownikiem, dodawaniem,
+ usuwaniem, łączeniem i rozłączaniem elementów.
+ Dziedziczy po QGraphicsView, które jest prezentacją sceny QGraphicScene
+ zawierającej wszelkie elementy.
+ 
+\end_layout
+
+\begin_layout Standard
+wheelEvent -> jest odpowiedzialna za odbiór 
+\end_layout
+
+\begin_layout Subsubsection
+Node
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/node.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa Node
+\end_layout
+
+\begin_layout Subsubsection
+Edge
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/edge.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa Edge
+\end_layout
+
+\begin_layout Subsubsection
+FormFromText
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/fromfromtext.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa FormFromText
+\end_layout
+
+\begin_layout Subsubsection
+editNode
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/editNode.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa editNode
+\end_layout
+
+\begin_layout Subsubsection
+lineEdit
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/lineEdit.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa lineEdit
+\end_layout
+
+\begin_layout Subsubsection
+textEdit
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/textEdit.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa textEdit
+\end_layout
+
+\begin_layout Subsubsection
+editTextDialog
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/editTextDialog.png
+	lyxscale 30
+	scale 30
+	groupId uml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.1 Klasa editTextDialog
 \end_layout
 
 \begin_layout Subsection
