@@ -172,18 +172,18 @@ class Form(QMainWindow):
 		print "show prev"
 		painter = QPainter(self.printer)
 		self.view.render(painter)
-
-app=QApplication(sys.argv)
-form=Form()
-if len(sys.argv)==2:
-	if "--text" in sys.argv:
-		form=Form(True)
-elif len(sys.argv)==3:
-	if "--file" in sys.argv:
-		form=Form(filename=sys.argv[2],centralNode=False)
-	elif "--text" in sys.argv:
-		form=Form(True,text=sys.argv[2])
-rect=QApplication.desktop().availableGeometry()
-form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
-form.show()
-app.exec_()
+if __name__ == "__main__":
+	app=QApplication(sys.argv)
+	form=Form()
+	if len(sys.argv)==2:
+		if "--text" in sys.argv:
+			form=Form(True)
+	elif len(sys.argv)==3:
+		if "--file" in sys.argv:
+			form=Form(filename=sys.argv[2],centralNode=False)
+		elif "--text" in sys.argv:
+			form=Form(True,text=sys.argv[2])
+	rect=QApplication.desktop().availableGeometry()
+	form.resize(int(rect.width() *0.7), int(rect.height() * 0.7))
+	form.show()
+	app.exec_()
