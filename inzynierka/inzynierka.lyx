@@ -899,6 +899,19 @@ Prezentacja mapy pamięci ma być płynne i animowane.
 \end_layout
 
 \begin_layout Subsection
+Serializacja
+\end_layout
+
+\begin_layout Standard
+Zapisywanie i odczytywanie danej mapy pamięci powinno być
+\begin_inset space \space{}
+\end_inset
+
+przeźroczyste dla użytkownika.
+ Powinno dokładnie odzwierciedlać stan danej mapy pamięci.
+\end_layout
+
+\begin_layout Subsection
 Interakcja z przeglądarką internetową
 \end_layout
 
@@ -1119,10 +1132,6 @@ Aplikacja nie powinna narażać system operacyjny na niestabilność działania
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Serializacja
-\end_layout
-
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
