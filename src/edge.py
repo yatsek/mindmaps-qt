@@ -13,7 +13,6 @@ class Edge(QGraphicsItem):
 		super(Edge,self).__init__()
 		self.sourcePoint=None
 		self.destPoint=None	
-		self.arrowSize=10
 		self.setFlags(self.ItemIsSelectable)
 		self.setAcceptedMouseButtons(Qt.NoButton)
 		self.source=sourceNode
@@ -66,9 +65,7 @@ class Edge(QGraphicsItem):
 		"""Sets bounding rectangle of a scene"""
 		if not self.source or not self.dest:
 			return QRectF()
-		penWidth=1
-		extra = (penWidth + self.arrowSize) / 2.0;
-		return QRectF(self.sourcePoint, QSizeF(self.destPoint.x() - self.sourcePoint.x(),self.destPoint.y() - self.sourcePoint.y())).normalized().adjusted(-extra,-extra,extra,extra)
+		return QRectF(self.sourcePoint, QSizeF(self.destPoint.x() - self.sourcePoint.x(),self.destPoint.y() - self.sourcePoint.y())).normalized()
 
 	def paint(self,painter, option=None, widget=None):
 		"""Paint edge on a scene"""
