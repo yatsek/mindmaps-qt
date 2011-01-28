@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -852,7 +852,17 @@ Specyfikacja wymagań funkcjonalnych programu
 \end_layout
 
 \begin_layout Subsection
-Tworzenie mapy pamięci
+Uwagi wstępne
+\end_layout
+
+\begin_layout Standard
+W celu przedstawienia wymagań funkcjonalnych została stworzona lista wszytkich
+ głównych funkcji aplikacji i każda z nich opisana.
+ Są to wymagania ogólne, definiujące szkic aplikacji.
+\end_layout
+
+\begin_layout Subsection
+Tworzenie map pamięci
 \end_layout
 
 \begin_layout Standard
@@ -877,7 +887,7 @@ Automatyczne rozmieszczanie pozycji węzłów uwzględniając połączenia pomi�
 \end_layout
 
 \begin_layout Subsection
-Prezentacja mapy pamięci
+Prezentacja map pamięci
 \end_layout
 
 \begin_layout Standard
@@ -886,15 +896,6 @@ Prezentacja mapy pamięci ma być płynne i animowane.
  jej w formie pliku graficznego.
  Powinna być możliwość przesuwania widoku mapy za pomocą myszki oraz zmianę
  powiększenia prezentacji.
-\end_layout
-
-\begin_layout Subsection
-Struktura serializacji
-\end_layout
-
-\begin_layout Standard
-Aplikacja ma umożliwiać zapisywanie i odczytywanie mapy pamięci w sposób
- transparentny dla użytkownika.
 \end_layout
 
 \begin_layout Subsection
@@ -912,6 +913,217 @@ W ramach szybkiego tworzenia map pamięci, przeglądarka internetowa powinna
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Specyfikacja wymagań pozafunkcjonalnych programu
+\end_layout
+
+\begin_layout Subsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Standard
+W tym rozdziale zostaną
+\begin_inset space \space{}
+\end_inset
+
+omówione wymagania pozafunkcjonalne, spełniane przez stworzoną aplikację,
+ w oparciu o standard ISO/IEC 9126-1:2001 [ISO].
+ Standard ten jest używany do oceny jakości oprogramowania.
+ Odniesiono się zatem do niego, opisując stosowne założenia spełniające
+ przez aplikację.
+\end_layout
+
+\begin_layout Subsection
+Wydajność
+\end_layout
+
+\begin_layout Enumerate
+Wykorzystanie zasobów (ang.
+
+\emph on
+ resource utilisation
+\emph default
+) - rodzaj i liczba wykorzystanych zasobów, np.
+ pamięć operacyjna
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja nie powinna wykorzystywać więcej niż
+\begin_inset space \space{}
+\end_inset
+
+30 MB pamięci operacyjnej.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Wydajność (ang.
+ 
+\emph on
+efficiency compliance
+\emph default
+) - szybkość odpowiedzi aplikacji na akcje użytkownika
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja powinna natychmiastowo reagować na interakcję użytkownika
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Użyteczność
+\end_layout
+
+\begin_layout Enumerate
+Łatwość zrozumienia (ang.
+ 
+\emph on
+understability
+\emph default
+)- łatwość zrozumienia czym jest dany produkt i jak może być użyty.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja powinna posiadać pełną
+\begin_inset space \space{}
+\end_inset
+
+dokumentację funkcjonalności.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Łatwość operowania (ang.
+ 
+\emph on
+operability
+\emph default
+) - zdefiniowana jako łatwość użytkowania i sterowania oprogramowaniem.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja powinna posiadać interfejs użyteczny dla użytkownika.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Atrakcyjność (ang.
+ 
+\emph on
+attractiveness
+\emph default
+) - wygląd produktu 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Komunikacja z aplikacją
+\begin_inset space \space{}
+\end_inset
+
+powinna odbywać się
+\begin_inset space \space{}
+\end_inset
+
+za pomocą
+\begin_inset space \space{}
+\end_inset
+
+interfejsu graficznie przystępnego dla użytkownika.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Przenośność
+\end_layout
+
+\begin_layout Enumerate
+Łatwość adaptacji (ang.
+ 
+\emph on
+adaptability
+\emph default
+) - pracochłonność potrzebna do dostosowania aplikacji by działała na innych
+ systemach operacyjnych
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja zostanie napisany w języku Python, w celu zapewnienia przenośności
+ pomiędzy systemami operacyjnymi
+\end_layout
+
+\begin_layout Itemize
+Aplikacja powinna umożliwiać uruchomienie na platformach systemowych Windows
+ oraz Linux 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Łatwość insatalacji (ang.
+ 
+\emph on
+installability
+\emph default
+) - nakład pracy potrzebny do zainstalowania i konfiguracji aplikacji
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aplikacja dostarcza dokumentację
+\begin_inset space \space{}
+\end_inset
+
+zainstalowania zależności potrzebnych do instalacji na danej platformie
+\end_layout
+
+\begin_layout Itemize
+Aplikacja jest zaprojektowani w sposób przenośny (ang.
+ 
+\emph on
+portable
+\emph default
+), nie wymaga zapisania jakichkolwiek informacji w rejestrze czy ustawieniach
+ systemu operacyjnego
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Niezawodność
+\end_layout
+
+\begin_layout Enumerate
+Odporność na błędy (and.
+ 
+\emph on
+failure recoverability
+\emph default
+) - zdolność do działania nawet po wystąpieniu błędu w aplikacji
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Błąd w czasie uruchomienia nie może powodować awarii całej aplikacji
+\end_layout
+
+\begin_layout Itemize
+Aplikacja nie powinna narażać system operacyjny na niestabilność działania
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Serializacja
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1167,7 +1379,16 @@ Widok dostarcza kontrolkę która wizualizuje zawartość sceny.
 
 \begin_layout Standard
 Obiekt sceny jest bazową klasą dla każdego graficznego elementu sceny.
- 
+ Dostępne są również predefiniowane klasy dziedziczące po QGraphicsItem,
+ definiując style rysowania elipsy, tekstu czy prostokąta.
+\end_layout
+
+\begin_layout Standard
+W aplikacji zostały wykorzystane wszystkie trzy klasy do stworzenia mechanizmu
+ map pamięci.
+ Z uwagi na zadowalającą funkcjonalność klasy QGraphicsScene nie było potrzeby
+ jej rozszerzać, w przypadku pozostałych klas zaistniała potrzeba przeciążenia
+ dużej części metod.
 \end_layout
 
 \begin_layout Subsection
@@ -1200,7 +1421,8 @@ clicked()
 \begin_inset Quotes erd
 \end_inset
 
- w momencie kliknięcia na niego.
+ w momencie kliknięcia na niego [PYQT].
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1723,7 +1945,7 @@ Nakładki PyQt w wersji 4.7 lub nowszej
 \end_layout
 
 \begin_layout Itemize
-Przeglądarki internetowej Firefox w wersji 3.5
+Przeglądarki internetowej Firefox w wersji 3.5 - 4.0b10
 \end_layout
 
 \begin_layout Subsection
@@ -1878,15 +2100,6 @@ Mapy twoich myśli
 
 \begin_layout List
 \labelwidthstring 00.00.0000
-[BUZAN2] Buzan Tony, 
-\emph on
-Pamięć na zawołanie
-\emph default
-, Ravi, Łódź 2003
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
 [PSYCHO] Nęcki Edward, Orzechowski Jarosław, Szymura Błażej, 
 \emph on
 Psychologia poznawcza
@@ -1905,28 +2118,14 @@ Cognitive Science an introduction
 
 \begin_layout List
 \labelwidthstring 00.00.0000
-[THINK] Krug Steve,
-\emph on
- Nie każ mi myśleć: O życiowym podejściu do funkcjonalności stron internetowych
-\emph default
-, Helion, Gliwice 2006
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-[BRAIN] Nicholas Carr, 
-\emph on
-The Shallows: What the Internet is doing to our brains
-\emph default
-, W.
- W.
- Norton & Company, New York 2010
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-[PYTHON] Summerfield Mar, Rapid GUI programming with Python and QT, Prentice
+[PYQT] Summerfield Mar, Rapid GUI programming with Python and QT, Prentice
  Hall, New York 2008
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+[ISO] ISO/IEC 9126-1, Software engineering — Product quality — Part 1: Quality
+ Model, June 2001
 \end_layout
 
 \end_body
