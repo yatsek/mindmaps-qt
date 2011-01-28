@@ -1,0 +1,2713 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="214.489mm"
+   height="444.853mm"
+   version="1.2"
+   id="svg2"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="diagram1.svg">
+  <metadata
+     id="metadata722">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="978"
+     id="namedview720"
+     showgrid="false"
+     inkscape:zoom="0.62680383"
+     inkscape:cx="30.096465"
+     inkscape:cy="924.5487"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Qt Svg Document</title>
+  <desc
+     id="desc6">Generated with Qt</desc>
+  <defs
+     id="defs8">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 788.12537 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="760.00037 : 788.12537 : 1"
+       inkscape:persp3d-origin="380.00018 : 525.41691 : 1"
+       id="perspective724" />
+    <inkscape:perspective
+       id="perspective3965"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4008"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g12"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-978.56308,187.69662)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,900 870,690 "
+     id="polyline20"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-123.05827)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,1020 870,1170 "
+     id="polyline24"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-209.17657)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,150 870,330 "
+     id="polyline28"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.85334,-76.204981)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g30"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <path
+       style="fill-rule:evenodd"
+       id="path32"
+       d="m 870,330 4,-10 -4,-12 -4,12 4,10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g34"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-756.43434,68.562029)">
+    <path
+       style="fill-rule:evenodd"
+       id="path36"
+       d="m 870,150 -4,10 4,12 4,-12 -4,-10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g38"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72616,-62.242906)">
+    <path
+       style="fill-rule:evenodd"
+       id="path40"
+       d="m 870,690 -4,10 4,12 4,-12 -4,-10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g42"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-749.2417,-189.85909)">
+    <path
+       style="fill-rule:evenodd"
+       id="path44"
+       d="m 870,1020 -4,10 4,12 4,-12 -4,-10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g50"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-200.97482)">
+    <path
+       style="fill-rule:evenodd"
+       id="path52"
+       d="m 870,900 4,-10 -4,-12 -4,12 4,10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g54"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <path
+       style="fill-rule:evenodd"
+       id="path56"
+       d="m 750,1170 204,0 0,65 -204,0 0,-65"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g58"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g60"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:700;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text62"
+       font-style="normal"
+       font-weight="700"
+       font-size="9"
+       y="1178"
+       x="833.5"
+       xml:space="preserve">lineEdit</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g64"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <polyline
+       style="fill:none"
+       id="polyline66"
+       points="750,1180 953,1180 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g68"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <polyline
+       style="fill:none"
+       id="polyline70"
+       points="750,1185 953,1185 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g72"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g74"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text76"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1193"
+       x="755"
+       xml:space="preserve">+ __init__(args : QWidget)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g78"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g80"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g82"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text84"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1203"
+       x="755"
+       xml:space="preserve">+ event(event : QKeyEvent) : QKeyEvent</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g86"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g88"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g90"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text92"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1213"
+       x="755"
+       xml:space="preserve">+ historyUp()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g94"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g96"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g98"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text100"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1223"
+       x="755"
+       xml:space="preserve">+ historyDown()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g102"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g104"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g106"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-722.5453,-259.75397)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text108"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1233"
+       x="755"
+       xml:space="preserve">+ checkStack()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g110"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,900 874,890 "
+     id="polyline116"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-202.03855)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,890 870,878 "
+     id="polyline118"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-202.03855)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,878 866,890 "
+     id="polyline120"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-202.03855)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,890 870,900 "
+     id="polyline122"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72618,-202.03855)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,700 870,712 "
+     id="polyline124"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72616,-61.925456)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,690 866,700 "
+     id="polyline126"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72616,-62.608936)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,712 874,700 "
+     id="polyline128"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72616,-61.925456)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,700 870,690 "
+     id="polyline130"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.72616,-62.608936)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g132"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text134"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="910"
+       x="874"
+       xml:space="preserve">-window</text>
+  </g>
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,1042 874,1030 "
+     id="polyline138"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-748.75721,-189.54165)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,1030 870,1020 "
+     id="polyline140"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-748.75721,-189.54165)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,330 874,320 "
+     id="polyline142"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-714.71076,-37.477736)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,320 870,330 "
+     id="polyline150"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-714.71076,-37.477736)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g152"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text154"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="160"
+       x="814"
+       xml:space="preserve">0..1</text>
+  </g>
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,150 866,160 "
+     id="polyline158"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,160 870,150 "
+     id="polyline160"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,160 870,172 "
+     id="polyline162"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,150 866,160 "
+     id="polyline164"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,172 874,160 "
+     id="polyline166"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,160 870,150 "
+     id="polyline168"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.62278,67.818191)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,1020 866,1030 "
+     id="polyline170"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.2417,-190.82568)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,1030 870,1042 "
+     id="polyline172"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.24169,-190.34239)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g174"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-202.42469)">
+    <path
+       style="fill-rule:evenodd"
+       id="path176"
+       d="m 600,900 465,0 0,130 -465,0 0,-130"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g178"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g180"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:700;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text182"
+       font-style="normal"
+       font-weight="700"
+       font-size="9"
+       y="908"
+       x="810"
+       xml:space="preserve">editNode</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g184"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <polyline
+       style="fill:none"
+       id="polyline186"
+       points="600,910 1064,910 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g188"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g190"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-706.2368,-129.89306)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text192"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="855.7796"
+       x="600.21381"
+       xml:space="preserve">- textEdit : lineEdit</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g194"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g196"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g198"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text200"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="928"
+       x="605"
+       xml:space="preserve">- fontColorB : QPushButton</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g202"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g204"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g206"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text208"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="938"
+       x="605"
+       xml:space="preserve">- insideColorB : QPushButton</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g210"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g212"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g214"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text216"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="948"
+       x="605"
+       xml:space="preserve">- button : QPushButton</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g218"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g220"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g222"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text224"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="958"
+       x="605"
+       xml:space="preserve">- layout : QGridLayout</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g226"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g228"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g230"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text232"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="968"
+       x="605"
+       xml:space="preserve">- node : Node</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g234"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g236"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g238"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text240"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="978"
+       x="605"
+       xml:space="preserve">- fontColor : QColor</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g242"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g244"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g246"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text248"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="988"
+       x="605"
+       xml:space="preserve">- insideColor : QColor</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g250"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g252"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <polyline
+       style="fill:none"
+       id="polyline254"
+       points="600,990 1064,990 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g256"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g258"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text260"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="998"
+       x="605"
+       xml:space="preserve">+ __init__(parent : QWidget, node : Node, text : string, fontColor : QColor, insideColor : QColor)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g262"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g264"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g266"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text268"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1008"
+       x="605"
+       xml:space="preserve">+ hidee()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g270"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g272"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g274"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text276"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1018"
+       x="605"
+       xml:space="preserve">+ setFontColor()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g278"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g280"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g282"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-712.44957,-200.97482)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text284"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1028"
+       x="605"
+       xml:space="preserve">+ setInsideColor()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g286"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g288"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-867.76878,73.783538)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text290"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="160"
+       x="904"
+       xml:space="preserve">-edgeList</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g292"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-672.06658,-43.774756)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text294"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="310"
+       x="814"
+       xml:space="preserve">-dest</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g296"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-665.85381,-90.251311)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text298"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="730"
+       x="814"
+       xml:space="preserve">-node</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g300"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-755.93892,-62.912156)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text302"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="310"
+       x="874"
+       xml:space="preserve">-source</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#323232;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g304"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-743.26586,-325.83006)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#323232;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text306"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="1150"
+       x="874"
+       xml:space="preserve">-textEdit</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g308"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <path
+       style="fill-rule:evenodd"
+       id="path310"
+       d="m 570,330 481,0 0,350 -481,0 0,-350"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g312"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g314"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:700;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text316"
+       font-style="normal"
+       font-weight="700"
+       font-size="9"
+       y="338"
+       x="797.5"
+       xml:space="preserve">Node</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g318"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <polyline
+       style="fill:none"
+       id="polyline320"
+       points="570,340 1050,340 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g322"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g324"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text326"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="348"
+       x="575"
+       xml:space="preserve">- edgeList : Edge[*]</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g328"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g330"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g332"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text334"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="358"
+       x="575"
+       xml:space="preserve">- font : QFont</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g336"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g338"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g340"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text342"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="368"
+       x="575"
+       xml:space="preserve">- text : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g344"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g346"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g348"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text350"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="378"
+       x="575"
+       xml:space="preserve">- level : int</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g352"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g354"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g356"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text358"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="388"
+       x="575"
+       xml:space="preserve">- movable : bool</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g360"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g362"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g364"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text366"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="398"
+       x="575"
+       xml:space="preserve">- insideColor : QColor</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g368"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g370"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g372"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text374"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="408"
+       x="575"
+       xml:space="preserve">- outsideColor : QColor</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g376"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g378"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g380"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text382"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="418"
+       x="575"
+       xml:space="preserve">- fontColor : QColor</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g384"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g386"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g388"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text390"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="428"
+       x="575"
+       xml:space="preserve">- parent : QWidget</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g392"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g394"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g396"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text398"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="438"
+       x="575"
+       xml:space="preserve">- rectOverText : QRectF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g400"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g402"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g404"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text406"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="448"
+       x="575"
+       xml:space="preserve">- window : editNode</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g408"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g410"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <polyline
+       style="fill:none"
+       id="polyline412"
+       points="570,450 1050,450 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g414"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g416"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text418"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="458"
+       x="575"
+       xml:space="preserve">+ __init__(pos : string, text : string, parent : QWidget, lev : int, movable : bool = True, array : dict)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g420"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g422"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g424"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text426"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="468"
+       x="575"
+       xml:space="preserve">+ randomHash() : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g428"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g430"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g432"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text434"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="478"
+       x="575"
+       xml:space="preserve">+ getFullInfo() : dict</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g436"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g438"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g440"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text442"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="488"
+       x="575"
+       xml:space="preserve">+ setFullInfo(r : dict)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g444"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g446"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g448"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text450"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="498"
+       x="575"
+       xml:space="preserve">+ scene(self : string) : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g452"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g454"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g456"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text458"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="508"
+       x="575"
+       xml:space="preserve">+ toggleMovable()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g460"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g462"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g464"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text466"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="518"
+       x="575"
+       xml:space="preserve">+ addEdge(edge : Edge)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g468"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g470"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g472"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text474"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="528"
+       x="575"
+       xml:space="preserve">+ connectedWith(item : Node) : Edge</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g476"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g478"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g480"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text482"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="538"
+       x="575"
+       xml:space="preserve">+ removeConnection(edge : Edge)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g484"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g486"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g488"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text490"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="548"
+       x="575"
+       xml:space="preserve">+ getConnectedNodes() : Node[*]</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g492"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g494"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g496"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text498"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="558"
+       x="575"
+       xml:space="preserve">+ shape()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g500"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g502"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g504"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text506"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="568"
+       x="575"
+       xml:space="preserve">+ paint(painter : QPainter, option : QStyleOptionGraphicsItem)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g508"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g510"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g512"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text514"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="578"
+       x="575"
+       xml:space="preserve">+ boundingRect() : QRectF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g516"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g518"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g520"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text522"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="588"
+       x="575"
+       xml:space="preserve">+ drawOnScene(scene : QGraphicScene)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g524"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g526"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g528"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text530"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="598"
+       x="575"
+       xml:space="preserve">+ ellipsisCenter() : QPointF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g532"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g534"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g536"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text538"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="608"
+       x="575"
+       xml:space="preserve">+ itemChange(change : GraphicsItemChange, value : QVariant)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g540"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g542"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g544"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text546"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="618"
+       x="575"
+       xml:space="preserve">+ mouseMoveEvent(event : QGraphicsSceneMouseEvent)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g548"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g550"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g552"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text554"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="628"
+       x="575"
+       xml:space="preserve">+ scale(plus : bool)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g556"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g558"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g560"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text562"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="638"
+       x="575"
+       xml:space="preserve">+ wheelEvent(event : QGraphicsSceneWheelEvent)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g564"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g566"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g568"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text570"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="648"
+       x="575"
+       xml:space="preserve">+ findBestSize(font : QFont, message : string) : QRectF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g572"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g574"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g576"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text578"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="658"
+       x="575"
+       xml:space="preserve">+ mouseDoubleClickEvent(event : QGraphicsSceneMouseEvent)</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g580"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g582"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g584"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text586"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="668"
+       x="575"
+       xml:space="preserve">+ calculateForces()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g588"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g590"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g592"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-675.17296,-51.976496)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text594"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="678"
+       x="575"
+       xml:space="preserve">+ advance(self : string) : bool</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g596"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g598"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <path
+       style="fill-rule:evenodd"
+       id="path600"
+       d="m 630,0 381,0 0,140 -381,0 0,-140"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g602"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g604"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:700;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text606"
+       font-style="normal"
+       font-weight="700"
+       font-size="9"
+       y="8"
+       x="808.5"
+       xml:space="preserve">Edge</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:700;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g608"
+     font-style="normal"
+     font-weight="700"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <polyline
+       style="fill:none"
+       id="polyline610"
+       points="630,10 1010,10 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g612"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g614"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text616"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="18"
+       x="635"
+       xml:space="preserve">- source : Node</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g618"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g620"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g622"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text624"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="28"
+       x="635"
+       xml:space="preserve">- dest : Node</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g626"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g628"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g630"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text632"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="38"
+       x="635"
+       xml:space="preserve">- srcPoint : QPointF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g634"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g636"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g638"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text640"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="48"
+       x="635"
+       xml:space="preserve">- destPoint : QPointF</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g642"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g644"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g646"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text648"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="58"
+       x="635"
+       xml:space="preserve">- visible : bool</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g650"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g652"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <polyline
+       style="fill:none"
+       id="polyline654"
+       points="630,60 1010,60 "
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g656"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g658"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text660"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="68"
+       x="635"
+       xml:space="preserve">+ __init__(sourceNode : Node, destNode : Node, visible : bool = True) : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g662"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g664"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g666"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text668"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="78"
+       x="635"
+       xml:space="preserve">+ sourceNode() : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g670"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g672"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g674"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text676"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="88"
+       x="635"
+       xml:space="preserve">+ setSourceNode(node : Node) : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g678"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g680"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g682"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text684"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="98"
+       x="635"
+       xml:space="preserve">+ destNode() : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g686"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g688"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g690"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text692"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="108"
+       x="635"
+       xml:space="preserve">+ setDestNode(node : Node) : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g694"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g696"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g698"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text700"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="118"
+       x="635"
+       xml:space="preserve">+ adjust() : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g702"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g704"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g706"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text708"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="128"
+       x="635"
+       xml:space="preserve">+ boundingRect()</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g710"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g712"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g714"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-681.38573,77.884409)">
+    <text
+       style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Serif"
+       id="text716"
+       font-style="normal"
+       font-weight="400"
+       font-size="9"
+       y="138"
+       x="635"
+       xml:space="preserve">+ paint(painter : QPainter, option : QStyleOptionGraphicsItem) : string</text>
+  </g>
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#a0ff91;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     id="g718"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-678.27935,76.517452)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,150 866,160 "
+     id="polyline158-2"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,160 870,150 "
+     id="polyline160-5"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,160 870,172 "
+     id="polyline162-4"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,150 866,160 "
+     id="polyline164-7"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,172 874,160 "
+     id="polyline166-4"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,160 870,150 "
+     id="polyline168-4"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-756.54186,128.61597)" />
+  <g
+     style="font-size:9px;font-style:normal;font-weight:400;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans Serif"
+     id="g42-3"
+     font-style="normal"
+     font-weight="400"
+     font-size="9"
+     transform="matrix(1.298062,0,0,1.1424185,-749.79477,-115.41548)">
+    <path
+       style="fill-rule:evenodd"
+       id="path44-0"
+       d="m 870,1020 -4,10 4,12 4,-12 -4,-10"
+       vector-effect="non-scaling-stroke" />
+  </g>
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,1042 874,1030 "
+     id="polyline138-7"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.31028,-115.098)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="874,1030 870,1020 "
+     id="polyline140-8"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.31028,-115.098)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="870,1020 866,1030 "
+     id="polyline170-6"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.79477,-116.38208)" />
+  <polyline
+     vector-effect="non-scaling-stroke"
+     points="866,1030 870,1042 "
+     id="polyline172-8"
+     style="font-size:9px;font-style:normal;font-weight:400;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;font-family:Sans Serif"
+     transform="matrix(1.298062,0,0,1.1424185,-749.79475,-115.89884)" />
+</svg>
