@@ -1,9 +1,14 @@
-#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
 \textclass article
 \use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
 \language polish
 \inputencoding utf8
 \font_roman default
@@ -16,9 +21,20 @@
 \font_tt_scale 100
 
 \graphics default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji w oparciu o technikę Mind Mappingu"
+\pdf_author "Wojciech Jurkowlaniec"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
@@ -47,11 +63,31 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 
 \series bold
 \size largest
-Wyższa Szkoła Komunikacji i Zarządzania w Poznaniu
+Wyższa Szkoła Komunikacji i Zarządzania 
+\begin_inset Newline newline
+\end_inset
+
+w Poznaniu
 \end_layout
 
 \begin_layout Standard
@@ -60,6 +96,7 @@ Instytut Informatyki
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -67,13 +104,7 @@ Instytut Informatyki
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -94,6 +125,7 @@ nr albumu: 17373
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -106,19 +138,24 @@ nr albumu: 17373
 \series bold
 \size largest
 Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji
- w oparciu o technikę Mind Mappingu
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
+ w oparciu 
+\begin_inset Newline newline
 \end_inset
 
-
+o technikę Mind Mappingu
 \end_layout
 
 \begin_layout Standard
 \align center
 Praca dyplomowa inżynierska
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -132,6 +169,7 @@ specjalność: Technologie i zastosowania internetu
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -139,13 +177,7 @@ specjalność: Technologie i zastosowania internetu
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -169,6 +201,7 @@ Instytut Informatyki
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset VSpace vfill
 \end_inset
 
@@ -212,6 +245,14 @@ LatexCommand tableofcontents
 
 \begin_layout Section*
 Spis rysunków
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout List
@@ -280,6 +321,8 @@ Opis problemu i koncepcja jego rozwiązania
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Żyjemy w czasach, gdzie komputery stały się łatwo dostępnym i używanym na
  co dzień narzędziem pracy czy rozrywki.
  Wykorzystuje się je do rozrywki, wzajemnej komunikacji, pogłębiania zainteresow
@@ -291,6 +334,8 @@ ań, a także do nauki.
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Najpopularniejszą metodą uczenia się jest notowanie mówionego słowa, a następnie
  powtarzanie przez wieloktrotne czytanie.
  Jednakże nie jest to technika efektywna dla wszystkich.
@@ -308,32 +353,43 @@ Cel i zakres pracy
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Celem niniejszej pracy jest opracowanie aplikacji umożliwiającej wspomaganie
  procesu uczenia się, przy wykorzystaniu metod efektywnej nauki.
- Program będzie oparty o tworzenie map pamięci, system powtórek oraz funkcjonaln
-ość szybkiego tworzenia ww.
- Map przy pomocy przeglądarki internetowej.
- Zostanie również przeprowadzona analiza ergonomii interfejsu użytkownika
- programu oraz objaśnienie działania tej techniki.
+ Program będzie oparty o tworzenie map pamięci oraz funkcjonalność szybkiego
+ tworzenia ww.
+ map przy pomocy przeglądarki internetowej.
+ Zostanie również przedstawiony interfejsu użytkownika programu oraz objaśnienie
+ działania tej techniki.
 \end_layout
 
 \begin_layout Subsection
 Omówienie pracy
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
+
+\series medium
 Praca została podzielona na dwie części - teoretyczną i praktyczną.
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona technika
  Mind Mappingu, omówienie procesów poznawczych towarzyszących nauce oraz
- wprowadzeniu do ergonomii interfejsu użytkownika wraz z analizą istniejących
- aplikacji wspomagających tworzenie map pamięci.
+ analizą istniejących aplikacji wspomagających tworzenie map pamięci.
 \end_layout
 
 \begin_layout Subparagraph
-TODO - opis rozdziałów części praktycznej
+
+\series medium
+Część praktyczną obejmują rozdziały 5-11, gdzie zostaje opisana koncepcja
+ programu do tworzenia map pamięci, specyfikacja wymagań funkcjonalnych
+ i niefunkcjonalnych, zostaną opisane wykorzystane technologie i narzędzia
+ a następnie architektura programu i opis interfejsu użytkownika.
+ Ostatni rozdział traktuje o instalacji programu i różnych trybach pracy.
 \end_layout
 
 \begin_layout Standard
@@ -356,6 +412,8 @@ Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeniem
  się i zapamietywaniem potrzebne jest parę słów wstępu na temat procesów
  poznawczych.
@@ -368,6 +426,8 @@ Skupianie uwagi
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Skupianie uwagi jest pierwszym elementem towarzyszącym uczeniu się.
  Jest bardzo ważny, gdyż bez koncentracji nie można przyswajać informacji.
  By dobrze zrozumieć ten proces, należy przytoczyć dwie definicje.
@@ -375,6 +435,7 @@ Skupianie uwagi jest pierwszym elementem towarzyszącym uczeniu się.
 
 \begin_layout Subparagraph
 
+\series medium
 \emph on
 Uwaga
 \emph default
@@ -384,6 +445,7 @@ Uwaga
 
 \begin_layout Subparagraph
 
+\series medium
 \emph on
 Świadomość
 \emph default
@@ -392,6 +454,8 @@ Uwaga
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Głównym elementem procesu skupiania uwagi jest 
 \emph on
 przeszukiwanie pola percepcyjnego
@@ -407,6 +471,8 @@ przeszukiwanie pola percepcyjnego
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Kolejnym ważnym elementem jest 
 \emph on
 podzielnośc uwagi
@@ -425,6 +491,8 @@ mocy obliczeniowej
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Również warto zwrócić uwagę na 
 \emph on
 przedłużoną koncentrację
@@ -438,6 +506,167 @@ przedłużoną koncentrację
 
 \begin_layout Subsection
 Odbieranie i analizowanie informacji
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Głównym elementem procesu skupiania uwagi jest 
+\emph on
+przeszukiwanie pola percepcyjnego
+\emph default
+.
+ Mózg ludzki dokonuje tej czynności automatycznie.
+ Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
+ który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
+ w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
+ te wystąpienia.
+ Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
+ się od otoczenia kolorem, kształtem czy rozmiarem.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Kolejnym ważnym elementem jest 
+\emph on
+podzielnośc uwagi
+\emph default
+, które ozacza dzielenie pewnej ograniczonej puli 
+\begin_inset Quotes eld
+\end_inset
+
+mocy obliczeniowej
+\begin_inset Quotes erd
+\end_inset
+
+ na więcej niż jedno zadanie.
+ Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
+ jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Również warto zwrócić uwagę na 
+\emph on
+przedłużoną koncentrację
+\emph default
+ (ang.
+ sustained attention).
+ Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
+ tym samym aspekcie otoczenia.
+ 
+\end_layout
+
+\begin_layout Subsection
+Zapamiętywanie informacji
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Głównym elementem procesu skupiania uwagi jest 
+\emph on
+przeszukiwanie pola percepcyjnego
+\emph default
+.
+ Mózg ludzki dokonuje tej czynności automatycznie.
+ Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
+ który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
+ w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
+ te wystąpienia.
+ Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
+ się od otoczenia kolorem, kształtem czy rozmiarem.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Kolejnym ważnym elementem jest 
+\emph on
+podzielnośc uwagi
+\emph default
+, które ozacza dzielenie pewnej ograniczonej puli 
+\begin_inset Quotes eld
+\end_inset
+
+mocy obliczeniowej
+\begin_inset Quotes erd
+\end_inset
+
+ na więcej niż jedno zadanie.
+ Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
+ jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Również warto zwrócić uwagę na 
+\emph on
+przedłużoną koncentrację
+\emph default
+ (ang.
+ sustained attention).
+ Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
+ tym samym aspekcie otoczenia.
+ 
+\end_layout
+
+\begin_layout Subsection
+Odtwarzanie informacji
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Głównym elementem procesu skupiania uwagi jest 
+\emph on
+przeszukiwanie pola percepcyjnego
+\emph default
+.
+ Mózg ludzki dokonuje tej czynności automatycznie.
+ Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
+ który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
+ w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
+ te wystąpienia.
+ Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
+ się od otoczenia kolorem, kształtem czy rozmiarem.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Kolejnym ważnym elementem jest 
+\emph on
+podzielnośc uwagi
+\emph default
+, które ozacza dzielenie pewnej ograniczonej puli 
+\begin_inset Quotes eld
+\end_inset
+
+mocy obliczeniowej
+\begin_inset Quotes erd
+\end_inset
+
+ na więcej niż jedno zadanie.
+ Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
+ jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Również warto zwrócić uwagę na 
+\emph on
+przedłużoną koncentrację
+\emph default
+ (ang.
+ sustained attention).
+ Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
+ tym samym aspekcie otoczenia.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -460,6 +689,8 @@ Wprowadzenie do techniki Mind Mappingu
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Obrazowe metody utrwalania wiedzy i modelowania systemów były używane od
  wieków w nauczaniu, wizualnym myśleniu i rozwiązywaniu problemów przez
  inżynierów, nauczycieli, psychologów i innych.
@@ -497,6 +728,8 @@ Rys 3.1 Przykład sieci semantycznej
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Technika 
 \emph on
 Mind Mappingu
@@ -519,8 +752,8 @@ burzy mózgów
 
  jako sposób reprezentacji planów i organizacji zadań.
  Metoda ta stała się bardzo popularna i jest wykorzystywana przez miliony
- ludzi na całym świecie.
- [BUZAN2]
+ ludzi na całym świecie [BUZAN2].
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -528,6 +761,8 @@ Nauka a ludzki mózg
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Mózg ludzki składa się dwóch półkul odpowiedzialnych za różne procesy myślowe.
  Lewa półkula zajmuje się analizą słowa, logiką, liczbami, hierarchią, linearnoś
 cią i zbiorami.
@@ -543,9 +778,8 @@ cią i zbiorami.
 \begin_inset Graphics
 	filename img/3.2.png
 	lyxscale 30
-	width 100text%
+	width 60text%
 	rotateOrigin center
-	groupId 1
 
 \end_inset
 
@@ -558,6 +792,8 @@ Rys 3.2 Funkcje półkul mózgowych
 \end_layout
 
 \begin_layout Paragraph
+
+\series medium
 Najczęściej spotykanymi sposobami notowania są [BUZAN1]:
 \end_layout
 
@@ -576,6 +812,8 @@ Notatki w formie hierarchicznej - uporządkowanie wiedzy w strukturę, oznaczon�
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
  linii, zbiorów i logiki.
  Patrząc na rysunek 3.2 można zauważyć, że analizą tych elementów zajmuje
@@ -628,7 +866,11 @@ Główne zagadnienia w postaci gałęzi wybiegają promieniście z centralnego
 
 \begin_layout Itemize
 Gałęzie zawierają kluczowy rysunek lub słowo (wypisane dużymi literami nad
- odpowiednią linią).
+ 
+\begin_inset Newline newline
+\end_inset
+
+odpowiednią linią).
  Zagadnienia poboczne lub mniej ważne reprezentowane są jako gałęzie podporządko
 wane gałęziom wyższego rzędu
 \end_layout
@@ -663,6 +905,8 @@ Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Na rynku komputerowym istnieje parę programów do tworzenia map pamięci.
  Najczęściej są one prostym edytorem graficznym grafiki wektorowej który
  pozwala na łączenie ze sobą informacji w sposób zgodny z zasadami tworzenia
@@ -691,10 +935,12 @@ Xmind
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Xmind jest programem Open Source stworzonym za pomocą języka Java oraz Eclipse
  Rich Client Platform i Eclipse Graphical Editing Framework.
- Użycie bibliotek Eclipse pozwoliło na stworzenie interfejsu który jest
- przystępny użytkownikom.
+ Użycie tych bibliotek pozwoliło na stworzenie interfejsu który jest przystępny
+ użytkownikom.
  Aplikacja jest rozwijana od 2007 roku, a od końca 2008 roku jest dostępna
  na licencji LGPL.
  
@@ -720,6 +966,8 @@ Rys 4.1 Wygląd interfejsu użytkownika programu XMind
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Jego funkcjonalność pozwala na:
 \end_layout
 
@@ -752,7 +1000,9 @@ publikowanie map pamięci w na stronach internetowych
 FreeMind
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 FreeMind jest aplikacją typu open source wydaną na licencji GPL.
  Została stworzona za pomocą języka programowania Java i zestawu narzędzi
  Swing do tworzenia interfejsu użytkownika.
@@ -780,7 +1030,7 @@ FreeMind jest aplikacją typu open source wydaną na licencji GPL.
 Rys 4.2 Wygląd interfejsu użytkownika programu FreeMind
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 Jej funkcjonalność pozwala na:
 \end_layout
 
@@ -809,7 +1059,9 @@ rozszerzenia do wielu systemów CMS (ang Content Management System)
 Buzan's iMindMap
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Buzan's iMindMap jest komercyjnym oprogramowaniem stworzonym przez firmę
  ThinkBuzan Ltd.
  Jej funcjonalność wykracza poza zwykłe tworzenie map pamięci i umożliwia
@@ -833,7 +1085,7 @@ Buzan's iMindMap jest komercyjnym oprogramowaniem stworzonym przez firmę
 
 \begin_layout Standard
 \align center
-Rys 4.3 Przykładowa mapa pamięci
+Rys 4.3 Wygląd interfejsu użytkownika programu iMindMap
 \end_layout
 
 \begin_layout Standard
@@ -855,7 +1107,9 @@ Specyfikacja wymagań funkcjonalnych programu
 Uwagi wstępne
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 W celu przedstawienia wymagań funkcjonalnych została stworzona lista wszytkich
  głównych funkcji aplikacji i każda z nich opisana.
  Są to wymagania ogólne, definiujące szkic aplikacji.
@@ -865,7 +1119,9 @@ W celu przedstawienia wymagań funkcjonalnych została stworzona lista wszytkich
 Tworzenie map pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
+
+\series medium
 Tworzenie map pamięci powinno umożliwiać:
 \end_layout
 
@@ -890,7 +1146,9 @@ Automatyczne rozmieszczanie pozycji węzłów uwzględniając połączenia pomi�
 Prezentacja map pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Prezentacja mapy pamięci ma być płynne i animowane.
  Powinna być również możliwość drukowania mapy pamięci oraz zapisywanie
  jej w formie pliku graficznego.
@@ -902,12 +1160,15 @@ Prezentacja mapy pamięci ma być płynne i animowane.
 Serializacja
 \end_layout
 
-\begin_layout Standard
-Zapisywanie i odczytywanie danej mapy pamięci powinno być
-\begin_inset space \space{}
+\begin_layout Subparagraph
+
+\series medium
+Zapisywanie i odczytywanie danej mapy pamięci powinno być przeźroczyste
+ dla 
+\begin_inset space ~
 \end_inset
 
-przeźroczyste dla użytkownika.
+użytkownika.
  Powinno dokładnie odzwierciedlać stan danej mapy pamięci.
 \end_layout
 
@@ -915,13 +1176,19 @@ przeźroczyste dla użytkownika.
 Interakcja z przeglądarką internetową
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 W ramach szybkiego tworzenia map pamięci, przeglądarka internetowa powinna
  umożliwić kopiowanie w wygodny sposób dowolnego tekstu ze strony internetowej
  do przeglądarki i szybkie tworzenie elementów bazowanych na tym tekście.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -936,7 +1203,9 @@ Specyfikacja wymagań pozafunkcjonalnych programu
 Uwagi wstępne
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 W tym rozdziale zostaną
 \begin_inset space \space{}
 \end_inset
@@ -1137,6 +1406,10 @@ Aplikacja nie powinna narażać system operacyjny na niestabilność działania
 \end_inset
 
 
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1144,6 +1417,8 @@ Wstępna konstrukcja programu
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Program powinien być skonstruowany w taki sposób, by oddzielić od siebie
  poszczególne elementy.
  Zapewni to łatwość rozszerzania aplikacji i naprawy błędów.
@@ -1175,6 +1450,8 @@ Interakcja z przeglądarką internetową
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Interfejs dodawania mapy pamięci powinien działać jak najwydajniej, z uwagi
  na możliwość uruchomienia go na różnych platformach o różnej mocy obliczeniowej.
  Większość produktów programistycznych jest dostępnych w formie binarnej,
@@ -1222,14 +1499,12 @@ Wymagania technologiczne aplikacji
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Głównym założeniem aplikacji jest możliwość uruchomienia jej na wielu platformac
 h, bez potrzeby dostosowywania jej do każdej z nich.
  Ma być obsługiwana za pomocą klawiatury, myszki i ekranu dotykowego.
- 
-\end_layout
-
-\begin_layout Subparagraph
-Program ma działać szybko na komputerach o słabej mocy obliczeniowej, nie
+ Program ma działać szybko na komputerach o słabej mocy obliczeniowej, nie
  zamując dużo miejsca w pamięci operacyjnej.
 \end_layout
 
@@ -1242,6 +1517,8 @@ Python
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
  programowania.
  Jego składnia jest bardzo charakterystyczna ze względu na umieszczanie
@@ -1256,12 +1533,17 @@ Qt
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 QT jest zbiorem bibliotek stworzonych przez firmę Trolltech, następnie przejętą
  przez firmę Nokia.
- Obejmuje kilkaset klas odpowiedzialnych za projektowanie interfejsu użytkownika
-, programowanie wielowątkowe, współdzielenie pamięci, komunikację z bazami
- danych, grafikę OpenGL, dostęp do multimediów, obsługę XML, komunikację
- międzyprocesową, sieciową, grafikę wektorową i innych.
+ Obejmuje kilkaset klas odpowiedzialnych za projektowanie interfejsu 
+\begin_inset Newline newline
+\end_inset
+
+użytkownika, programowanie wielowątkowe, współdzielenie pamięci, komunikację
+ z bazami danych, grafikę OpenGL, dostęp do multimediów, obsługę XML, komunikacj
+ę międzyprocesową, sieciową, grafikę wektorową i innych.
  Programy które używają tych bibliotek można uruchomić na następujących
  platformach: Linux, Windows, Mac OS X, Embedded Linux, Windows CE, Symbian
  i Maemo.
@@ -1278,6 +1560,8 @@ PyQt
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 PyQt jest nakładką stworzoną by używać bibliotek QT wraz z językiem programowani
 a Python.
  Została stworzona poprzez narzędzie SIP, które automatycznie generuje moduły
@@ -1291,6 +1575,8 @@ Javascript, XUL i XPCOM
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Javascript jest interpretowanym, obiektowym językiem programowania wykorzystywan
 ym głównie na stronach Internetowych.
  Stosuje się go głównie do zapewnienia interaktywności stron Internetowych
@@ -1298,6 +1584,8 @@ ym głównie na stronach Internetowych.
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 XUL (ang.
  XML-based User-interface Language) jest językiem XML przeznaczonym do definiown
 ia interfejsów użytkownika.
@@ -1306,6 +1594,8 @@ ia interfejsów użytkownika.
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 XPCOM (ang.
  Cross Platform Component Object Model) jest przenośną platformą obiektów
  COM, podobną do Microsoft COM.
@@ -1318,6 +1608,8 @@ XPCOM (ang.
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Zestaw tych trzech technologii pozwala na tworzenie rozszerzeń do aplikacji
  Firefox i Thunderbird.
 \end_layout
@@ -1338,10 +1630,23 @@ Architektura programu
 \end_layout
 
 \begin_layout Subsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Aplikacja została napisana w języku programowania python w oparciu o biblioteki
+ QT.
+\end_layout
+
+\begin_layout Subsection
 Zarządzanie mapami pamięci
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Głównym systemem zarządzającym obiektami na mapie pamięci oraz ich wyświetlaniem
  jest 
 \emph on
@@ -1363,7 +1668,9 @@ QGraphicsView - widok danej sceny
 QGraphicsItem - obiekt sceny
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Scena jest kontenerem na obiekty, zapewniając szybki dostęp do nich.
  Jej zaletą jest zarządzanie stanem obiektów, detekcją kolizji i propagacją
  zdarzeń.
@@ -1378,7 +1685,9 @@ do efektywnego zarządzania widzialnością danych obiektów.
  to zdarzenie do obiektu który znajduje się na danej pozycji.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Widok dostarcza kontrolkę która wizualizuje zawartość sceny.
  Możliwe jest podłączenie wielu widoków do jednej sceny by zapewnić wiele
  rzutni na dany zbiór obiektów.
@@ -1386,13 +1695,34 @@ Widok dostarcza kontrolkę która wizualizuje zawartość sceny.
  na zdarzenia sceny przetwarzając koordynaty widoku na koordynaty sceny.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Obiekt sceny jest bazową klasą dla każdego graficznego elementu sceny.
  Dostępne są również predefiniowane klasy dziedziczące po QGraphicsItem,
- definiując style rysowania elipsy, tekstu czy prostokąta.
+ definiując style rysowania elipsy, tekstu czy prostokąta [PYQT].
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/diagram1.png
+	lyxscale 30
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.2 Schemat UML elementów sceny
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
 W aplikacji zostały wykorzystane wszystkie trzy klasy do stworzenia mechanizmu
  map pamięci.
  Z uwagi na zadowalającą funkcjonalność klasy QGraphicsScene nie było potrzeby
@@ -1400,11 +1730,66 @@ W aplikacji zostały wykorzystane wszystkie trzy klasy do stworzenia mechanizmu
  dużej części metod.
 \end_layout
 
+\begin_layout Subparagraph
+
+\series medium
+Klasa GraphicsView dziedziczy po klasie QGraphicsView i opisuje zarządzanie
+ interakcją z użytkownikiem.
+ Zaimplementowane są tam wszystkie funkcje związane ze zdarzeniami myszy
+ oraz klawiatury, które odpowiadają za zaznaczanie, łączenie i 
+\begin_inset Newline newline
+\end_inset
+
+rozłączanie obiektów, przesuwanie i zmienianie powiększenia widoku mapy
+ oraz animacje obiektów.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Łączenie obiektów odbywa się na podstawie wykrywania kolizji.
+ W metodzie mouseMoveEvent, przy przesuwaniu obiektu sprawdzane jest czy
+ obiekty nie nachodzą na siebie i są łączone.
+ Tworzy się nowy obiekt klasy Edge, który zostaje dodany do sceny a w obu
+ łączonych obiektach klasy Node, do pola edgeList dołączana jest referencja
+ na obiekt Edge.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Animacje w mapie pamięci odbywają się przy pomocy zegara QTimer zarządzanego
+ przez klasę GraphicsView.
+ W momencie gdy dany obiekt klasy Node zmienił swoją pozycję, zegar zostaje
+ uruchomiony.
+ Przy każdym impulsie zegara obliczane są nowe pozycje każdego elementu
+ na podstawie odległości i połączeń między nimi, następnie pozycje są aktualizow
+ane uwzględniając połączenia między nimi (obiekty klasy Edge).
+ W momencie gdy po obliczeniu sił żaden z elementów nie zmienia swojego
+ położenia, zegar zostaje zatrzymany by oszczędzić czas procesora.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Rysowanie i geometria poszczególnych elementów jest zaimplementowane w klasie
+ Node i Edge.
+ Za geometrię odpowiada metoda shape, która przekazuje do sceny informację
+ jaki obszar zajmuje dany obiekt.
+ Metoda paint rysuje element, który składa się z elipsy wypełnionej kolorem
+ oraz tekstu.
+ W momencie gdy funkcja paint jest uruchamiana, każde połączenie (Edge)
+ pomiędzy obiektami zostaje również przerysowane, by ich linie płynnie się
+ aktualizowały przy zmianie pozycji węzłów.
+\end_layout
+
 \begin_layout Subsection
 System sygnałów i slotów
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Biblioteka QT umożliwia na bardzo proste zarządzanie zdarzeniami na obiektach.
  Posiada ona system sygnałów i slotów, który implementuje wzorzec projektowy
  obserwatora (ang.
@@ -1435,6 +1820,26 @@ clicked()
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/diagram2.png
+	lyxscale 30
+	width 82text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 8.2 Schemat UML interfejsu użytkownika
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
 System sygnałów i slotów jest wykorzystywany głównie w klasie 
 \emph on
 FormFromText
@@ -1488,244 +1893,78 @@ która otrzymuje informacje jaki tekst został wybrany i tworzy nowy element
  z okna.
 \end_layout
 
-\begin_layout Standard
-Architektura obiekt - scena
+\begin_layout Subsection
+Interakcja z przeglądarką Internetową
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+W celu zintegrowania przeglądarki Internetowej Firefox z programem, koniecznym
+ było stworzenie rozszerzenia.
+ Jest to możliwe dzięki językowi Javascript, językowi opisu interfejsów
+ użytkownika XUL oraz biblioteką XPCOM.
+ Dodaje ono do menu kontekstowego nową pozycję z tekstem 
+\begin_inset Quotes eld
+\end_inset
+
+Add to MindMap
+\begin_inset Quotes erd
+\end_inset
+
+ za pomocą definicji w języku XUL.
+ W momencie gdy użytkownik kliknął tą pozycję menu, uruchamia się funkcja
+ w języku javascript, która sprawdza czy tekst został zaznaczony, następnie
+ uruchamia aplikację do map pamięci z parametrami 
+\begin_inset Quotes eld
+\end_inset
+
+--text
+\begin_inset Quotes erd
+\end_inset
+
+ oraz stringiem zawierającym zaznaczony tekst.
+ Aplikacja zostaje uruchomiona jako proces równorzędny, dzięki czemu przy
+ zamknięciu przeglądarki Internetowej możliwa jest dalsza praca z mapą pamięci.
+ Jest to możliwe dzięki bibliotece XPCOM.
 \end_layout
 
 \begin_layout Subsection
-Opis klas
+Konstrukcja kodu źródłowego aplikacji
 \end_layout
 
-\begin_layout Subsubsection
-Form
+\begin_layout Subparagraph
+
+\series medium
+W aplikacji poszczególna funkcjonalność została od siebie odseparowana,
+ umożliwiając łatwiejsze zrozumienie kodu źródłowego i dalszą rozbudowę.
+ Większość klas dziedziczy po generycznych klasach biblioteki QT.
+ Poszczególne funcjonalności zostały zaimplementowane w następujących klasach:
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/form.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
+\begin_layout Itemize
+Główne okno programu - klasa Form
 \end_layout
 
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa Form
+\begin_layout Itemize
+Serializacja - funkcje serialize i deserialize w pliku serialize.py
 \end_layout
 
-\begin_layout Standard
-Jest to główna klasa aplikacji.
- Dziedziczy po klasie QMainWindow.
- Zawiera główne okno oraz metody związane z serializacją, deserializacją
- oraz drukowaniem.
- Konstruktor w zależności od podanych argumentów tworzy nowy dokument, wczytuje
- istniejący lub uruchamia nowy dokument z oknem tworzenia dokumentu z tekstu.
+\begin_layout Itemize
+animowanie, rysowanie poszczególnych elementów mapy pamięci- klasy Node
+ i Edge
 \end_layout
 
-\begin_layout Subsubsection
-GraphicView
+\begin_layout Itemize
+zarządzanie interakcją z użytkownikiem - klasa GraphicsItem
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/graphicsView.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
+\begin_layout Itemize
+tworzenie mapy pamięci z tekstu - klasy FormFromText oraz textEdit
 \end_layout
 
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa GraphicsView
-\end_layout
-
-\begin_layout Standard
-Jest to klasa odpowiedzialna za wszelką interakcją z użytkownikiem, dodawaniem,
- usuwaniem, łączeniem i rozłączaniem elementów.
- Dziedziczy po QGraphicsView, które jest prezentacją sceny QGraphicScene
- zawierającej wszelkie elementy.
- Grupa metod 
-\emph on
-mousePressEvent
-\emph default
-, 
-\emph on
-mouseReleaseEvent
-\emph default
- i 
-\emph on
-mouseMoveEvent
-\emph default
- zarządza wszelkimi zdarzeniami związanymi z przemieszczaniem elementów,
- zmienianiem powiększenia, przesuwaniem widoku i tworzeniem nowych elementów.
-\end_layout
-
-\begin_layout Subsubsection
-Node
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/node.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa Node
-\end_layout
-
-\begin_layout Subsubsection
-Edge
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/edge.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa Edge
-\end_layout
-
-\begin_layout Subsubsection
-FormFromText
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/fromfromtext.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa FormFromText
-\end_layout
-
-\begin_layout Subsubsection
-editNode
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/editNode.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa editNode
-\end_layout
-
-\begin_layout Subsubsection
-lineEdit
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/lineEdit.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa lineEdit
-\end_layout
-
-\begin_layout Subsubsection
-textEdit
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/textEdit.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa textEdit
-\end_layout
-
-\begin_layout Subsubsection
-editTextDialog
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/editTextDialog.png
-	lyxscale 30
-	scale 30
-	groupId uml
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Rys 8.1 Klasa editTextDialog
-\end_layout
-
-\begin_layout Subsection
-Listing kodu
+\begin_layout Itemize
+interakcja z przeglądarką Internetową - pliki pluginu do przeglądarki
 \end_layout
 
 \begin_layout Standard
@@ -1748,6 +1987,8 @@ Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowych
  programów, w poniższym rozdziale zostanie omówiona interakcja programu
  z użytkownikiem.
@@ -1773,6 +2014,8 @@ Rys 9.1 Wygląd interfejsu użytkownika programu
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
  jak największej przestrzeni do oglądania mapy pamięci.
  Ma to na celu umożliwienie pełnego skupienia się przy tworzeniu mapy.
@@ -1787,6 +2030,8 @@ Poruszanie się w widoku mapy pamięci
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
  lub środkowego przycisku i poruszania myszy.
  Zwiększanie lub zmniejszanie widoku wielkości mapy pamięci odbywa się za
@@ -1800,6 +2045,8 @@ Dodawanie i edycja węzłów
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
  miejscu w widoku mapy pamięci.
  Stworzy to nowy element i otworzy okno edycji tekstu i stylu węzła.
@@ -1822,6 +2069,8 @@ Rys 9.2 Wygląd okna edycji węzła
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Po zamknięciu okna edycji uaktualnia się wygląd węzła.
  Przywołać to okno można ponownie klikając dwukrotnie na obiekcie.
  By edytować wielkość węzła, należy zaznaczyć element i użyć rolki.
@@ -1832,6 +2081,8 @@ Usuwanie węzłów
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Zaznaczając dowolne elementy można je usunąć naciskając przycisk DELETE
  lub wybierając z górnego menu Edit->Delete.
 \end_layout
@@ -1841,6 +2092,8 @@ Zaznaczając dowolne elementy można je usunąć naciskając przycisk DELETE
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Łączenie węzłów odbywa się poprzez przeciągnięcie dowolnego elementu na
  inny.
 \end_layout
@@ -1850,6 +2103,8 @@ Rozłączanie węzłów
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Rozłączanie węzłów odbywa się w analogiczny sposób co łączenie, tylko należy
  przy tej operacji trzymać wciśnięty przycisk CTRL i najechać elementem
  na inny który chcemy rozłączyć.
@@ -1860,6 +2115,8 @@ Ustawianie automatycznego pozycjonowania węzła
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Zaznaczając element i naciskając środkowy przycisk myszki można sprawić,
  by element się nie animował i nie przemieszczał.
  Umożliwia to dokładnie wypozycjonowanie elementów jeżeli automatyczne zawodzi.
@@ -1870,6 +2127,8 @@ Dodawanie węzłów z tekstu
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Kolejnym elementem interfejsu jest tworze mapy pamięci z tekstu ze strony
  Internetowej.
  Jeżeli zainstalowany został dodatek do przeglądarki Firefox, można zaznaczyć
@@ -1907,6 +2166,8 @@ Rys 9.3 Wygląd okna dodawania węzłów z tekstu
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 By przekształcić dany fragment tekstu na węzeł w mapie pamięci, należy za
  pomocą myszki zaznaczyć dany tekst.
  Po zaznaczeniu pojawią się dwa przyciski.
@@ -1938,6 +2199,8 @@ Wymagania systemowe
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Aplikacja posiada następujące wymagania systemowe:
 \end_layout
 
@@ -1966,6 +2229,8 @@ GNU/Linux
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
  interpreter python, biblioteki QT oraz PyQt.
 \end_layout
@@ -1992,6 +2257,8 @@ Microsoft Windows
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Do uruchomienia aplikacji pod systemami operacyjnymi z rodziny Microsoft
  Windows wystarczy odpakować archiwum 
 \emph on
@@ -2010,6 +2277,8 @@ Instalacja rozszerzenia do przeglądarki Firefox
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Aplikacja posiada dwa osobne rozszerzenia, w zależności od systemu operacyjnego
  na którym zostaje uruchomiona.
  By zainstalować rozszerzenie, należy uruchomić przeglądarkę Firefox i wpisać
@@ -2018,6 +2287,8 @@ Aplikacja posiada dwa osobne rozszerzenia, w zależności od systemu operacyjneg
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 W systemie operacyjnym Linux, gdy aplikację mamy w folderze 
 \emph on
 /home/user/mindmapping
@@ -2032,6 +2303,8 @@ file:///home/user/mindmapping/mindmapping.xpi
 \end_layout
 
 \begin_layout Subparagraph
+
+\series medium
 Następnie po zainstalowaniu rozszerzenia i uruchomieniu ponownym przeglądarki
  musimy skonfigurować ścieżkę z której będzie uruchamiania aplikacja.
  W tym celu uruchamiamy Narzędzia->Dodatki, i w preferencjach rozszerzenia
