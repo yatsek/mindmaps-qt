@@ -3,6 +3,11 @@
 \begin_document
 \begin_header
 \textclass article
+\begin_preamble
+%\usepackage{fontspec}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -92,11 +97,6 @@ w Poznaniu
 
 \begin_layout Standard
 \align center
-Instytut Informatyki
-\end_layout
-
-\begin_layout Standard
-\align center
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -121,7 +121,10 @@ Wojciech Jurkowlaniec
 
 \begin_layout Standard
 \align center
-nr albumu: 17373
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -137,16 +140,26 @@ nr albumu: 17373
 
 \series bold
 \size largest
-Aplikacja wspomagająca szybkie uczenie się oraz zapamiętywanie informacji
+Aplikacja wspomagająca proces uczenia się oraz zapamiętywanie informacji
  w oparciu 
 \begin_inset Newline newline
 \end_inset
 
-o technikę Mind Mappingu
+o technikę Mind Mapping
 \end_layout
 
 \begin_layout Standard
 \align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
 Praca dyplomowa inżynierska
 \end_layout
 
@@ -159,45 +172,37 @@ Praca dyplomowa inżynierska
 \end_layout
 
 \begin_layout Standard
-\align center
-kierunek: Informatyka
-\end_layout
-
-\begin_layout Standard
-\align center
-specjalność: Technologie i zastosowania internetu
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Promotor:
-\end_layout
-
-\begin_layout Standard
-\align center
-dr inż.
+\align right
+Promotor: dr inż.
  Ewa Idzikowska
 \end_layout
 
 \begin_layout Standard
-\align center
+\align right
 Instytut Informatyki
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+Instytut Informatyki
+\end_layout
+
+\begin_layout Standard
+\align left
+kierunek: Informatyka
+\end_layout
+
+\begin_layout Standard
+\align left
+specjalność: Technologie i zastosowania internetu
 \end_layout
 
 \begin_layout Standard
@@ -248,61 +253,7 @@ Spis rysunków
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-3.1 Przykład sieci semantycznej
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-3.2 Funkcje półkul mózgowych
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-3.3 Przykładowa mapa pamięci
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-4.1 Wygląd interfejsu użytkownika programu XMind
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-4.2 Wygląd interfejsu użytkownika programu FreeMind
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-4.3 Wygląd interfejsu użytkownika programu Buzan's iMindMap
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-9.1
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-9.2
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-9.3
-\end_layout
-
-\begin_layout List
-\labelwidthstring 00.00.0000
-9.4
+TODO
 \end_layout
 
 \begin_layout Standard
@@ -408,7 +359,7 @@ Procesy poznawcze towarzyszące nauce
 \end_layout
 
 \begin_layout Subsection
-Uwagi wstępne
+Wprowadzenie
 \end_layout
 
 \begin_layout Subparagraph
@@ -508,165 +459,12 @@ przedłużoną koncentrację
 Odbieranie i analizowanie informacji
 \end_layout
 
-\begin_layout Subparagraph
-
-\series medium
-Głównym elementem procesu skupiania uwagi jest 
-\emph on
-przeszukiwanie pola percepcyjnego
-\emph default
-.
- Mózg ludzki dokonuje tej czynności automatycznie.
- Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
- który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
- w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
- te wystąpienia.
- Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
- się od otoczenia kolorem, kształtem czy rozmiarem.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Kolejnym ważnym elementem jest 
-\emph on
-podzielnośc uwagi
-\emph default
-, które ozacza dzielenie pewnej ograniczonej puli 
-\begin_inset Quotes eld
-\end_inset
-
-mocy obliczeniowej
-\begin_inset Quotes erd
-\end_inset
-
- na więcej niż jedno zadanie.
- Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
- jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Również warto zwrócić uwagę na 
-\emph on
-przedłużoną koncentrację
-\emph default
- (ang.
- sustained attention).
- Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
- tym samym aspekcie otoczenia.
- 
-\end_layout
-
 \begin_layout Subsection
 Zapamiętywanie informacji
 \end_layout
 
-\begin_layout Subparagraph
-
-\series medium
-Głównym elementem procesu skupiania uwagi jest 
-\emph on
-przeszukiwanie pola percepcyjnego
-\emph default
-.
- Mózg ludzki dokonuje tej czynności automatycznie.
- Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
- który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
- w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
- te wystąpienia.
- Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
- się od otoczenia kolorem, kształtem czy rozmiarem.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Kolejnym ważnym elementem jest 
-\emph on
-podzielnośc uwagi
-\emph default
-, które ozacza dzielenie pewnej ograniczonej puli 
-\begin_inset Quotes eld
-\end_inset
-
-mocy obliczeniowej
-\begin_inset Quotes erd
-\end_inset
-
- na więcej niż jedno zadanie.
- Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
- jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Również warto zwrócić uwagę na 
-\emph on
-przedłużoną koncentrację
-\emph default
- (ang.
- sustained attention).
- Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
- tym samym aspekcie otoczenia.
- 
-\end_layout
-
 \begin_layout Subsection
 Odtwarzanie informacji
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Głównym elementem procesu skupiania uwagi jest 
-\emph on
-przeszukiwanie pola percepcyjnego
-\emph default
-.
- Mózg ludzki dokonuje tej czynności automatycznie.
- Przykładowo jak osoba stoi na ulicy w tłumie i szuka swojego znajomego,
- który ma na sobie czerwoną kurtkę, każde pojawienie się czerwonego koloru
- w zasięgu pola widzenia sprawia że osoba reaguje ze szczególną uwagą na
- te wystąpienia.
- Najłatwiej rozpoznaje się obiekty które posiadają cechy priorytetowe, różnią
- się od otoczenia kolorem, kształtem czy rozmiarem.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Kolejnym ważnym elementem jest 
-\emph on
-podzielnośc uwagi
-\emph default
-, które ozacza dzielenie pewnej ograniczonej puli 
-\begin_inset Quotes eld
-\end_inset
-
-mocy obliczeniowej
-\begin_inset Quotes erd
-\end_inset
-
- na więcej niż jedno zadanie.
- Jednak robienie paru rzeczy na raz musi spowodować zakłócenie przynajmniej
- jednej z nich, dlatego ważne jest by tych czynności nie było zbyt wiele.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Również warto zwrócić uwagę na 
-\emph on
-przedłużoną koncentrację
-\emph default
- (ang.
- sustained attention).
- Polega na zdolności utrzymania uwagi selektywnej przez dłuższy czas na
- tym samym aspekcie otoczenia.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1717,7 +1515,7 @@ Obiekt sceny jest bazową klasą dla każdego graficznego elementu sceny.
 
 \begin_layout Standard
 \align center
-Rys 8.2 Schemat UML elementów sceny
+Rys 9.1 Schemat UML elementów sceny
 \end_layout
 
 \begin_layout Subparagraph
@@ -1834,7 +1632,7 @@ clicked()
 
 \begin_layout Standard
 \align center
-Rys 8.2 Schemat UML interfejsu użytkownika
+Rys 9.2 Schemat UML interfejsu użytkownika
 \end_layout
 
 \begin_layout Subparagraph
@@ -2010,7 +1808,7 @@ Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowyc
 
 \begin_layout Standard
 \align center
-Rys 9.1 Wygląd interfejsu użytkownika programu
+Rys 10.1 Wygląd interfejsu użytkownika programu
 \end_layout
 
 \begin_layout Subparagraph
@@ -2065,7 +1863,7 @@ By dodać nowy węzeł do mapy pamięci, należy kliknąć dwukrotnie na pustym
 
 \begin_layout Standard
 \align center
-Rys 9.2 Wygląd okna edycji węzła
+Rys 10.2 Wygląd okna edycji węzła
 \end_layout
 
 \begin_layout Subparagraph
@@ -2073,7 +1871,7 @@ Rys 9.2 Wygląd okna edycji węzła
 \series medium
 Po zamknięciu okna edycji uaktualnia się wygląd węzła.
  Przywołać to okno można ponownie klikając dwukrotnie na obiekcie.
- By edytować wielkość węzła, należy zaznaczyć element i użyć rolki.
+ By edytować wielkość węzła, należy zaznaczyć element i użyć rolki w myszce.
 \end_layout
 
 \begin_layout Subsection
@@ -2162,7 +1960,7 @@ Add to Mindmap
 
 \begin_layout Standard
 \align center
-Rys 9.3 Wygląd okna dodawania węzłów z tekstu
+Rys 10.3 Wygląd okna dodawania węzłów z tekstu
 \end_layout
 
 \begin_layout Subparagraph
@@ -2177,6 +1975,170 @@ By przekształcić dany fragment tekstu na węzeł w mapie pamięci, należy za
  węzeł na mapie pamięci.
  Po zdecydowaniu co zrobić z wszystkimi zaznaczeniami tekstu zostanie przycisk
  zamknięcia okienka.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Przykład użycia programu
+\end_layout
+
+\begin_layout Subsection
+Uwagi wstępne
+\end_layout
+
+\begin_layout Standard
+By dobrze zrozumieć sposób działania aplikacji, należy przytoczyć przypadek
+ użycia tworzenia kompletnej mapy pamięci.
+ Zostało to przedstawione w tym rozdziale krok po kroku.
+\end_layout
+
+\begin_layout Subsection
+Wybór tekstu
+\end_layout
+
+\begin_layout Standard
+Najłatwiej tworzy się mapy pamięci na podstawie istniejącego tekstu.
+ Ucząc się przy pomocy komputera, najczęstszym źródłem informacji są strony
+ Internetowe.
+ Zakładamy, że użytkownik poprawnie zainstalował dodatek do przeglądarki
+ Internetowej.
+ Pierwszym krokiem jest znalezienie strony Internetowej z interesującją
+ nas zawartością.
+ Następnie zaznaczamy tekst z którego chcemy stworzyć mapę pamięci, klikamy
+ prawym klawiszem nad zaznaczonym tekstem i wybieramy pozycję 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Add to MindMap
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Powyższe czynności obrazuje rysunek 11.1.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/tut1.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 11.1 Wygląd okna przeglądarki Internetowej
+\end_layout
+
+\begin_layout Subsection
+Wybór słów-kluczy
+\end_layout
+
+\begin_layout Standard
+Następnym krokiem jest wybranie najważniejszych słów czy fraz które występują
+ w tekscie.
+ Początkowy wygląd okna tworzenia mapy pamięci z tekstu prezentuje rysunek
+ 11.2.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/tut2.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 11.2 Wygląd interfejsu programu po dodaniu tekstu 
+\end_layout
+
+\begin_layout Standard
+Wybieramy odpowiednie słowa z których stworzymy węzły.
+ W tym celu za pomocą myszy zaznaczamy odpowiednie słowa lub frazy, które
+ pojawiają się z prawej strony okna.
+ By dodać dane zaznaczenie do mapy pamięci, klikamy na przycisk z tekstem.
+ By usunąć zaznaczenie, klikamy na przycisk z napisem 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Rysunek 11.2 prezentuje ten proces.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/tut3.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 11.3 Wygląd interfejsu programu po dodaniu paru węzłów
+\end_layout
+
+\begin_layout Subsection
+Dostosowanie mapy pamięci
+\end_layout
+
+\begin_layout Standard
+Po wybraniu wszystkich elementów, możemy zamknąć okno z tekstem.
+ Ostatnim krokiem jest dostosowanie i rozbudowanie swojej mapy pamięci do
+ własnych potrzeb.
+ Używając technik manipulacji węzłami opisanymi w poprzednim rozdziale układamy
+ interesującą nas strukturę, kolory i wielkość mapy.
+ Po zakończonej pracy możemy ją zapisać i wydrukować.
+ Jest to przedstawione na rysunku 11.4.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/tut4.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Rys 11.3 Drukowanie mapy pamięci
 \end_layout
 
 \begin_layout Standard
@@ -2217,7 +2179,16 @@ Nakładki PyQt w wersji 4.7 lub nowszej
 \end_layout
 
 \begin_layout Itemize
-Przeglądarki internetowej Firefox w wersji 3.5 - 4.0b10
+Przeglądarki internetowej Firefox w wersji 3.5 - 4.0 beta 10
+\end_layout
+
+\begin_layout Itemize
+W przypadku systemu operacyjnego Windows, należy zainstalować pakiet 
+\emph on
+VC++ 2008 Redistributable Package.
+ 
+\emph default
+Jest on dostępny na stronie firmy Microsoft
 \end_layout
 
 \begin_layout Subsection
@@ -2236,7 +2207,7 @@ By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
 \end_layout
 
 \begin_layout Standard
-W systemach opartych na dystrybucji Debian (np.
+W systemach opartych o dystrybucję Debian (np.
  Ubuntu, Mint) wystarczy wydać polecenie z terminalu z dostępem adminstracyjnym:
 \end_layout
 
@@ -2247,9 +2218,10 @@ sudo apt-get install python python-qt4 libqt4-core libqt4-gui
 \end_layout
 
 \begin_layout Standard
-Następnie uruchamiamy program plikiem 
+Następnie uruchamiamy program za pomocą skryptu shellowego z flagą uruchomieniow
+ą
 \emph on
-runner.sh.
+ runner.sh.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2329,7 +2301,9 @@ Tryb nowego dokumentu
 \end_layout
 
 \begin_layout Standard
-Należy uruchomić aplikację bez argumentów
+Ten tryb jest domyślnym sposobem uruchomienia aplikacji.
+ Jest zalecany dla większości użytkowników.
+ By go użyć, wystarczy uruchomić aplikację.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2337,17 +2311,29 @@ Tryb tworzenia mapy pamięci z tekstu
 \end_layout
 
 \begin_layout Standard
-Należy dodać dwa argumenty: 
+Ten tryb jest potrzebny przy integracji z przeglądarką Internetową.
+ Przy uruchomieniu należy dodać dwa argumenty: 
+\end_layout
+
+\begin_layout Standard
+
 \emph on
---text 
+np.
+ mindmapping.exe --text 
 \begin_inset Quotes eld
 \end_inset
 
-Tekst z którego chcemy stworzyć mapę pamięci
+Przykładowy tekst z którego chemy stworzyć mapę pamięci
 \begin_inset Quotes erd
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Dzięki temu po uruchomieniu pojawią się dwa okna: główne okno z pustą mapą
+ pamięci oraz dodatkowe z kreatorem węzłów z tekstu.
+ Opis używania tego okna znajduje się w rozdziale 10.8.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2355,9 +2341,26 @@ Tryb Wczytania pliku przy uruchomieniu
 \end_layout
 
 \begin_layout Standard
-Należy dodać dwa argumenty: 
+Przy integracji programu z systemem operacyjnym lub innym oprogramowaniem
+ potrzebne jest również automatyczne wczytywanie aplikacji z zapisaną mapą
+ pamięci.
+ W tym przypadku należy dodać dwa argumenty: 
+\end_layout
+
+\begin_layout Standard
+
 \emph on
 --file /ścieżka/do/pliku.mindqt
+\end_layout
+
+\begin_layout Standard
+Wszystkie zapisane pliki tego programu mają rozszerzenie 
+\emph on
+mindqt, 
+\emph default
+jednak możliwe jest wczytanie dowolnego pliku.
+ Ważne jest tylko, by wczytywany plik został wcześniej zapisany w tej aplikacji,
+ w przeciwnym razie aplikacja pokaże błąd wczytywania pliku.
 \end_layout
 
 \begin_layout Standard
