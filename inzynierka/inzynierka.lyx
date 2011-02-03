@@ -105,7 +105,7 @@ w Poznaniu
 
 \begin_layout Standard
 \align center
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -121,7 +121,7 @@ Wojciech Jurkowlaniec
 
 \begin_layout Standard
 \align center
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -252,8 +252,79 @@ LatexCommand tableofcontents
 Spis rysunków
 \end_layout
 
-\begin_layout Standard
-TODO
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.1 Przykład sieci semantycznej
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.2 Funkcje półkul mózgowych
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+3.3 Przykładowa mapa pamięci
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.1 Wygląd interfejsu użytkownika programu XMind
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.2 Wygląd interfejsu użytkownika programu FreeMind
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+4.3 Wygląd interfejsu użytkownika programu iMindMap
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.1 Schemat UML elementów sceny
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+9.2 Schemat UML interfejsu użytkownika
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+10.1 Wygląd interfejsu użytkownika programu
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+10.2 Wygląd okna edycji węzła
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+10.3 Wygląd okna dodawania węzłów z tekstu
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+11.1 Wygląd okna przeglądarki Internetowej
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+11.2 Wygląd interfejsu programu po dodaniu tekstu
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+11.3 Wygląd interfejsu programu po dodaniu paru węzłów
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+11.4 Drukowanie mapy pamięci
 \end_layout
 
 \begin_layout Standard
@@ -288,7 +359,7 @@ ań, a także do nauki.
 
 \series medium
 Najpopularniejszą metodą uczenia się jest notowanie mówionego słowa, a następnie
- powtarzanie przez wieloktrotne czytanie.
+ powtarzanie przez wielokrotne czytanie.
  Jednakże nie jest to technika efektywna dla wszystkich.
  Dlatego alternatywą może być wykorzystanie 
 \emph on
@@ -366,7 +437,7 @@ Wprowadzenie
 
 \series medium
 By dobrze zrozumieć pojęcia związane z mapami pamięci oraz efektywnym uczeniem
- się i zapamietywaniem potrzebne jest parę słów wstępu na temat procesów
+ się i zapamiętywaniem potrzebne jest parę słów wstępu na temat procesów
  poznawczych.
  Ten rozdział jest podzielony na cztery podrozdziały które opisują poszczególny
  fazy związane z uczeniem się.
@@ -459,12 +530,172 @@ przedłużoną koncentrację
 Odbieranie i analizowanie informacji
 \end_layout
 
+\begin_layout Subparagraph
+
+\series medium
+Na procesy odbierania i analizowania informacji składa się percepcja.
+ Jest to zbiór procesów aktywnej interpretacji danych otoczenia.
+ Dzięki wskazówkom kontekstowym, nastawieniu i wcześniej zdobytą wiedzą
+ możliwe jest rozpoznanie obiektów.
+ Do jej zadań należy dostarczanie informacji z całego ciała, uwzględniając
+ narządy wewnętrzne, zmysły i aktualne położenie kończyn.
+ W wyniku tych procesów pojawiają się spostrzeżenia, zwane 
+\emph on
+perceptami 
+\emph default
+[PSYCHO]
+\emph on
+.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Ważną rzeczą przy uczeniu się jest rozpoznawanie wzorców (ang.
+ 
+\emph on
+pattern recognition
+\emph default
+).
+ Jest to bardzo ważna umiejętność, gdyż dzięki niej można na przykład rozpoznawa
+ć pismo ręczne.
+ Każdy wzorzec jest podświadomie kategoryzowany, i trwa on zależnie od ilości
+ kategorii który ten proces musi sprawdzić [COGNI].
+ Warto zauważyć, że im struktura identyfikowanych informacji jest bardziej
+ ujednolicona, tym szybciej następuje ten proces.
+ 
+\end_layout
+
 \begin_layout Subsection
 Zapamiętywanie informacji
 \end_layout
 
+\begin_layout Subparagraph
+
+\series medium
+Pamięć jest zdolnością do przechowywania informacji i późniejszego jej wykorzyst
+ania.
+ Składa się na niego zespół procesów poznawczych.
+ Mimo badań nad pamięcią trwających już od wieków, nie udało się jednoznacznie
+ stwierdzić w jaki sposób informacje są zapisywane.
+ Jednak najbardziej przemawiającym modelem pamięci opartym na kryterium
+ czasu przechowywania informacji jest podział na trzy systemy [COGNI]:
+\end_layout
+
+\begin_layout Itemize
+magazyn sensoryczny (ang.
+ 
+\emph on
+sensory storage
+\emph default
+)
+\end_layout
+
+\begin_layout Itemize
+magazyn krótkotrwały (ang.
+ 
+\emph on
+short term storage
+\emph default
+)
+\end_layout
+
+\begin_layout Itemize
+magazyn długotrwały (ang.
+ 
+\emph on
+long term storage
+\emph default
+)
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+\emph on
+Magazyn sensoryczny
+\emph default
+ jest specyficzny dla powiązanego z nim zmysłu.
+ Podstawową funkcją każdego z nich jest przetrzymanie bodźca przez krótki
+ czas (maksymalnie kilkaset milisekund).
+ Przykładowo gdy zgasi się światło, osoba jeszcze przez chwilę 
+\begin_inset Quotes eld
+\end_inset
+
+widzi
+\begin_inset Quotes erd
+\end_inset
+
+ obraz pomieszczenia w którym się znajduje.
+ Zbiór wszystkich informacji sensorycznych jest przekazywany do systemu
+ poznawczego.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+\emph on
+Magazyn pamięci krótkotrwałej
+\emph default
+ działa w inny sposób niż sensoryczny, gdyż zbiera informacje które zostały
+ już przetworzone przez system poznawczy, jak również przywołane z pamięci
+ długotrwałej czy efekt bieżącego przetwarzania informacji.
+ Podstawową funkcją tego rodzaju pamięci jest przechowywanie informacji
+ w czasie niezbędnym do jej przetworzenia zgodnie z celem, jaki aktualnie
+ realizujemy.
+ Czas ten wacha się od kilkunastu do kilkudziesięciu sekund.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+\emph on
+Magazyn pamięci długotrwałej
+\emph default
+ z kolei charakteryzuje się najdłuższym czasem przechowywania informacji,
+ mierzonym w perspektywie lat.
+ Jednak informacja trafiająca do pamięci długotrwałej nie pozostaje tam
+ na zawsze.
+ Przykładem jest nauka języków obcych.
+ W momencie gdy przez długi czas nie używamy danego języka, wiedza na jego
+ temat zanika.
+\end_layout
+
 \begin_layout Subsection
-Odtwarzanie informacji
+Podsumowanie
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Patrząc powyższy rozdział można zwrócić uwagę, że przed zapisaniem informacji
+ 
+\begin_inset Quotes eld
+\end_inset
+
+na stałe
+\begin_inset Quotes erd
+\end_inset
+
+ potrzebne jest dużo procesów nim trafi ona do magazynu pamięci długotrwałej.
+ Na początku osoba ucząca się musi skupić uwagę na przedmiocie badań, by
+ zacząć go analizować.
+ Ważne w tym momencie jest, by uwaga nie była rozpraszana, przedmiot był
+ zróżnicowany i w zasięgu wzroku nie było elementów przeszkadzających uczeniu
+ się.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Śledząc dalsze kroki w celu zapamiętania informacji, po pomyślnym skupieniu
+ się na obiekcie który zawiera informacje, umysł musi: rozpoznać jakiego
+ typu jest to przedmiot, przeanalizowanie jak ważna jest jej zawartość i
+ utrwalić w pamięci długotrwałej.
+ Patrząc na mapę pamięci, wszystkie te zadania mamy ułatwione.
+ Zawiera ona ujednoliconą strukturę jak i bogatą formę przekazu, zmuszającą
+ na aktywowanie obu półkul mózgowych i szybkiego przypomnienia sobie przelanych
+ tam wcześniej informacji.
 \end_layout
 
 \begin_layout Standard
@@ -493,7 +724,7 @@ Obrazowe metody utrwalania wiedzy i modelowania systemów były używane od
  wieków w nauczaniu, wizualnym myśleniu i rozwiązywaniu problemów przez
  inżynierów, nauczycieli, psychologów i innych.
  Jeden z pierwszych przykładów takich graficznych zapisów został stworzony
- przez Porfiriusza, greciego myśliciela żyjącego w III wieku n.e.
+ przez Porfiriusza, greckiego myśliciela żyjącego w III wieku n.e.
  Pierwszym krokiem standaryzacji tego rodzaju organizacji myśli były 
 \emph on
 sieci semantyczne
@@ -564,7 +795,7 @@ Nauka a ludzki mózg
 Mózg ludzki składa się dwóch półkul odpowiedzialnych za różne procesy myślowe.
  Lewa półkula zajmuje się analizą słowa, logiką, liczbami, hierarchią, linearnoś
 cią i zbiorami.
- Natomiast prawa połkula odpowiada za rytm, świadomość przestrzeni, obraz
+ Natomiast prawa półkula odpowiada za rytm, świadomość przestrzeni, obraz
  całości, wyobraźnię, marzenia, postrzeganie kolorów i rozmiarów.
  W czasie uczenia się z wykorzystaniem notatek linearnych wykorzystuje się
  głównie lewą półkulę.
@@ -601,7 +832,7 @@ Notatki w formie narracyjnej - spisywanie treści komunikatu w formie ciągu
 \end_layout
 
 \begin_layout Enumerate
-Notatki w formie listy myśli w koleności pojawiania się
+Notatki w formie listy myśli w kolejności pojawiania się
 \end_layout
 
 \begin_layout Enumerate
@@ -1254,7 +1485,7 @@ Interfejs dodawania mapy pamięci powinien działać jak najwydajniej, z uwagi
  na możliwość uruchomienia go na różnych platformach o różnej mocy obliczeniowej.
  Większość produktów programistycznych jest dostępnych w formie binarnej,
  i mimo dużej możliwości dostosowywania ich działania, czasami istnieje
- potrzeba głębszej modyfikacji, co nie zawsze jest możliwowe.
+ potrzeba głębszej modyfikacji, co nie zawsze jest możliwe.
  Dzięki społeczności OpenSource wiele rozwiązań posiada swoje kompilacje
  na różne platformy sprzętowe i systemowe, co w tym przypadku ma duże znaczenie.
  Przejawem tego podejścia jest użycie następujących technologii:
@@ -1321,8 +1552,8 @@ Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
  programowania.
  Jego składnia jest bardzo charakterystyczna ze względu na umieszczanie
  wcięć w kodzie zamiast nawiasów, dzięki czemu kod staje się bardzo czytelny.
- Istnieją setki gotowych modułów do pythona która umożliwiają na użycie
- bibilotek napisanych w innych językach programowania.
+ Istnieją setki gotowych modułów do Pythona która umożliwiają na użycie
+ bibliotek napisanych w innych językach programowania.
  
 \end_layout
 
@@ -1401,7 +1632,7 @@ XPCOM (ang.
  Interfejsy w XPCOM są definiowane jako dialekty IDL (ang.
  Interface Definition Language) zwane XPIDL.
  XPCOM dostarcza zestaw componentów i klas pozwalających na zarządzanie
- plikami i pamięcia, wątki, struktury danych i inne.
+ plikami i pamięcią, wątki, struktury danych i inne.
  
 \end_layout
 
@@ -1434,7 +1665,7 @@ Uwagi wstępne
 \begin_layout Subparagraph
 
 \series medium
-Aplikacja została napisana w języku programowania python w oparciu o biblioteki
+Aplikacja została napisana w języku programowania Python w oparciu o biblioteki
  QT.
 \end_layout
 
@@ -1604,7 +1835,7 @@ Observer pattern
  również przekazywanie wartości podczas emitowania sygnału.
  Niektóre obiekty zawierają predefiniowane sygnały i sloty, dzięki czemu
  można przekierowywać zdarzenia poszczególnych obiektów.
- Na przykład klasa QPushButton która implementuje przyciski na widgecie
+ Na przykład klasa QPushButton która implementuje przyciski na widżecie
  emituje sygnał 
 \begin_inset Quotes eld
 \end_inset
@@ -1721,7 +1952,7 @@ Add to MindMap
 \begin_inset Quotes erd
 \end_inset
 
- oraz stringiem zawierającym zaznaczony tekst.
+ oraz ciągiem znaków zawierającym zaznaczony tekst.
  Aplikacja zostaje uruchomiona jako proces równorzędny, dzięki czemu przy
  zamknięciu przeglądarki Internetowej możliwa jest dalsza praca z mapą pamięci.
  Jest to możliwe dzięki bibliotece XPCOM.
@@ -1737,7 +1968,7 @@ Konstrukcja kodu źródłowego aplikacji
 W aplikacji poszczególna funkcjonalność została od siebie odseparowana,
  umożliwiając łatwiejsze zrozumienie kodu źródłowego i dalszą rozbudowę.
  Większość klas dziedziczy po generycznych klasach biblioteki QT.
- Poszczególne funcjonalności zostały zaimplementowane w następujących klasach:
+ Poszczególne funkcjonalności zostały zaimplementowane w następujących klasach:
 \end_layout
 
 \begin_layout Itemize
@@ -1787,7 +2018,7 @@ Uwagi wstępne
 \begin_layout Subparagraph
 
 \series medium
-Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od stardardowych
+Z uwagi na lekką odmienność interfejsu użytkownika aplikacji od standardowych
  programów, w poniższym rozdziale zostanie omówiona interakcja programu
  z użytkownikiem.
 \end_layout
@@ -1917,7 +2148,7 @@ Ustawianie automatycznego pozycjonowania węzła
 \series medium
 Zaznaczając element i naciskając środkowy przycisk myszki można sprawić,
  by element się nie animował i nie przemieszczał.
- Umożliwia to dokładnie wypozycjonowanie elementów jeżeli automatyczne zawodzi.
+ Umożliwia to dokładnie pozycjonowanie elementów jeżeli automatyczne zawodzi.
 \end_layout
 
 \begin_layout Subsection
@@ -2012,8 +2243,8 @@ Najłatwiej tworzy się mapy pamięci na podstawie istniejącego tekstu.
  Internetowe.
  Zakładamy, że użytkownik poprawnie zainstalował dodatek do przeglądarki
  Internetowej.
- Pierwszym krokiem jest znalezienie strony Internetowej z interesującją
- nas zawartością.
+ Pierwszym krokiem jest znalezienie strony Internetowej z interesującą nas
+ zawartością.
  Następnie zaznaczamy tekst z którego chcemy stworzyć mapę pamięci, klikamy
  prawym klawiszem nad zaznaczonym tekstem i wybieramy pozycję 
 \begin_inset Quotes eld
@@ -2054,7 +2285,9 @@ Wybór słów-kluczy
 
 \begin_layout Standard
 Następnym krokiem jest wybranie najważniejszych słów czy fraz które występują
- w tekscie.
+ w tekście.
+ Powinny być charakterystyczne i jednoznacznie kojarzyć się z tematem danej
+ treści.
  Początkowy wygląd okna tworzenia mapy pamięci z tekstu prezentuje rysunek
  11.2.
 \end_layout
@@ -2138,7 +2371,7 @@ Po wybraniu wszystkich elementów, możemy zamknąć okno z tekstem.
 
 \begin_layout Standard
 \align center
-Rys 11.3 Drukowanie mapy pamięci
+Rys 11.4 Drukowanie mapy pamięci
 \end_layout
 
 \begin_layout Standard
@@ -2208,7 +2441,8 @@ By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
 
 \begin_layout Standard
 W systemach opartych o dystrybucję Debian (np.
- Ubuntu, Mint) wystarczy wydać polecenie z terminalu z dostępem adminstracyjnym:
+ Ubuntu, Mint) wystarczy wydać polecenie z terminalu z dostępem administracyjnym
+:
 \end_layout
 
 \begin_layout Standard
@@ -2254,7 +2488,7 @@ Instalacja rozszerzenia do przeglądarki Firefox
 Aplikacja posiada dwa osobne rozszerzenia, w zależności od systemu operacyjnego
  na którym zostaje uruchomiona.
  By zainstalować rozszerzenie, należy uruchomić przeglądarkę Firefox i wpisać
- w pasku adresu ścieżkę do pliku z roszerzeniem.
+ w pasku adresu ścieżkę do pliku z rozszerzeniem.
  
 \end_layout
 
@@ -2292,15 +2526,13 @@ natomiast w systemie Windows mindmapping.exe.
 Uruchamiania aplikacji z argumentami
 \end_layout
 
-\begin_layout Standard
-Aplikacja umożliwia uruchomienie w trzech trybach.
-\end_layout
-
 \begin_layout Subsubsection
 Tryb nowego dokumentu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Ten tryb jest domyślnym sposobem uruchomienia aplikacji.
  Jest zalecany dla większości użytkowników.
  By go użyć, wystarczy uruchomić aplikację.
@@ -2310,13 +2542,16 @@ Ten tryb jest domyślnym sposobem uruchomienia aplikacji.
 Tryb tworzenia mapy pamięci z tekstu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Ten tryb jest potrzebny przy integracji z przeglądarką Internetową.
  Przy uruchomieniu należy dodać dwa argumenty: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 
+\series medium
 \emph on
 np.
  mindmapping.exe --text 
@@ -2330,33 +2565,45 @@ Przykładowy tekst z którego chemy stworzyć mapę pamięci
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Dzięki temu po uruchomieniu pojawią się dwa okna: główne okno z pustą mapą
  pamięci oraz dodatkowe z kreatorem węzłów z tekstu.
  Opis używania tego okna znajduje się w rozdziale 10.8.
+ Wygląd aplikacji po uruchomieniu w tym trybie prezentuje rysunek 11.2.
 \end_layout
 
 \begin_layout Subsubsection
 Tryb Wczytania pliku przy uruchomieniu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Przy integracji programu z systemem operacyjnym lub innym oprogramowaniem
  potrzebne jest również automatyczne wczytywanie aplikacji z zapisaną mapą
  pamięci.
  W tym przypadku należy dodać dwa argumenty: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
 
+\series medium
 \emph on
 --file /ścieżka/do/pliku.mindqt
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Wszystkie zapisane pliki tego programu mają rozszerzenie 
 \emph on
-mindqt, 
+*.mindqt
+\emph default
+,
+\emph on
+ 
 \emph default
 jednak możliwe jest wczytanie dowolnego pliku.
  Ważne jest tylko, by wczytywany plik został wcześniej zapisany w tej aplikacji,
