@@ -115,11 +115,11 @@ class Node(QGraphicsItem):
 				nodes.append(edge.dest)
 		return nodes
 
-	def shape(self):
-		"""Defines shape of a node"""
-		path=QPainterPath()
-		path.addEllipse(self.boundingRect())
-		return path
+	#def shape(self):
+	#	"""Defines shape of a node"""
+	#	path=QPainterPath()
+	#	path.addEllipse(self.boundingRect())
+	#	return path
 
 	def paint(self,painter,option=None,widget=None):
 		"""Method for painting the item"""
@@ -134,11 +134,11 @@ class Node(QGraphicsItem):
 		r=self.rectOverText
 		painter.drawEllipse(r)
 
-		center_diff=self.rectOverText.center()
+		#center_diff=self.rectOverText.center()
 		#draw text
 		painter.setFont(self.font)
 		painter.setPen(self.fontColor)
-		painter.drawText(9,26,self.text)
+		painter.drawText(QRectF(5,6,r.width(),r.height()),self.text)
 
 	def boundingRect(self):
 		"""Sets the bounding rectangle of a node"""
@@ -194,14 +194,16 @@ class Node(QGraphicsItem):
 	def findBestSize(self, font, message):
 		"""Returns best rectangle for text over ellipsis"""
 		offset=25
-		fontMetrics=QFontMetrics(font)
+		f=QFont(font)
+		f.setPointSize(f.pointSize()-1)
+		fontMetrics=QFontMetrics(f)
 		rect=fontMetrics.boundingRect(message)
 		w=rect.width()
 		h=rect.height()
 		a=sqrt( (w*w+h*h)/(1+(h/w)*(h/w))  )
 		b=a*h/w
 		test=QRectF()
-		test.setHeight(b+offset-8)
+		test.setHeight(b+offset)
 		test.setWidth(a+offset)
 		return test 
 
