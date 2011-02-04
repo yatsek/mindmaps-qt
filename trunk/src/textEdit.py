@@ -4,8 +4,9 @@ import globalVars as globalV
 class textEdit(QTextEdit):
 	def __init__(self,parent=None,text="Override"):
 		super(textEdit,self).__init__(parent)
+		self.setAcceptRichText(False)		
 		self.setCursorWidth(0) #nie chcemy kursora myszki 
-		self.setText(text)
+		self.setPlainText(text)
 		self.setFont(globalV.fontFromText)
 		
 	def checkLength(self,text):
