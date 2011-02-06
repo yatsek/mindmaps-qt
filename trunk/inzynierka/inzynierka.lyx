@@ -202,7 +202,7 @@ kierunek: Informatyka
 
 \begin_layout Standard
 \align left
-specjalność: Technologie i zastosowania internetu
+specjalność: Technologie i zastosowania Internetu
 \end_layout
 
 \begin_layout Standard
@@ -2405,6 +2405,12 @@ Jest on dostępny na stronie firmy Microsoft
 \begin_layout Subparagraph
 
 \series medium
+Aplikacja jest dostępna na płycie CD dołączonej do pracy inżynierskiej.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
 By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
  interpreter python, biblioteki QT oraz PyQt.
  W systemach opartych o dystrybucję Debian (np.
@@ -2416,7 +2422,7 @@ By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
 
 \series medium
 \emph on
-sudo apt-get install python python-qt4 libqt4-core libqt4-gui
+apt-get install python python-qt4 libqt4-core libqt4-gui
 \end_layout
 
 \begin_layout Subparagraph
@@ -2425,7 +2431,11 @@ sudo apt-get install python python-qt4 libqt4-core libqt4-gui
 Następnie uruchamiamy program za pomocą skryptu shellowego z flagą uruchomieniow
 ą
 \emph on
- runner.sh
+ runner.sh 
+\emph default
+znajdującego się w folderze 
+\emph on
+/linux
 \emph default
 .
 \end_layout
@@ -2437,6 +2447,10 @@ Do uruchomienia aplikacji pod systemami operacyjnymi z rodziny Microsoft
  Windows wystarczy odpakować archiwum 
 \emph on
 mindmapping-win32.zip
+\emph default
+ znajdujący się w folderze 
+\emph on
+/windows
 \emph default
  na dysku lokalnym i uruchomić plik wykonywalny 
 \emph on
@@ -2455,6 +2469,15 @@ Instalacja rozszerzenia do przeglądarki Firefox
 \series medium
 Aplikacja posiada dwa osobne rozszerzenia, w zależności od systemu operacyjnego
  na którym zostaje uruchomiona.
+ Znajdują się one odpowiednio w folderach 
+\emph on
+/linux
+\emph default
+ i 
+\emph on
+/windows
+\emph default
+.
  By zainstalować rozszerzenie, należy uruchomić przeglądarkę Firefox i wpisać
  w pasku adresu ścieżkę do pliku z rozszerzeniem.
  
@@ -2474,7 +2497,7 @@ W systemie operacyjnym Linux, gdy aplikację mamy w folderze
 
 \series medium
 \emph on
-file:///home/user/mindmapping/mindmapping.xpi
+file:///home/user/mindmapping/mindmapping-linux.xpi
 \end_layout
 
 \begin_layout Subparagraph
@@ -2555,9 +2578,8 @@ Przy integracji programu z systemem operacyjnym lub innym oprogramowaniem
 
 \begin_layout Quotation
 
-\series medium
 \emph on
---file /ścieżka/do/pliku.mindqt
+mindmapping.exe --file /ścieżka/do/pliku.mindqt
 \end_layout
 
 \begin_layout Subparagraph
@@ -2598,11 +2620,16 @@ Podsumowanie pracy
 
 \series medium
 W ramach projektu pomyślnie ukończono implmentację aplikacji do tworzenia
- map pamięci spełniającą postawione cele.
- Zgodnie z założeniami umożliwia ona wygodne tworzenie map oraz interakcję
- z przeglądarką internetową.
- Zastosowanie otwartych technologii takich jak Python i QT sprawiło, że
- aplikacja działa wydajnie i jest odporna na błędy.
+ map pamięci spełniającą postawione wymagania.
+ Podstawowym było stworzenie aplikacji, która umożliwi tworzenie dowolnych
+ połączeń pomiędzy elementami na mapie.
+ Kolejną rzeczą było stworzenie łatwego w operowaniu interfejsu użytkownika,
+ pozwalającego na tworzenie i operowanie elementami na mapie.
+ Następnym ważnym elementem aplikacji było umożliwienie użytkownikowi szybkiego
+ stworzenia mapy pamięci z dowolnego tekstu na stronie internetowej.
+ Ostatnią rzeczą było stworzenie aplikacji dostępnej na wiele platform.
+ Jest to możliwe dzięki językowi programowania Python i zestawie bibliotek
+ QT.
 \end_layout
 
 \begin_layout Subparagraph
@@ -2610,7 +2637,7 @@ W ramach projektu pomyślnie ukończono implmentację aplikacji do tworzenia
 \series medium
 Aplikacja zostanie w przyszłości rozwijana by uzyskać w pełni funkcjonalny
  edytor map pamięci, mogący konkurować z istniejącymi produktami na rynku.
- Planowana jest również implementacja na platformy mobilne.
+ Planowane jest również dostosowanie aplikacji na platformy mobilne.
 \end_layout
 
 \begin_layout Standard
