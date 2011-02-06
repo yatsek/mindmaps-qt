@@ -138,7 +138,7 @@ class Node(QGraphicsItem):
 		#draw text
 		painter.setFont(self.font)
 		painter.setPen(self.fontColor)
-		painter.drawText(QRectF(5,6,r.width(),r.height()),self.text)
+		painter.drawText(QRectF(5,6,r.width()-5,r.height()-6),self.text)
 
 	def boundingRect(self):
 		"""Sets the bounding rectangle of a node"""
@@ -196,7 +196,7 @@ class Node(QGraphicsItem):
 		offset=25
 		f=QFont(font)
 		f.setPointSize(f.pointSize()-1)
-		fontMetrics=QFontMetrics(f)
+		fontMetrics=QFontMetrics(font)
 		rect=fontMetrics.boundingRect(message)
 		w=rect.width()
 		h=rect.height()
@@ -205,6 +205,8 @@ class Node(QGraphicsItem):
 		test=QRectF()
 		test.setHeight(b+offset)
 		test.setWidth(a+offset)
+		test.setX(test.x()-5)
+		test.setY(test.y()-6)
 		return test 
 
 	def mouseDoubleClickEvent(self,event):
