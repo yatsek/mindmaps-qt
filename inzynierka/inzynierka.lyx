@@ -309,7 +309,7 @@ Spis rysunków
 
 \begin_layout List
 \labelwidthstring 00.00.0000
-11.1 Wygląd okna przeglądarki Internetowej
+11.1 Wygląd okna przeglądarki internetowej
 \end_layout
 
 \begin_layout List
@@ -336,10 +336,6 @@ Spis rysunków
 
 \begin_layout Section
 Wstęp
-\end_layout
-
-\begin_layout Subsection
-Opis problemu i koncepcja jego rozwiązania
 \end_layout
 
 \begin_layout Subparagraph
@@ -370,10 +366,6 @@ Mind Mappingu
  na zapamiętanie informacji o dowolnej złożoności długofalowo.
 \end_layout
 
-\begin_layout Subsection
-Cel i zakres pracy
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
@@ -386,20 +378,11 @@ Celem niniejszej pracy jest opracowanie aplikacji umożliwiającej wspomaganie
  działania tej techniki.
 \end_layout
 
-\begin_layout Subsection
-Omówienie pracy
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
 Praca została podzielona na dwie części - teoretyczną i praktyczną.
-\end_layout
-
-\begin_layout Subparagraph
-
-\series medium
-Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona technika
+ Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona technika
  Mind Mappingu, omówienie procesów poznawczych towarzyszących nauce oraz
  analizą istniejących aplikacji wspomagających tworzenie map pamięci.
 \end_layout
@@ -407,11 +390,12 @@ Część teoretyczną obejmują rozdziały 2-4, gdzie zostaje objaśniona techni
 \begin_layout Subparagraph
 
 \series medium
-Część praktyczną obejmują rozdziały 5-11, gdzie zostaje opisana koncepcja
+Część praktyczną obejmują rozdziały 5-12, gdzie zostaje opisana koncepcja
  programu do tworzenia map pamięci, specyfikacja wymagań funkcjonalnych
  i niefunkcjonalnych, zostaną opisane wykorzystane technologie i narzędzia
  a następnie architektura programu i opis interfejsu użytkownika.
- Ostatni rozdział traktuje o instalacji programu i różnych trybach pracy.
+ Przedostatni rozdział traktuje o instalacji programu i różnych trybach
+ pracy.
 \end_layout
 
 \begin_layout Standard
@@ -427,10 +411,6 @@ Część praktyczną obejmują rozdziały 5-11, gdzie zostaje opisana koncepcja
 
 \begin_layout Section
 Procesy poznawcze towarzyszące nauce
-\end_layout
-
-\begin_layout Subsection
-Wprowadzenie
 \end_layout
 
 \begin_layout Subparagraph
@@ -713,10 +693,6 @@ na stałe
 Mind mapping
 \end_layout
 
-\begin_layout Subsection
-Wprowadzenie do techniki Mind Mappingu
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
@@ -734,7 +710,7 @@ sieci semantyczne
  Zostały one opracowane przez Richarda H.
  Richensa w celu zdefiniowania meta-języka do translacji maszynowej na języki
  naturalne [COGNI].
- Przykład takiej sieci semantycznej ilustruje Rys 3.1
+ Przykład takiej sieci semantycznej ilustruje rysunek 3.1
 \end_layout
 
 \begin_layout Standard
@@ -823,7 +799,7 @@ Rys 3.2 Funkcje półkul mózgowych
 \begin_layout Paragraph
 
 \series medium
-Najczęściej spotykanymi sposobami notowania są [BUZAN1]:
+Najczęściej spotykanymi sposobami notowania są [BUZAN]:
 \end_layout
 
 \begin_layout Enumerate
@@ -857,7 +833,7 @@ Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
  notatek.
  Jedną z metod pobudzenia wszystkich obszarów mózgu jest technika tworzenia
  map pamięci.
- Przykład takiej mapy ilustruje rysunek 2.3
+ Przykład takiej mapy ilustruje rysunek 3.3
 \end_layout
 
 \begin_layout Standard
@@ -879,9 +855,13 @@ Ten rodzaj notatek pobudza mózg za pomocą analizy: słów, liczb, kolejności,
 Rys 3.3 Przykładowa mapa pamięci
 \end_layout
 
+\begin_layout Subsection
+Zasady tworzenia map pamięci
+\end_layout
+
 \begin_layout Standard
 Tony Buzan skonstruował 4 podstawowe zasady potrzebne przy tworzeniu mapy
- pamięci [BUZAN1]:
+ pamięci [BUZAN]:
 \end_layout
 
 \begin_layout Itemize
@@ -929,10 +909,6 @@ Ważne jest również, by wzbogacać je o kolory, rysunki oraz własne skróty
 Przegląd aplikacji do tworzenia map pamięci
 \end_layout
 
-\begin_layout Subsection
-Uwagi wstępne
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
@@ -944,15 +920,15 @@ Na rynku komputerowym istnieje parę programów do tworzenia map pamięci.
 \end_layout
 
 \begin_layout Itemize
+tworzenie węzłów według struktury drzewa
+\end_layout
+
+\begin_layout Itemize
 kolorowanie węzłów
 \end_layout
 
 \begin_layout Itemize
 dodawanie ikonek do węzłów
-\end_layout
-
-\begin_layout Itemize
-tworzenie węzłów według struktury drzewa
 \end_layout
 
 \begin_layout Itemize
@@ -972,7 +948,7 @@ Xmind jest programem Open Source stworzonym za pomocą języka Java oraz Eclipse
  użytkownikom.
  Aplikacja jest rozwijana od 2007 roku, a od końca 2008 roku jest dostępna
  na licencji LGPL.
- 
+ Przykładowy zrzut ekranu został przedstawiony na rys 4.1.
 \end_layout
 
 \begin_layout Standard
@@ -1095,6 +1071,7 @@ Buzan's iMindMap jest komercyjnym oprogramowaniem stworzonym przez firmę
  ThinkBuzan Ltd.
  Jej funcjonalność wykracza poza zwykłe tworzenie map pamięci i umożliwia
  ponadto zarządzanie projektami i planowanie.
+ Wyróżnia go wygodny interfejs użytkownika i bogate graficznie mapy pamięci.
  Rysunek 4.3 prezentuje wygląd aplikacji.
 \end_layout
 
@@ -1130,10 +1107,6 @@ Rys 4.3 Wygląd interfejsu użytkownika programu iMindMap
 
 \begin_layout Section
 Specyfikacja wymagań funkcjonalnych programu
-\end_layout
-
-\begin_layout Subsection
-Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
@@ -1226,10 +1199,6 @@ W ramach szybkiego tworzenia map pamięci, przeglądarka internetowa powinna
 
 \begin_layout Section
 Specyfikacja wymagań pozafunkcjonalnych programu
-\end_layout
-
-\begin_layout Subsection
-Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
@@ -1393,7 +1362,7 @@ Aplikacja dostarcza dokumentację
 \begin_inset space \space{}
 \end_inset
 
-zainstalowania zależności potrzebnych do instalacji na danej platformie
+zainstalowania bibliotek potrzebnych do instalacji na danej platformie
 \end_layout
 
 \begin_layout Itemize
@@ -1523,10 +1492,6 @@ XUL, Javascript i XPCOM - zbór technologii wykorzystywany do tworzenia rozszerz
 Wykorzystane technologie i narzędzia
 \end_layout
 
-\begin_layout Subsection
-Wymagania technologiczne aplikacji
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
@@ -1538,10 +1503,6 @@ h, bez potrzeby dostosowywania jej do każdej z nich.
 \end_layout
 
 \begin_layout Subsection
-Biblioteki i języki programowania
-\end_layout
-
-\begin_layout Subsubsection
 Python
 \end_layout
 
@@ -1551,13 +1512,15 @@ Python
 Python jest interpretowanym, interaktywnym, zorientowanym obiektowo językiem
  programowania.
  Jego składnia jest bardzo charakterystyczna ze względu na umieszczanie
- wcięć w kodzie zamiast nawiasów, dzięki czemu kod staje się bardzo czytelny.
+ wcięć w kodzie zamiast nawiasów.
+ Jedną z charakterystycznych cech tego języka programowania jest tworzenie
+ funkcji anonimowych jak również to, że wszystko jest obiektem.
  Istnieją setki gotowych modułów do Pythona która umożliwiają na użycie
- bibliotek napisanych w innych językach programowania.
+ bibliotek napisanych w innych językach programowania [PYQT].
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Qt
 \end_layout
 
@@ -1580,11 +1543,15 @@ użytkownika, programowanie wielowątkowe, współdzielenie pamięci, komunikacj
 s czy OS/2.
  Bibliotek Qt można używać za pomocą języka C++, jednak dzięki zastosowaniu
  MOC (ang.
- Meta Object Compiler) jest możliwość pisania swoich aplikacji w innych
- językach programowania, takich jak Java, C#, Lisp, Pascal, Python czy Ruby.
+ 
+\emph on
+Meta Object Compiler
+\emph default
+) jest możliwość pisania swoich aplikacji w innych językach programowania,
+ takich jak Java, C#, Lisp, Pascal, Python czy Ruby [PYQT].
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 PyQt
 \end_layout
 
@@ -1596,10 +1563,10 @@ a Python.
  Została stworzona poprzez narzędzie SIP, które automatycznie generuje moduły
  Pythona z plików nagłówkowych bibliotek C++.
  To narzędzie zostało stworzone na potrzeby stworzenia tej nakładki, przez
- firmę Riverbank Computing.
+ firmę Riverbank Computing [PYQT].
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Javascript, XUL i XPCOM
 \end_layout
 
@@ -1607,8 +1574,8 @@ Javascript, XUL i XPCOM
 
 \series medium
 Javascript jest interpretowanym, obiektowym językiem programowania wykorzystywan
-ym głównie na stronach Internetowych.
- Stosuje się go głównie do zapewnienia interaktywności stron Internetowych
+ym głównie na stronach internetowych.
+ Stosuje się go głównie do zapewnienia interaktywności stron internetowych
  po stronie klienta
 \end_layout
 
@@ -1616,8 +1583,11 @@ ym głównie na stronach Internetowych.
 
 \series medium
 XUL (ang.
- XML-based User-interface Language) jest językiem XML przeznaczonym do definiown
-ia interfejsów użytkownika.
+ 
+\emph on
+XML-based User-interface Language
+\emph default
+) jest językiem XML przeznaczonym do definiownia interfejsów użytkownika.
  Jest używany głównie przez produkty fundacji Mozilli typu Firefox, Flock
  czy Thunderbird.
 \end_layout
@@ -1626,11 +1596,18 @@ ia interfejsów użytkownika.
 
 \series medium
 XPCOM (ang.
- Cross Platform Component Object Model) jest przenośną platformą obiektów
- COM, podobną do Microsoft COM.
+ 
+\emph on
+Cross Platform Component Object Model
+\emph default
+) jest przenośną platformą obiektów COM, podobną do Microsoft COM.
  Posiada dowiązań do wielu języków programowania.
  Interfejsy w XPCOM są definiowane jako dialekty IDL (ang.
- Interface Definition Language) zwane XPIDL.
+ 
+\emph on
+Interface Definition Language
+\emph default
+) zwane XPIDL.
  XPCOM dostarcza zestaw componentów i klas pozwalających na zarządzanie
  plikami i pamięcią, wątki, struktury danych i inne.
  
@@ -1658,15 +1635,12 @@ Zestaw tych trzech technologii pozwala na tworzenie rozszerzeń do aplikacji
 Architektura programu
 \end_layout
 
-\begin_layout Subsection
-Uwagi wstępne
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
 Aplikacja została napisana w języku programowania Python w oparciu o biblioteki
  QT.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1757,6 +1731,7 @@ W aplikacji zostały wykorzystane wszystkie trzy klasy do stworzenia mechanizmu
  Z uwagi na zadowalającą funkcjonalność klasy QGraphicsScene nie było potrzeby
  jej rozszerzać, w przypadku pozostałych klas zaistniała potrzeba przeciążenia
  dużej części metod.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -1771,6 +1746,7 @@ Klasa GraphicsView dziedziczy po klasie QGraphicsView i opisuje zarządzanie
 
 rozłączanie obiektów, przesuwanie i zmienianie powiększenia widoku mapy
  oraz animacje obiektów.
+ Schemat UML prezentuje rysunek 9.1.
 \end_layout
 
 \begin_layout Subparagraph
@@ -1920,16 +1896,17 @@ która otrzymuje informacje jaki tekst został wybrany i tworzy nowy element
  na scenie razem z tym tekstem.
  Jednak gdy użytkownik naciśnie drugi przycisk, oba przyciski zostają usunięte
  z okna.
+ Schemat UML prezentuje rysunek 9.2.
 \end_layout
 
 \begin_layout Subsection
-Interakcja z przeglądarką Internetową
+Interakcja z przeglądarką internetową
 \end_layout
 
 \begin_layout Subparagraph
 
 \series medium
-W celu zintegrowania przeglądarki Internetowej Firefox z programem, koniecznym
+W celu zintegrowania przeglądarki internetowej Firefox z programem, koniecznym
  było stworzenie rozszerzenia.
  Jest to możliwe dzięki językowi Javascript, językowi opisu interfejsów
  użytkownika XUL oraz biblioteką XPCOM.
@@ -1954,7 +1931,7 @@ Add to MindMap
 
  oraz ciągiem znaków zawierającym zaznaczony tekst.
  Aplikacja zostaje uruchomiona jako proces równorzędny, dzięki czemu przy
- zamknięciu przeglądarki Internetowej możliwa jest dalsza praca z mapą pamięci.
+ zamknięciu przeglądarki internetowej możliwa jest dalsza praca z mapą pamięci.
  Jest to możliwe dzięki bibliotece XPCOM.
 \end_layout
 
@@ -1993,7 +1970,7 @@ tworzenie mapy pamięci z tekstu - klasy FormFromText oraz textEdit
 \end_layout
 
 \begin_layout Itemize
-interakcja z przeglądarką Internetową - pliki pluginu do przeglądarki
+interakcja z przeglądarką internetową - pliki pluginu do przeglądarki
 \end_layout
 
 \begin_layout Standard
@@ -2009,10 +1986,6 @@ interakcja z przeglądarką Internetową - pliki pluginu do przeglądarki
 
 \begin_layout Section
 Interfejs użytkownika
-\end_layout
-
-\begin_layout Subsection
-Uwagi wstępne
 \end_layout
 
 \begin_layout Subparagraph
@@ -2049,6 +2022,7 @@ Aplikacja ma bardzo prosty interfejs z uwagi na dostarczenie użytkownikowi
  jak największej przestrzeni do oglądania mapy pamięci.
  Ma to na celu umożliwienie pełnego skupienia się przy tworzeniu mapy.
  Główną część okna zajmuje widok mapy pamięci, wraz z paskiem menu programu.
+ Rysunek 10.1 ilustruje wygląd interfejsu użytkownika.
  Interakcja z programem odbywa się za pomocą klawiatury i myszki.
  Zaleca się korzystanie z myszy zewnętrznej lub touchpada skonfigurowanego
  do naciskania środkowego przycisku myszy i funkcji rolki.
@@ -2070,7 +2044,7 @@ Przesuwanie widoku mapy pamięci odbywa się za pomocą naciśnięcia prawego
 \end_layout
 
 \begin_layout Subsection
-Dodawanie i edycja węzłów
+Manipulacja węzłami
 \end_layout
 
 \begin_layout Subparagraph
@@ -2105,10 +2079,6 @@ Po zamknięciu okna edycji uaktualnia się wygląd węzła.
  By edytować wielkość węzła, należy zaznaczyć element i użyć rolki w myszce.
 \end_layout
 
-\begin_layout Subsection
-Usuwanie węzłów
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
@@ -2116,19 +2086,11 @@ Zaznaczając dowolne elementy można je usunąć naciskając przycisk DELETE
  lub wybierając z górnego menu Edit->Delete.
 \end_layout
 
-\begin_layout Subsection
-Łączenie węzłów
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
 Łączenie węzłów odbywa się poprzez przeciągnięcie dowolnego elementu na
  inny.
-\end_layout
-
-\begin_layout Subsection
-Rozłączanie węzłów
 \end_layout
 
 \begin_layout Subparagraph
@@ -2139,16 +2101,13 @@ Rozłączanie węzłów odbywa się w analogiczny sposób co łączenie, tylko n
  na inny który chcemy rozłączyć.
 \end_layout
 
-\begin_layout Subsection
-Ustawianie automatycznego pozycjonowania węzła
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
 Zaznaczając element i naciskając środkowy przycisk myszki można sprawić,
  by element się nie animował i nie przemieszczał.
- Umożliwia to dokładnie pozycjonowanie elementów jeżeli automatyczne zawodzi.
+ Umożliwia to dokładnie pozycjonowanie elementów jeżeli automatyczne nie
+ spełnia wymagań użytkownika.
 \end_layout
 
 \begin_layout Subsection
@@ -2159,9 +2118,10 @@ Dodawanie węzłów z tekstu
 
 \series medium
 Kolejnym elementem interfejsu jest tworze mapy pamięci z tekstu ze strony
- Internetowej.
- Jeżeli zainstalowany został dodatek do przeglądarki Firefox, można zaznaczyć
- w przeglądarce dowolny tekst, i z menu kontekstowego kliknąć pozycję 
+ internetowej.
+ Jeżeli zainstalowany został dodatek do przeglądarki Firefox (proces instalacji
+ jest omówiony w rozdziałe 12), można zaznaczyć w przeglądarce dowolny tekst,
+ i z menu kontekstowego kliknąć pozycję 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2223,10 +2183,6 @@ By przekształcić dany fragment tekstu na węzeł w mapie pamięci, należy za
 Przykład użycia programu
 \end_layout
 
-\begin_layout Subsection
-Uwagi wstępne
-\end_layout
-
 \begin_layout Standard
 By dobrze zrozumieć sposób działania aplikacji, należy przytoczyć przypadek
  użycia tworzenia kompletnej mapy pamięci.
@@ -2240,10 +2196,10 @@ Wybór tekstu
 \begin_layout Standard
 Najłatwiej tworzy się mapy pamięci na podstawie istniejącego tekstu.
  Ucząc się przy pomocy komputera, najczęstszym źródłem informacji są strony
- Internetowe.
+ internetowe.
  Zakładamy, że użytkownik poprawnie zainstalował dodatek do przeglądarki
- Internetowej.
- Pierwszym krokiem jest znalezienie strony Internetowej z interesującą nas
+ internetowej.
+ Pierwszym krokiem jest znalezienie strony internetowej z interesującą nas
  zawartością.
  Następnie zaznaczamy tekst z którego chcemy stworzyć mapę pamięci, klikamy
  prawym klawiszem nad zaznaczonym tekstem i wybieramy pozycję 
@@ -2276,7 +2232,7 @@ Add to MindMap
 
 \begin_layout Standard
 \align center
-Rys 11.1 Wygląd okna przeglądarki Internetowej
+Rys 11.1 Wygląd okna przeglądarki internetowej
 \end_layout
 
 \begin_layout Subsection
@@ -2374,6 +2330,32 @@ Po wybraniu wszystkich elementów, możemy zamknąć okno z tekstem.
 Rys 11.4 Drukowanie mapy pamięci
 \end_layout
 
+\begin_layout Subsection
+Uczenie się z mapy pamięci
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Po stworzeniu mapy pamięci, oglądając ją po dłuższym czasie bardzo szybko
+ można sobie uzmysłowić na podstawie jakich materiałów czy myśli była ona
+ tworzona.
+ Dzieje się tak dzięki relacjom pomiędzy węzłami.
+ Ważnymi elementami na mapie są również wielkość i kolor danego elementu.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Jednak największą zaletą tworzenia mapy jest umiejętność osoby tworzącej
+ powiązania procesu myślowego towarzyszącego tworzeniu z daną mapą.
+ W zależności od czasu tworzenia mapy pamieci, możliwe jest przypomnienie
+ sobie szczegółów podczas jej powstawania.
+ Czym więcej czasu użytkownik poświęci na daną mapę, skupi się i przemyśli
+ jej strukturę, tym większe są szanse na wyciągnięcie maksimum z niej.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -2386,11 +2368,7 @@ Rys 11.4 Drukowanie mapy pamięci
 \end_layout
 
 \begin_layout Section
-Uwagi końcowe
-\end_layout
-
-\begin_layout Subsection
-Wymagania systemowe
+Uruchamianie programu
 \end_layout
 
 \begin_layout Subparagraph
@@ -2424,42 +2402,32 @@ VC++ 2008 Redistributable Package.
 Jest on dostępny na stronie firmy Microsoft
 \end_layout
 
-\begin_layout Subsection
-Uruchomienie programu
-\end_layout
-
-\begin_layout Subsubsection
-GNU/Linux
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
 By uruchomić program na systemach opartych z grupy Linux, należy zainstalować
  interpreter python, biblioteki QT oraz PyQt.
-\end_layout
-
-\begin_layout Standard
-W systemach opartych o dystrybucję Debian (np.
+ W systemach opartych o dystrybucję Debian (np.
  Ubuntu, Mint) wystarczy wydać polecenie z terminalu z dostępem administracyjnym
 :
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quotation
 
+\series medium
 \emph on
 sudo apt-get install python python-qt4 libqt4-core libqt4-gui
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+
+\series medium
 Następnie uruchamiamy program za pomocą skryptu shellowego z flagą uruchomieniow
 ą
 \emph on
- runner.sh.
-\end_layout
-
-\begin_layout Subsubsection
-Microsoft Windows
+ runner.sh
+\emph default
+.
 \end_layout
 
 \begin_layout Subparagraph
@@ -2478,7 +2446,7 @@ mindmapping.exe
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Instalacja rozszerzenia do przeglądarki Firefox
 \end_layout
 
@@ -2502,8 +2470,9 @@ W systemie operacyjnym Linux, gdy aplikację mamy w folderze
 , wpisujemy:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quotation
 
+\series medium
 \emph on
 file:///home/user/mindmapping/mindmapping.xpi
 \end_layout
@@ -2517,7 +2486,7 @@ Następnie po zainstalowaniu rozszerzenia i uruchomieniu ponownym przeglądarki
  podajemy bezwzględną ścieżkę do pliku wykonywalnego.
  W systemie Linux musimy podać plik 
 \emph on
-main.py, 
+runner.sh, 
 \emph default
 natomiast w systemie Windows mindmapping.exe.
 \end_layout
@@ -2526,16 +2495,12 @@ natomiast w systemie Windows mindmapping.exe.
 Uruchamiania aplikacji z argumentami
 \end_layout
 
-\begin_layout Subsubsection
-Tryb nowego dokumentu
-\end_layout
-
 \begin_layout Subparagraph
 
 \series medium
-Ten tryb jest domyślnym sposobem uruchomienia aplikacji.
+Domyślnym sposobem uruchomienia aplikacji jest uruchomienie go bez argumentów.
  Jest zalecany dla większości użytkowników.
- By go użyć, wystarczy uruchomić aplikację.
+ Tryb ten tworzy automatycznie nową, pustą mapę pamięci.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2545,15 +2510,16 @@ Tryb tworzenia mapy pamięci z tekstu
 \begin_layout Subparagraph
 
 \series medium
-Ten tryb jest potrzebny przy integracji z przeglądarką Internetową.
+Ten tryb jest potrzebny przy integracji z przeglądarką internetową.
  Przy uruchomieniu należy dodać dwa argumenty: 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Quotation
 
 \series medium
-\emph on
 np.
+
+\emph on
  mindmapping.exe --text 
 \begin_inset Quotes eld
 \end_inset
@@ -2587,7 +2553,7 @@ Przy integracji programu z systemem operacyjnym lub innym oprogramowaniem
  W tym przypadku należy dodać dwa argumenty: 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Quotation
 
 \series medium
 \emph on
@@ -2617,13 +2583,57 @@ jednak możliwe jest wczytanie dowolnego pliku.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Podsumowanie pracy
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+W ramach projektu pomyślnie ukończono implmentację aplikacji do tworzenia
+ map pamięci spełniającą postawione cele.
+ Zgodnie z założeniami umożliwia ona wygodne tworzenie map oraz interakcję
+ z przeglądarką internetową.
+ Zastosowanie otwartych technologii takich jak Python i QT sprawiło, że
+ aplikacja działa wydajnie i jest odporna na błędy.
+\end_layout
+
+\begin_layout Subparagraph
+
+\series medium
+Aplikacja zostanie w przyszłości rozwijana by uzyskać w pełni funkcjonalny
+ edytor map pamięci, mogący konkurować z istniejącymi produktami na rynku.
+ Planowana jest również implementacja na platformy mobilne.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Bibliografia
 \end_layout
 
 \begin_layout List
 \labelwidthstring 00.00.0000
-[BUZAN1] Buzan Tony, 
+[BUZAN] Buzan Tony, 
 \emph on
 Mapy twoich myśli
 \emph default
