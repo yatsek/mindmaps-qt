@@ -1,0 +1,1 @@
+Application which allows creating mind maps. Written in PyQt
